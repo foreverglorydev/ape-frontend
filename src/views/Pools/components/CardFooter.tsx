@@ -9,7 +9,12 @@ import { CommunityTag, CoreTag, BinanceTag, ApeZone } from 'components/Tags'
 import { PoolCategory } from 'config/constants/types'
 import getTimePeriods from 'utils/getTimePeriods'
 import { BSC_BLOCK_TIME } from 'config'
-import { Text } from '@apeswapfinance/uikit'
+import {
+  Text,
+  // MetamaskIcon,
+  Flex,
+  LinkExternal,
+} from '@apeswapfinance/uikit'
 
 const tags = {
   [PoolCategory.BINANCE]: BinanceTag,
@@ -137,6 +142,25 @@ const CardFooter: React.FC<Props> = ({
           <TokenLink href={projectLink} target="_blank">
             {TranslateString(412, 'View project site')}
           </TokenLink>
+          {/* {poolContractAddress && (
+        <Flex mb="2px" justifyContent="flex-end">
+          <LinkExternal bold={false} fontSize="14px" href={`${BASE_BSC_SCAN_URL}/address/${poolContractAddress}`}>
+            {TranslateString(412, 'View Contract')}
+          </LinkExternal>
+        </Flex>
+      )}
+      {account && isMetaMaskInScope && tokenAddress && (
+        <Flex justifyContent="flex-end">
+          <Text
+            color="primary"
+            fontSize="14px"
+            onClick={() => registerToken(tokenAddress, earningToken.symbol, earningToken.decimals, imageSrc)}
+          >
+            Add to Metamask
+          </Text>
+          <MetamaskIcon ml="4px" />
+        </Flex>
+      )} */}
         </Details>
       )}
     </StyledFooter>
