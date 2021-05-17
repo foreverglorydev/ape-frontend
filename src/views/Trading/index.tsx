@@ -6,7 +6,10 @@ import TradingTable from './Trading'
 import PersonalTrading from './PersonalTrading'
 
 const Trading = () => {
-  const { season = '0', pair = '0xf65c1c0478efde3c19b49ecbe7acc57bb6b1d713' }: { season?: string, pair?: string } = useParams()
+  const {
+    season = '0',
+    pair = '0xf65c1c0478efde3c19b49ecbe7acc57bb6b1d713',
+  }: { season?: string; pair?: string } = useParams()
 
   return (
     <Page>

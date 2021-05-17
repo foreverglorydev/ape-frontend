@@ -96,7 +96,7 @@ export const useGetTradingStats = (pair: string, season: string) => {
       try {
         setLoading(true)
         const response = await fetch(`${apiBaseUrl}/trading/${season}/${pair}`)
-        const responsedata: TradeStats[]  = await response.json()
+        const responsedata: TradeStats[] = await response.json()
 
         setData(responsedata)
         setLoading(false)
@@ -109,9 +109,8 @@ export const useGetTradingStats = (pair: string, season: string) => {
     fetchData()
   }, [setData, pair, season])
 
-  return {data, loading}
+  return { data, loading }
 }
-
 
 export const useGetPersonalTradingStats = (pair: string, address: string, season: string) => {
   const [data, setData] = useState<TradeStats | null>(null)
@@ -122,7 +121,7 @@ export const useGetPersonalTradingStats = (pair: string, address: string, season
       try {
         setLoading(true)
         const response = await fetch(`${apiBaseUrl}/trading/${season}/${pair}/${address.toLowerCase()}`)
-        const responsedata: TradeStats  = await response.json()
+        const responsedata: TradeStats = await response.json()
 
         setData(responsedata)
         setLoading(false)
@@ -135,7 +134,7 @@ export const useGetPersonalTradingStats = (pair: string, address: string, season
     fetchData()
   }, [setData, pair, season, address])
 
-  return {data, loading}
+  return { data, loading }
 }
 
 const RESERVES_QUERY = (address) => {
