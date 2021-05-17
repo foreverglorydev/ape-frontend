@@ -23,6 +23,7 @@ const Teams = lazy(() => import('./views/Teams'))
 const Team = lazy(() => import('./views/Teams/Team'))
 const Profile = lazy(() => import('./views/Profile'))
 const Chart = lazy(() => import('./views/Chart'))
+const Trading = lazy(() => import('./views/Trading'))
 const ApeZone = lazy(() => import('./views/ApeZone'))
 const Stats = lazy(() => import('./views/Stats'))
 
@@ -77,6 +78,12 @@ const App: React.FC = () => {
             </Route>
             <Route path="/chart">
               <Chart />
+            </Route>
+            <Route path="/trading/:season/:pair">
+              <Trading />
+            </Route>
+            <Route path="/trading">
+              <Trading />
             </Route>
             <Route path="/apezone">
               <ApeZone />

@@ -79,6 +79,65 @@ export const useGetStats = () => {
   return data
 }
 
+interface TradeStats {
+  address: string
+  pair: string
+  season: number
+  pendingBananaRewards: number
+  totalTradedUsd: number
+}
+
+export const useGetTradingStats = (pair: string, season: string) => {
+  const [data, setData] = useState<TradeStats[] | null>(null)
+  const [loading, setLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch(`${apiBaseUrl}/trading/${season}/${pair}`)
+        const responsedata: TradeStats[]  = await response.json()
+
+        setData(responsedata)
+        setLoading(false)
+      } catch (error) {
+        console.error('Unable to fetch data:', error)
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [setData, pair, season])
+
+  return {data, loading}
+}
+
+
+export const useGetPersonalTradingStats = (pair: string, address: string, season: string) => {
+  const [data, setData] = useState<TradeStats | null>(null)
+  const [loading, setLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch(`${apiBaseUrl}/trading/${season}/${pair}/${address.toLowerCase()}`)
+        const responsedata: TradeStats  = await response.json()
+
+        setData(responsedata)
+        setLoading(false)
+      } catch (error) {
+        console.error('Unable to fetch data:', error)
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [setData, pair, season, address])
+
+  return {data, loading}
+}
+
 const RESERVES_QUERY = (address) => {
   return `
   {
