@@ -114,9 +114,11 @@ const Farm: React.FC = () => {
       <Divider />
       <FlexLayout>
         <Route exact path={`${path}`}>
-          {isLoadingPools ? <LoadingContainer className="something">
-            <Spinner />
-          </LoadingContainer> : (
+          {isLoadingPools ? (
+            <LoadingContainer className="something">
+              <Spinner />
+            </LoadingContainer>
+          ) : (
             <>
               {orderBy(openPools, ['sortOrder']).map((pool) => (
                 <PoolCard key={pool.sousId} pool={pool} />

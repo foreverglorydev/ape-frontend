@@ -51,7 +51,14 @@ export const PoolsSlice = createSlice({
 })
 
 // Actions
-export const { setPoolsPublicData, setPoolsUserData, updatePoolsUserData, setPools, setPoolsFetchStart, setPoolsFetchFailed } = PoolsSlice.actions
+export const {
+  setPoolsPublicData,
+  setPoolsUserData,
+  updatePoolsUserData,
+  setPools,
+  setPoolsFetchStart,
+  setPoolsFetchFailed,
+} = PoolsSlice.actions
 
 export const fetchAndSetPools = () => async (dispatch) => {
   try {

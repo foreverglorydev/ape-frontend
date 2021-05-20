@@ -239,25 +239,26 @@ export const getPromosHome = async () => {
   return promos
 }
 
-let poolPromise;
+let poolPromise
 
 export const fetchPools = async () => {
   const url = `${baseUrlStrapi}/pools`
   const resp = await fetch(url)
   const data = await resp.json()
-  const poolsList = data.map((promo):PoolConfig => {
-    return {
-      sousId: Number(promo.sousId),
-      ...promo
-    }
-  })
+  const poolsList = data.map(
+    (promo): PoolConfig => {
+      return {
+        sousId: Number(promo.sousId),
+        ...promo,
+      }
+    },
+  )
 
-  return poolsList;
+  return poolsList
 }
 
-
 export const getPools = async () => {
-  if(!poolPromise) poolPromise = fetchPools()
+  if (!poolPromise) poolPromise = fetchPools()
 
-  return poolPromise;
+  return poolPromise
 }
