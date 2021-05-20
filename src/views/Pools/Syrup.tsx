@@ -1,9 +1,11 @@
 import React from 'react'
 import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
+import { useSelector } from 'react-redux'
+import { State } from 'state/types'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading, Image } from '@apeswapfinance/uikit'
+import { Heading, Image, Spinner } from '@apeswapfinance/uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -18,6 +20,14 @@ import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
 import Divider from './components/Divider'
+
+const LoadingContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+`
 
 const Farm: React.FC = () => {
   const { path } = useRouteMatch()
@@ -80,6 +90,7 @@ const Farm: React.FC = () => {
     }
   })
 
+  const isLoadingPools = useSelector((state: State) => state.pools.isLoading)
   const [finishedPools, openPools] = partition(poolsWithApy, (pool) => pool.isFinished)
 
   return (
@@ -103,12 +114,16 @@ const Farm: React.FC = () => {
       <Divider />
       <FlexLayout>
         <Route exact path={`${path}`}>
-          <>
-            {orderBy(openPools, ['sortOrder']).map((pool) => (
-              <PoolCard key={pool.sousId} pool={pool} />
-            ))}
-            <Coming />
-          </>
+          {isLoadingPools ? <LoadingContainer className="something">
+            <Spinner />
+          </LoadingContainer> : (
+            <>
+              {orderBy(openPools, ['sortOrder']).map((pool) => (
+                <PoolCard key={pool.sousId} pool={pool} />
+              ))}
+              <Coming />
+            </>
+          )}
         </Route>
         <Route path={`${path}/history`}>
           {orderBy(finishedPools, ['sortOrder']).map((pool) => (

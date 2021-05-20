@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit'
 import poolsConfig from 'config/constants/pools'
-import { fetchReserveData } from 'hooks/api'
+import { fetchReserveData, getPools } from 'hooks/api'
 import { fetchPoolsBlockLimits, fetchPoolsTotalStatking } from './fetchPools'
 import {
   fetchPoolsAllowance,
@@ -11,13 +11,23 @@ import {
 } from './fetchPoolsUser'
 import { PoolsState, Pool } from '../types'
 
-const initialState: PoolsState = { data: [...poolsConfig] }
+const initialState: PoolsState = { data: [...poolsConfig], isLoading: true }
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
 export const PoolsSlice = createSlice({
   name: 'Pools',
   initialState,
   reducers: {
+    setPools: (state, action) => {
+      state.data = action.payload
+      state.isLoading = false
+    },
+    setPoolsFetchStart: (state) => {
+      state.isLoading = true
+    },
+    setPoolsFetchFailed: (state) => {
+      state.isLoading = false
+    },
     setPoolsPublicData: (state, action) => {
       const livePoolsData: Pool[] = action.payload
       state.data = state.data.map((pool) => {
@@ -41,15 +51,25 @@ export const PoolsSlice = createSlice({
 })
 
 // Actions
-export const { setPoolsPublicData, setPoolsUserData, updatePoolsUserData } = PoolsSlice.actions
+export const { setPoolsPublicData, setPoolsUserData, updatePoolsUserData, setPools, setPoolsFetchStart, setPoolsFetchFailed } = PoolsSlice.actions
 
+export const fetchAndSetPools = () => async (dispatch) => {
+  try {
+    dispatch(setPoolsFetchStart())
+    const pools = await getPools()
+    dispatch(setPools(pools))
+  } catch (error) {
+    dispatch(setPoolsFetchFailed())
+  }
+}
 // Thunks
 export const fetchPoolsPublicDataAsync = () => async (dispatch) => {
+  const pools = await getPools()
   const blockLimits = await fetchPoolsBlockLimits()
   const totalStakings = await fetchPoolsTotalStatking()
 
   const liveData = await Promise.all(
-    poolsConfig.map(async (pool) => {
+    pools.map(async (pool) => {
       const blockLimit = blockLimits.find((entry) => entry.sousId === pool.sousId)
       const totalStaking = totalStakings.find((entry) => entry.sousId === pool.sousId)
       const lpData = pool.lpStaking ? await fetchReserveData(pool.stakingTokenAddress[CHAIN_ID]) : null
@@ -65,12 +85,13 @@ export const fetchPoolsPublicDataAsync = () => async (dispatch) => {
 }
 
 export const fetchPoolsUserDataAsync = (account) => async (dispatch) => {
+  const pools = await getPools()
   const allowances = await fetchPoolsAllowance(account)
   const stakingTokenBalances = await fetchUserBalances(account)
   const stakedBalances = await fetchUserStakeBalances(account)
   const pendingRewards = await fetchUserPendingRewards(account)
 
-  const userData = poolsConfig.map((pool) => ({
+  const userData = pools.map((pool) => ({
     sousId: pool.sousId,
     allowance: allowances[pool.sousId],
     stakingTokenBalance: stakingTokenBalances[pool.sousId],

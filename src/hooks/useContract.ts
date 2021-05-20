@@ -26,6 +26,7 @@ import masterChef from 'config/abi/masterchef.json'
 import sousChef from 'config/abi/sousChef.json'
 import sousChefBnb from 'config/abi/sousChefBnb.json'
 import profile from 'config/abi/bananaProfile.json'
+import { useAllPools } from 'state/hooks'
 
 const useContract = (abi: AbiItem, address: string, contractOptions?: ContractOptions) => {
   const web3 = useWeb3()
@@ -96,7 +97,8 @@ export const useMasterchef = () => {
 }
 
 export const useSousChef = (id) => {
-  const config = poolsConfig.find((pool) => pool.sousId === id)
+  const pools = useAllPools()
+  const config = pools.find((pool) => pool.sousId === id)
   const rawAbi = config.poolCategory === PoolCategory.BINANCE ? sousChefBnb : sousChef
   const abi = (rawAbi as unknown) as AbiItem
   return useContract(abi, config.contractAddress[process.env.REACT_APP_CHAIN_ID])

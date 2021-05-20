@@ -22,6 +22,7 @@ import { fetchProfile } from './profile'
 import { fetchStats } from './stats'
 import { fetchStatsOverall } from './statsOverall'
 import { fetchTeam, fetchTeams } from './teams'
+import { fetchAndSetPools } from './pools'
 
 const ZERO = new BigNumber(0)
 
@@ -90,6 +91,14 @@ export const useGnanaPools = (account): Pool[] => {
 export const useAllPools = (): Pool[] => {
   const pools = useSelector((state: State) => state.pools.data)
   return pools
+}
+
+export const useFetchAndSetPools = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchAndSetPools())
+  }, [dispatch])
 }
 
 // TVL

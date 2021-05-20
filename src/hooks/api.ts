@@ -1,3 +1,4 @@
+import { PoolConfig } from 'config/constants/types'
 import { useEffect, useState } from 'react'
 import useRefresh from './useRefresh'
 
@@ -236,4 +237,27 @@ export const getPromosHome = async () => {
   })
 
   return promos
+}
+
+let poolPromise;
+
+export const fetchPools = async () => {
+  const url = `${baseUrlStrapi}/pools`
+  const resp = await fetch(url)
+  const data = await resp.json()
+  const poolsList = data.map((promo):PoolConfig => {
+    return {
+      sousId: Number(promo.sousId),
+      ...promo
+    }
+  })
+
+  return poolsList;
+}
+
+
+export const getPools = async () => {
+  if(!poolPromise) poolPromise = fetchPools()
+
+  return poolPromise;
 }

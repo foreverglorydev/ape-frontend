@@ -6,11 +6,13 @@ import { QuoteToken } from 'config/constants/types'
 import multicall from 'utils/multicall'
 import { getWbnbAddress } from 'utils/addressHelpers'
 import BigNumber from 'bignumber.js'
+import { getPools } from 'hooks/api'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
 export const fetchPoolsBlockLimits = async () => {
-  const poolsWithEnd = poolsConfig.filter((p) => p.sousId !== 0)
+  const pools = await getPools()
+  const poolsWithEnd = pools.filter((p) => p.sousId !== 0)
   const callsStartBlock = poolsWithEnd.map((poolConfig) => {
     return {
       address: poolConfig.contractAddress[CHAIN_ID],
@@ -39,8 +41,9 @@ export const fetchPoolsBlockLimits = async () => {
 }
 
 export const fetchPoolsTotalStatking = async () => {
-  const nonBnbPools = poolsConfig.filter((p) => p.stakingTokenName !== QuoteToken.BNB)
-  const bnbPool = poolsConfig.filter((p) => p.stakingTokenName === QuoteToken.BNB)
+  const pools = await getPools()
+  const nonBnbPools = pools.filter((p) => p.stakingTokenName !== QuoteToken.BNB)
+  const bnbPool = pools.filter((p) => p.stakingTokenName === QuoteToken.BNB)
 
   const callsNonBnbPools = nonBnbPools.map((poolConfig) => {
     if (poolConfig.reflect) {

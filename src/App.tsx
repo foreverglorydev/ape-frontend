@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { ResetCSS } from '@apeswapfinance/uikit'
 import BigNumber from 'bignumber.js'
-import { useFetchProfile, useFetchStats, useFetchPublicData, useFetchStatsOverall } from 'state/hooks'
+import { useFetchProfile, useFetchStats, useFetchPublicData, useFetchStatsOverall, useFetchAndSetPools } from 'state/hooks'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
 import ToastListener from './components/ToastListener'
@@ -42,6 +42,7 @@ const App: React.FC = () => {
     if (account) dataLayer?.push({ event: 'wallet_connect', user_id: account })
   }, [account, connect])
 
+  useFetchAndSetPools()
   useFetchPublicData()
   useFetchProfile()
   useFetchStats()
