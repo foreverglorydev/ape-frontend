@@ -91,7 +91,7 @@ const Pools: React.FC = () => {
   const TranslateString = useI18n()
   const { account } = useWallet()
   const farms = useFarms()
-  const pools = useGnanaPools(account)?.splice(0,2)
+  const pools = useGnanaPools(account)?.splice(0, 2)
   const { statsOverall } = useStatsOverall()
   const bnbPriceUSD = usePriceBnbBusd()
   const block = useBlock()
@@ -150,22 +150,21 @@ const Pools: React.FC = () => {
   const [finishedPools, openPools] = partition(poolsWithApy, (pool) => pool.isFinished)
 
   return (
-      
-        <FlexLayout>
-          <Route exact path={`${path}`}>
-            <>
-              {orderBy(openPools, ['sortOrder']).map((pool) => (
-                <PoolCard key={pool.sousId} pool={pool} />
-              ))}
-              <Coming />
-            </>
-          </Route>
-          <Route path={`${path}/history`}>
-            {orderBy(finishedPools, ['sortOrder']).map((pool) => (
-              <PoolCard key={pool.sousId} pool={pool} />
-            ))}
-          </Route>
-        </FlexLayout>
+    <FlexLayout>
+      <Route exact path={`${path}`}>
+        <>
+          {orderBy(openPools, ['sortOrder']).map((pool) => (
+            <PoolCard key={pool.sousId} pool={pool} />
+          ))}
+          <Coming />
+        </>
+      </Route>
+      <Route path={`${path}/history`}>
+        {orderBy(finishedPools, ['sortOrder']).map((pool) => (
+          <PoolCard key={pool.sousId} pool={pool} />
+        ))}
+      </Route>
+    </FlexLayout>
   )
 }
 

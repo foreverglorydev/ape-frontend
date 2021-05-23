@@ -74,7 +74,6 @@ const StyledLI = styled.li`
   font-family: 'Poppins';
 `
 
-
 const Hero = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.colors.primary};
@@ -116,31 +115,29 @@ const Zone = () => {
 
   return (
     <>
-    
-    <Description />
-    <Page>
-      <StyledHeroSection>
-      <Hero>
-        <div>
-          <Heading as="h1" size="xxl" mb="16px">
-            {TranslateString(282, 'Banana fiesta')}
-          </Heading>
-          <ul>
-            <li>{TranslateString(580, 'Stake BANANA to earn new tokens.')}</li>
-            <li>{TranslateString(404, 'You can unstake at any time.')}</li>
-            <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
-          </ul>
-        </div>
-        <div>
-          <Image src="/images/pool-ape.png" alt="ApeSwap illustration" width={470} height={439} responsive />
-        </div>
-      </Hero>
-      </StyledHeroSection>
-      <Divider />
-      <Pools />
-      <StyledIframe url="http://localhost:3000/?embed=1#/swap?outputCurrency=0xa4f93159ce0a4b533b443c74b89967c60a5969f8" />
-
-    </ Page>
+      <Description />
+      <Page>
+        <StyledHeroSection>
+          <Hero>
+            <div>
+              <Heading as="h1" size="xxl" mb="16px">
+                {TranslateString(282, 'Banana fiesta')}
+              </Heading>
+              <ul>
+                <li>{TranslateString(580, 'Stake BANANA to earn new tokens.')}</li>
+                <li>{TranslateString(404, 'You can unstake at any time.')}</li>
+                <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
+              </ul>
+            </div>
+            <div>
+              <Image src="/images/pool-ape.png" alt="ApeSwap illustration" width={470} height={439} responsive />
+            </div>
+          </Hero>
+        </StyledHeroSection>
+        <Divider />
+        <Pools />
+        <StyledIframe url="http://localhost:3000/?embed=1#/swap?outputCurrency=0xa4f93159ce0a4b533b443c74b89967c60a5969f8" />
+      </Page>
     </>
   )
 }

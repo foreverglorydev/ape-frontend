@@ -127,7 +127,6 @@ const Home: React.FC = () => {
         </FlexColumn>
       </Cards>
       <StyledIframe url="http://localhost:3000/?embed=1#/swap?outputCurrency=0xa4f93159ce0a4b533b443c74b89967c60a5969f8" />
-
     </Page>
   )
 }
