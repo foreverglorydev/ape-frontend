@@ -24,6 +24,7 @@ const Team = lazy(() => import('./views/Teams/Team'))
 const Profile = lazy(() => import('./views/Profile'))
 const Chart = lazy(() => import('./views/Chart'))
 const ApeZone = lazy(() => import('./views/ApeZone'))
+const Matic = lazy(() => import('./views/Matic'))
 const Stats = lazy(() => import('./views/Stats'))
 
 // This config is required for number formating
@@ -92,6 +93,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/stats">
               <Stats />
+            </Route>
+            <Route path="/matic">
+              <Matic />
             </Route>
             {/* Redirect */}
             <Route path="/staking">

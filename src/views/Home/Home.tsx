@@ -6,8 +6,31 @@ import FarmStakingCard from 'views/Home/components/FarmStakingCard'
 import BananaStats from 'views/Home/components/BananaStats'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import EarnAPYCard from 'views/Home/components/EarnAPYCard'
+import Iframe from 'react-iframe'
 import PromoCard from './components/PromoCard'
 import WelcomeCard from './components/WelcomeCard'
+
+const StyledIframe = styled(Iframe)`
+  width: 100%;
+  height: 860px;
+
+  & > div {
+    grid-column: span 6;
+    width: 100%;
+  }
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    & > div {
+      height: 1200px;
+    }
+  }
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    & > div {
+      height: 860px;
+    }
+  }
+`
 
 export interface GridWidth {
   spanFirst?: number
@@ -103,6 +126,8 @@ const Home: React.FC = () => {
           <TotalValueLockedCard />
         </FlexColumn>
       </Cards>
+      <StyledIframe url="http://localhost:3000/?embed=1#/swap?outputCurrency=0xa4f93159ce0a4b533b443c74b89967c60a5969f8" />
+
     </Page>
   )
 }
