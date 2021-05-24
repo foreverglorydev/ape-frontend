@@ -1,5 +1,4 @@
 import { AbiItem } from 'web3-utils'
-import poolsConfig from 'config/constants/pools'
 import masterChefABI from 'config/abi/masterchef.json'
 import sousChefABI from 'config/abi/sousChef.json'
 import erc20ABI from 'config/abi/erc20.json'
@@ -14,14 +13,13 @@ const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
 // BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
-// const nonBnbPools = poolsConfig.filter((p) => p.stakingTokenName !== QuoteToken.BNB)
-// const bnbPools = poolsConfig.filter((p) => p.stakingTokenName === QuoteToken.BNB)
-// const nonMasterPools = poolsConfig.filter((p) => p.sousId !== 0)
+
 const web3 = getWeb3()
 const masterChefContract = new web3.eth.Contract((masterChefABI as unknown) as AbiItem, getMasterChefAddress())
 
 export const fetchPoolsAllowance = async (account) => {
-  const nonBnbPools = await getPools()
+  const pools = await getPools()
+  const nonBnbPools = pools.filter((p) => p.stakingTokenName !== QuoteToken.BNB)
   const calls = nonBnbPools.map((p) => ({
     address: p.stakingTokenAddress[CHAIN_ID],
     name: 'allowance',

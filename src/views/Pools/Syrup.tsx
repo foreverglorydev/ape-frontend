@@ -115,7 +115,7 @@ const Farm: React.FC = () => {
       <FlexLayout>
         <Route exact path={`${path}`}>
           {isLoadingPools ? (
-            <LoadingContainer className="something">
+            <LoadingContainer>
               <Spinner />
             </LoadingContainer>
           ) : (
