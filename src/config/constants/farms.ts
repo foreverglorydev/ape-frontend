@@ -277,6 +277,81 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
+    pid: 54,
+    lpSymbol: 'NEAR-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xb75724635a6cda850f08b578f23a568cedba099d', // NEAR-BNB BananaPair
+    },
+    tokenSymbol: 'NEAR',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x1fa4a73a3f0133f0025378af00236f3abdee5d63', // NEAR Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 56,
+    lpSymbol: 'SNX-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0x8b1f1f28a8ccbaa8a8bc1582921ece97ce99d9e1', // SNX-BNB BananaPair
+    },
+    tokenSymbol: 'SNX',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x9ac983826058b8a9c7aa1c9171441191232e8404', // SNX Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 57,
+    lpSymbol: 'BLZ-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0x015f807d0186f7e62810d0c597a23cb19ff57e4d', // BLZ-BNB BananaPair
+    },
+    tokenSymbol: 'BLZ',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x935a544bf5816e3a7c13db2efe3009ffda0acda2', // BLZ Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 58,
+    lpSymbol: 'TAPE-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0x756d4406169273d99aac8366cf5eaf7865d6a9b9', // TAPE-BNB BananaPair
+    },
+    tokenSymbol: 'TAPE',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0xf63400ee0420ce5b1ebdee0c942d7de1c734a41f', // TAPE Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 59,
+    lpSymbol: 'CELR-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xb7f42e58cf2364ac994f93f7aff3b158cfa3dc76', // CELER-BNB BananaPair
+    },
+    tokenSymbol: 'CELR',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x1f9f6a696c6fd109cd3956f45dc709d2b3902163', // CELER Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
     pid: 53,
     lpSymbol: 'COTI-BNB LP',
     lpAddresses: {
@@ -623,7 +698,21 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.ETH,
     quoteTokenAdresses: contracts.eth,
   },
-
+  {
+    pid: 55,
+    lpSymbol: 'MOONLIGHT-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663', // Placeholder
+      56: '0xe6de19ae48969af0a6f78271e41d3ce47580eafb', // MOONLIGHT-BNB ApePair
+    },
+    tokenSymbol: 'MOONLIGHT',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a', // Placeholder
+      56: '0xb1ced2e320e3f4c8e3511b1dc59203303493f382', // MOONLIGHT Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
   {
     pid: 24,
     lpSymbol: 'NAUT-BNB LP',

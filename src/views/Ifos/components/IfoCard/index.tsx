@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Card, CardBody, CardRibbon } from '@apeswapfinance/uikit'
-import { BSC_BLOCK_TIME } from 'config'
+import { BSC_BLOCK_TIME, ZERO_ADDRESS } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
@@ -15,6 +15,7 @@ import IfoCardDescription from './IfoCardDescription'
 import IfoCardDetails from './IfoCardDetails'
 import IfoCardTime from './IfoCardTime'
 import IfoCardContribute from './IfoCardContribute'
+import IfoCardBNBContribute from './IfoCardBNBContribute'
 
 export interface IfoCardProps {
   ifo: Ifo
@@ -81,6 +82,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
     tokenDecimals,
     releaseBlockNumber,
     burnedTxUrl,
+    startBlock: start,
   } = ifo
   const [state, setState] = useState({
     isLoading: true,
@@ -110,7 +112,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
         contract.methods.raisingAmount().call(),
         contract.methods.totalAmount().call(),
       ])
-      const startBlockNum = parseInt(startBlock, 10)
+      const startBlockNum = start || parseInt(startBlock, 10)
       const endBlockNum = parseInt(endBlock, 10)
 
       const status = getStatus(currentBlock, startBlockNum, endBlockNum)
@@ -138,10 +140,11 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
     }
 
     fetchProgress()
-  }, [currentBlock, contract, releaseBlockNumber, setState])
+  }, [currentBlock, contract, releaseBlockNumber, setState, start])
 
   const isActive = state.status === 'live'
   const isFinished = state.status === 'finished'
+  const ContributeCard = currencyAddress === ZERO_ADDRESS ? IfoCardBNBContribute : IfoCardContribute
 
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
@@ -157,7 +160,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
         />
         {!account && <UnlockButton fullWidth />}
         {(isActive || isFinished) && (
-          <IfoCardContribute
+          <ContributeCard
             address={address}
             currency={currency}
             currencyAddress={currencyAddress}
