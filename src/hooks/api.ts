@@ -246,10 +246,21 @@ export const fetchPools = async () => {
   const resp = await fetch(url)
   const data = await resp.json()
   const poolsList = data.map(
-    (promo): PoolConfig => {
+    (pool): PoolConfig => {
       return {
-        sousId: Number(promo.sousId),
-        ...promo,
+        sousId: Number(pool.sousId),
+        tokenName: pool.tokenName,
+        image: pool.image,
+        stakingTokenName: pool.stakingTokenName,
+        stakingTokenAddress: pool.stakingTokenAddress,
+        contractAddress: pool.contractAddress,
+        poolCategory: pool.poolCategory,
+        projectLink: pool.projectLink,
+        harvest: pool.harvest,
+        tokenPerBlock: pool.tokenPerBlock,
+        sortOrder: pool.sortOrder,
+        isFinished: pool.isFinished,
+        tokenDecimals: Number(pool.tokenDecimals),
       }
     },
   )
