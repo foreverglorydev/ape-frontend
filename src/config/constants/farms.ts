@@ -307,6 +307,66 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
+    pid: 57,
+    lpSymbol: 'BLZ-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0x015f807d0186f7e62810d0c597a23cb19ff57e4d', // BLZ-BNB BananaPair
+    },
+    tokenSymbol: 'BLZ',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x935a544bf5816e3a7c13db2efe3009ffda0acda2', // BLZ Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 58,
+    lpSymbol: 'TAPE-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0x756d4406169273d99aac8366cf5eaf7865d6a9b9', // TAPE-BNB BananaPair
+    },
+    tokenSymbol: 'TAPE',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0xf63400ee0420ce5b1ebdee0c942d7de1c734a41f', // TAPE Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 59,
+    lpSymbol: 'CELR-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xb7f42e58cf2364ac994f93f7aff3b158cfa3dc76', // CELER-BNB BananaPair
+    },
+    tokenSymbol: 'CELR',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x1f9f6a696c6fd109cd3956f45dc709d2b3902163', // CELER Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 60,
+    lpSymbol: 'SHIB-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xc0afb6078981629f7eae4f2ae93b6dbea9d7a7e9', // SHIBA-BNB BananaPair
+    },
+    tokenSymbol: 'SHIB',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x2859e4544c4bb03966803b044a93563bd2d0dd4d', // SHIBA Token
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
     pid: 53,
     lpSymbol: 'COTI-BNB LP',
     lpAddresses: {
