@@ -103,7 +103,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: 'https://obiedobo.gitbook.io/apeswap-finance/',
+        href: 'https://apeswap.gitbook.io/apeswap-finance/',
       },
       {
         label: 'Blog',
@@ -120,6 +120,10 @@ const config: MenuEntry[] = [
       {
         label: 'ApeTV',
         href: 'https://anchor.fm/apetv',
+      },
+      {
+        label: 'Bug Bounty Program',
+        href: 'https://apeswap.gitbook.io/apeswap-finance/security/bug-bounty-program',
       },
       {
         label: 'GEMZ Audit Report',
