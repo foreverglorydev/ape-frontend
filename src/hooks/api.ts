@@ -243,8 +243,8 @@ export const getPromosHome = async () => {
 let poolPromise
 
 export const fetchPools = async () => {
-  const GET_ALL = window.location.href.includes('https://apeswap.finance/');
-  const filter = GET_ALL ? '?public=1' : '';
+  const GET_ALL = window.location.href.includes('https://apeswap.finance/')
+  const filter = GET_ALL ? '?public=1' : ''
   const url = `${baseUrlStrapi}/pools${filter}`
   const resp = await fetch(url)
   const data = await resp.json()
@@ -278,6 +278,6 @@ export const getPools = async () => {
 }
 
 const mappingImage = (pool) => {
-  if(pool.image_path) return pool.image_path.url
+  if (pool.image_path) return pool.image_path.url
   return `/images/tokens/${pool.image || `${pool.tokenName}.svg`}`
 }
