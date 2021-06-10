@@ -513,7 +513,7 @@ const Farms: React.FC = () => {
     const sortFarms = (farms: FarmWithStakedValue[]): FarmWithStakedValue[] => {
       switch (sortOption) {
         case 'apr':
-          return orderBy(farms, (farm: FarmWithStakedValue) => farm.apr, sortDirection)
+          return orderBy(farms, (farm: FarmWithStakedValue) => farm.apr.toNumber(), sortDirection)
         case 'multiplier':
           return orderBy(
             farms,
@@ -538,6 +538,8 @@ const Farms: React.FC = () => {
     } else {
       farmsStaked = stakedOnly ? farmsList(stakedInactiveFarms) : farmsList(inactiveFarms)
     }
+
+    debugger; // eslint-disable-line no-debugger
 
     return sortFarms(farmsStaked)
     // .slice(0, numberOfFarmsVisible)
