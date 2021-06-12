@@ -122,6 +122,8 @@ const StyledButton = styled(Button)`
   font-size: 16px;
   line-height: 24px;
   color: #a16552;
+  width: 193px;
+  height: 36px;
 `
 
 const StyledMonkey = styled.img`
