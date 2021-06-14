@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Card, CardBody, CardRibbon } from '@apeswapfinance/uikit'
-import { BSC_BLOCK_TIME } from 'config'
+import { BSC_BLOCK_TIME, ZERO_ADDRESS } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
-import { useIfoContract } from 'hooks/useContract'
+import { useSafeIfoContract } from 'hooks/useContract'
 import UnlockButton from 'components/UnlockButton'
 import IfoCardHeader from './IfoCardHeader'
 import IfoCardProgress from './IfoCardProgress'
@@ -15,6 +15,7 @@ import IfoCardDescription from './IfoCardDescription'
 import IfoCardDetails from './IfoCardDetails'
 import IfoCardTime from './IfoCardTime'
 import IfoCardContribute from './IfoCardContribute'
+import IfoCardBNBContribute from './IfoCardBNBContribute'
 
 export interface IfoCardProps {
   ifo: Ifo
@@ -81,6 +82,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
     tokenDecimals,
     releaseBlockNumber,
     burnedTxUrl,
+    startBlock: start,
   } = ifo
   const [state, setState] = useState({
     isLoading: true,
@@ -95,7 +97,8 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
     endBlockNum: 0,
   })
   const { account } = useWallet()
-  const contract = useIfoContract(address)
+
+  const contract = useSafeIfoContract(address)
 
   const currentBlock = useBlock()
   const TranslateString = useI18n()
@@ -104,13 +107,17 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
 
   useEffect(() => {
     const fetchProgress = async () => {
+      if (!address) {
+        // Allow IAO details to be shown before contracts are deployed
+        return
+      }
       const [startBlock, endBlock, raisingAmount, totalAmount] = await Promise.all([
         contract.methods.startBlock().call(),
         contract.methods.endBlock().call(),
         contract.methods.raisingAmount().call(),
         contract.methods.totalAmount().call(),
       ])
-      const startBlockNum = parseInt(startBlock, 10)
+      const startBlockNum = start || parseInt(startBlock, 10)
       const endBlockNum = parseInt(endBlock, 10)
 
       const status = getStatus(currentBlock, startBlockNum, endBlockNum)
@@ -138,10 +145,11 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
     }
 
     fetchProgress()
-  }, [currentBlock, contract, releaseBlockNumber, setState])
+  }, [currentBlock, contract, releaseBlockNumber, setState, start, address])
 
   const isActive = state.status === 'live'
   const isFinished = state.status === 'finished'
+  const ContributeCard = currencyAddress === ZERO_ADDRESS ? IfoCardBNBContribute : IfoCardContribute
 
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
@@ -149,6 +157,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
         <IfoCardHeader ifoId={id} name={name} subTitle={subTitle} />
         <IfoCardProgress progress={state.progress} />
         <IfoCardTime
+          isComingSoon={!address}
           isLoading={state.isLoading}
           status={state.status}
           secondsUntilStart={state.secondsUntilStart}
@@ -157,7 +166,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
         />
         {!account && <UnlockButton fullWidth />}
         {(isActive || isFinished) && (
-          <IfoCardContribute
+          <ContributeCard
             address={address}
             currency={currency}
             currencyAddress={currencyAddress}
@@ -179,6 +188,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo, notLp }) => {
           raisingAmount={state.raisingAmount}
           totalAmount={state.totalAmount}
           burnedTxUrl={burnedTxUrl}
+          address={address}
         />
         <IfoCardDescription description={description} />
       </CardBody>

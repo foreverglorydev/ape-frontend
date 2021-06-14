@@ -139,22 +139,42 @@ const ifos: Ifo[] = [
   },
   {
     id: 'aperocket',
-    address: '0xA907d38Ed8aFEe131E9E3AAf0510386E9195fDB0',
-    isActive: true,
+    address: '0x8AC93DC2F83cEf4032FbC71070Dc5Af06fd9D105',
+    isActive: false,
     name: 'ApeRocket',
     subTitle: 'DeFi yield farming aggregator and optimizer for Binance Smart Chain.',
     description:
       'ApeRocket Finance is a suite of products in Decentralized Finance (DeFi) that provides yield optimization strategies through the Binance Smart Chain, using ApeSwap liquidity.',
-    launchDate: 'May. 20',
+    launchDate: 'May. 25',
     launchTime: '03:00 UTC',
     saleAmount: ' 55,556 SPACE',
     raiseAmount: '$500,000',
     projectSiteUrl: 'https://aperocket.finance',
     currency: 'BNB',
-    currencyAddress: '0xf65c1c0478efde3c19b49ecbe7acc57bb6b1d713',
+    currencyAddress: '0x0000000000000000000000000000000000000000',
     tokenDecimals: 18,
     releaseBlockNumber: 7378325,
     // burnedTxUrl: 'https://bscscan.com/tx/0x938454e722fdef0a2f34b16f16bed50f6deb692b942331a9a6e2cf96977e116b',
+  },
+  {
+    id: 'hifi',
+    // address: '0xF9F1B0945A31FB2Ea429014e58fCA47dAEee4743', // Leave empty for "Coming Soon!"
+    address: '0x4D5e1E722e9280d44C564ef3FC14E0B03a50ad47', // IAO Aux contract!"
+    isActive: true,
+    name: 'Hifi',
+    subTitle: 'Decentralized retro gaming ecosystem.',
+    description:
+      'HiFi is a decentralized retro gaming ecosystem driven by its community. It uses staking and gameplay mining participation rewards to create a completely new DeFi gaming experience.',
+    launchDate: 'June 11',
+    launchTime: '03:00 UTC',
+    saleAmount: '120,000,000 HIFI',
+    raiseAmount: '$600,000',
+    projectSiteUrl: 'http://hifigamingsociety.org/',
+    currency: 'BNB',
+    currencyAddress: '0x0000000000000000000000000000000000000000',
+    tokenDecimals: 18,
+    releaseBlockNumber: 8135430, // block to start showing contract details
+    // burnedTxUrl: '',
   },
 ]
 

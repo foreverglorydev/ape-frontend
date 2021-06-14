@@ -519,7 +519,7 @@ const pools: PoolConfig[] = [
     projectLink: 'https://ont.io',
     harvest: true,
     tokenPerBlock: `0.009645061728000000`,
-    sortOrder: 1,
+    sortOrder: 2,
     isFinished: false,
     tokenDecimals: 18,
   },
@@ -561,7 +561,7 @@ const pools: PoolConfig[] = [
     projectLink: 'https://www.bitfresh.win',
     harvest: true,
     tokenPerBlock: `3.858024691358025`,
-    sortOrder: 2,
+    sortOrder: 1.01,
     reflect: true,
     isFinished: false,
     tokenDecimals: 18,
@@ -608,7 +608,7 @@ const pools: PoolConfig[] = [
     sortOrder: 3,
     reflect: true,
     isFinished: false,
-    tokenDecimals: 18,
+    tokenDecimals: 8,
   },
   {
     sousId: 27,
@@ -786,6 +786,271 @@ const pools: PoolConfig[] = [
     isFinished: false,
     tokenDecimals: 18,
   },
+  {
+    sousId: 36,
+    tokenName: 'MOONLIGHT',
+    image: 'MOONLIGHT.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0xe44d4786e9d367a475a0789dc618c76a2b2d05ec', // ApeRewardPool
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://moonlighttoken.com/',
+    harvest: true,
+    tokenPerBlock: `15098621`,
+    sortOrder: 3,
+    reflect: true,
+    isFinished: false,
+    tokenDecimals: 9,
+  },
+  {
+    sousId: 37,
+    tokenName: 'SPACE',
+    image: 'SPACE.svg',
+    stakingTokenName: 'SPACE-BNB',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xd0F82498051067E154d1dcd3d88fA95063949D7e', // SPACE-BNB
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0xfE615dA45dBC8C763851A34Cf14d65B0056a2D8A', // ApeRewardPool
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://aperocket.finance/',
+    harvest: true,
+    tokenPerBlock: `0.02755704365`,
+    sortOrder: 1,
+    reflect: false,
+    isFinished: true,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 38,
+    tokenName: 'TAPE',
+    image: 'TAPE.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0x4b5ee00fcce905cc2861c8255b368cf9f114c667', // ApeRewardPool
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://apetools.co/',
+    harvest: true,
+    tokenPerBlock: `2.314814814814815`,
+    sortOrder: 3,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 39,
+    tokenName: 'SPACE',
+    image: 'SPACE.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0x52634C2763a6DADA2028440d0892431b04809d88', // ApeRewardPool
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://aperocket.finance',
+    harvest: true,
+    tokenPerBlock: `0.009902199074074074`,
+    sortOrder: 2,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 40,
+    tokenName: 'pCWS',
+    image: 'pCWS.png',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0x1C62ac4D59FFACb35BFfcDb9fcd8b368a528B544', // pCWS
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://game.seascape.network/',
+    harvest: true,
+    tokenPerBlock: `0.011574074074074074`,
+    sortOrder: 2,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 41,
+    tokenName: 'TYPH',
+    image: 'TYPH.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0x222c821620480f7482238dd3B71A7051d02c9624',
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://typhoon.network/',
+    harvest: true,
+    tokenPerBlock: `0.413359788359788350`,
+    sortOrder: 2,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 42,
+    tokenName: 'bMXX',
+    image: 'bMXX.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0x73dAF9AfEBB271007167f3f0D140a35f5b1a7058',
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://multiplier.finance/',
+    harvest: true,
+    tokenPerBlock: `0.014467592592592593 `,
+    sortOrder: 3,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 43,
+    tokenName: 'HIFI',
+    image: 'HIFI.svg',
+    stakingTokenName: 'HIFI-BNB',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xf093ce6778c4d7d99c23f714297fff15a661d354', // HIFI-BNB
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0x454155ac563a382458eda66fdaf59237d7230dc9', // ApeRewardPool
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'http://hifigamingsociety.org',
+    harvest: true,
+    tokenPerBlock: `49.6031746031746`,
+    sortOrder: 1,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 44,
+    tokenName: 'CRUSH',
+    image: 'BCA.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0x9407026d236deae22cc1f3c419a9e47cbfcfe9e5',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0xa439dec59e6ef0ef2c03564fcd72b181054e3e60',
+      56: '0xAC4409CC7709783c7CCEb6c6e69Fe42fAD192623',
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'http://bitcrusharcade.io',
+    harvest: true,
+    tokenPerBlock: `0.2314816600938735`,
+    sortOrder: 4,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 45,
+    tokenName: 'GRAND',
+    image: 'GRAND.png',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x3996F919980778cb0fc1982087cAc01089e33fe7',
+      56: '0x52F5f16F90B897AB9C2c7d3028FEF9e11B2BB485',
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://www.thegrandbanks.finance/',
+    harvest: true,
+    tokenPerBlock: `0.000231481481481481`,
+    sortOrder: 5,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+  {
+    sousId: 46,
+    tokenName: 'GMR',
+    image: 'gmr.png',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299', // GNANA
+    },
+    contractAddress: {
+      97: '0x0e34e04310e44329f1dafd28c9922ee4517ac397',
+      56: '0xfd9c606d3Ff6AC1b044C4F5C0A9Fa934634bD2e8',
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://www.gmr.finance/',
+    harvest: true,
+    tokenPerBlock: `1257518.026451967`,
+    sortOrder: 6,
+    reflect: true,
+    isFinished: false,
+    tokenDecimals: 9,
+  },
+  {
+    sousId: 47,
+    tokenName: 'WINGS',
+    image: 'WINGS.svg',
+    stakingTokenName: 'BANANA',
+    stakingTokenAddress: {
+      97: '0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a',
+      56: '0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95',
+    },
+    contractAddress: {
+      97: '0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d',
+      56: '0x15C4200e694e4A0223191Ec717906CBA82F54745',
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://jetswap.finance/',
+    harvest: true,
+    tokenPerBlock: `0.009156250000000000`,
+    sortOrder: 6,
+    reflect: true,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
+
   /* {
     sousId: 45,
     tokenName: 'LINA',
