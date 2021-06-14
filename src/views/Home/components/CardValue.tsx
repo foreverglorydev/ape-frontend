@@ -23,6 +23,7 @@ const CardValue: React.FC<CardValueProps> = ({
   color,
   text,
   fontWeight,
+  fontFamily,
   differentFontSize,
 }) => {
   const { countUp, update } = useCountUp({
@@ -41,6 +42,8 @@ const CardValue: React.FC<CardValueProps> = ({
     ${({ theme }) => theme.mediaQueries.xl} {
       font-size: ${differentFontSize || fontSize};
     }
+
+    font-family: ${fontFamily || 'titan-one'};
   `
 
   const updateValue = useRef(update)

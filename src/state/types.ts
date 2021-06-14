@@ -35,6 +35,12 @@ export interface Profile {
   rarestNft: Nft
 }
 
+export interface ProfileTrading {
+  ownedNfts: Nft[]
+  rarestNft: Nft
+  address: string
+}
+
 export interface Stats {
   aggregateApr: number
   aggregateAprPerDay: number
@@ -142,6 +148,12 @@ export interface PoolsState {
 }
 
 export interface ProfileState {
+  isInitialized: boolean
+  isLoading: boolean
+  data: Profile
+}
+
+export interface TradingState {
   isInitialized: boolean
   isLoading: boolean
   data: Profile

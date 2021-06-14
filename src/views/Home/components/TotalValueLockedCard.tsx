@@ -54,6 +54,7 @@ const StyledFlex = styled(Flex)`
 const StyledImage = styled.img`
   opacity: 0.1;
   position: absolute;
+  stroke: red;
   right: 20px;
   top: 30px;
 
