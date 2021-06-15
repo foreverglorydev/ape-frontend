@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Card, Text, Flex, ArrowDropDownIcon } from '@apeswapfinance/uikit'
 
 const ParticipatingTokens = () => {
-
   const StyledCard = styled(Card)`
     background-image: url('/images/trading-card.svg');
     background-repeat: no-repeat;
@@ -15,7 +14,7 @@ const ParticipatingTokens = () => {
 
   const StyledTextSmaller = styled(Text)`
     font-weight: bold;
-    line-height: 37px;
+    line-height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +27,8 @@ const ParticipatingTokens = () => {
     ${({ theme }) => theme.mediaQueries.xs} {
       font-size: 25px;
       max-width: 100%;
+      margin-left: 50px;
+      margin-right: 50px;
     }
   `
 
@@ -68,20 +69,22 @@ const ParticipatingTokens = () => {
   `
 
   return (
-      <StyledCard>
-        <StyledTextSmaller color="white" fontFamily="poppins">Participating Tokens</StyledTextSmaller>
-        <Flex justifyContent="center" alignItems="center">
-          <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <StyledToken src="/images/tokens/banana.svg" alt="banana-token" />
-            <StyledTokenText>BANANA</StyledTokenText>
-          </Flex>
-          <StyledArrow />
-          <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <StyledToken src="/images/tokens/banana.svg" alt="banana-token" />
-            <StyledTokenText>BANANA</StyledTokenText>
-          </Flex>
+    <StyledCard>
+      <StyledTextSmaller color="white" fontFamily="poppins">
+        Participating Tokens
+      </StyledTextSmaller>
+      <Flex justifyContent="center" alignItems="center">
+        <Flex flexDirection="column" justifyContent="center" alignItems="center">
+          <StyledToken src="/images/tokens/banana.svg" alt="banana-token" />
+          <StyledTokenText>BANANA</StyledTokenText>
         </Flex>
-      </StyledCard>
+        <StyledArrow />
+        <Flex flexDirection="column" justifyContent="center" alignItems="center">
+          <StyledToken src="/images/tokens/banana.svg" alt="banana-token" />
+          <StyledTokenText>BANANA</StyledTokenText>
+        </Flex>
+      </Flex>
+    </StyledCard>
   )
 }
 

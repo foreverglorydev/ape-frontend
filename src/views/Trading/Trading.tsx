@@ -19,19 +19,17 @@ const StyledHeader = styled(Text)`
 `
 
 const StyledText = styled(Text)`
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 
-font-family: Poppins;
-font-weight: bold;
-font-size: 12px;
-line-height: 22px;
-display: flex;
-align-items: center;
-text-transform: uppercase;
-
-${({ theme }) => theme.mediaQueries.sm} {
-  font-size: 15px;
-}
-
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 15px;
+  }
 `
 
 const StyledTR = styled(Flex)<{ ranking: number }>`
@@ -52,7 +50,10 @@ const StyledTR = styled(Flex)<{ ranking: number }>`
   margin-bottom: 10px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    max-width: 537px;
+    max-width: 400px;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    min-width: 537px;
   }
 `
 
@@ -94,6 +95,8 @@ const StyledAvatar = styled.img`
 
 const StyledFlexColumn = styled(Flex)`
   margin-right: 10px;
+  justify-content: center;
+  align-items: center;
 
   ${({ theme }) => theme.mediaQueries.xs} {
     margin-right: 30px;
@@ -104,11 +107,17 @@ const StyledFlexColumn = styled(Flex)`
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
-    margin-right: 70px;
+    margin-right: 30px;
   }
   ${({ theme }) => theme.mediaQueries.lg} {
     margin-right: 50px;
   }
+`
+
+const StyledFlexColumnLast = styled(Flex)`
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
 `
 
 const StyledHeading = styled(Text)`
@@ -124,7 +133,7 @@ const StyledHeading = styled(Text)`
 const Table = ({ data }) => {
   return (
     <div style={{ width: '100%' }}>
-      <StyledHeading color="secondary" fontFamily="poppins" fontSize="24px">
+      <StyledHeading color="text" fontFamily="poppins" fontSize="24px">
         Season Results
       </StyledHeading>
       <div>
@@ -139,29 +148,29 @@ const Table = ({ data }) => {
                   {/* <StyledAvatar src={image} alt="nfa" /> */}
                 </Flex>
                 <StyledFlexColumn flexDirection="column" justifyContent="center" ml="50px">
-                  <StyledHeader color={row.ranking <= 3 ? "white" : "secondary"}>Wallet</StyledHeader>
-                  <StyledText color={row.ranking <= 3 ? "white" : "secondary"}>
+                  <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Wallet</StyledHeader>
+                  <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>
                     {row.address.substr(1, 3)}....{row.address.substr(row.address.length - 5)}
                   </StyledText>
                 </StyledFlexColumn>
                 <StyledFlexColumn flexDirection="column" justifyContent="center">
-                  <StyledHeader color={row.ranking <= 3 ? "white" : "secondary"}>Volume</StyledHeader>
-                  <StyledText color={row.ranking <= 3 ? "white" : "secondary"}>
+                  <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Volume</StyledHeader>
+                  <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>
                     {row.totalTradedUsd.toLocaleString(undefined, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
                     })}
                   </StyledText>
                 </StyledFlexColumn>
-                <StyledFlexColumn flexDirection="column" justifyContent="center">
-                  <StyledHeader color={row.ranking <= 3 ? "white" : "secondary"}>Reward</StyledHeader>
-                  <StyledText color={row.ranking <= 3 ? "white" : "secondary"} >
+                <StyledFlexColumnLast flexDirection="column" justifyContent="center">
+                  <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Reward</StyledHeader>
+                  <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>
                     {row.pendingBananaRewards.toLocaleString(undefined, {
                       maximumFractionDigits: 0,
                     })}{' '}
                     BANANA
                   </StyledText>
-                </StyledFlexColumn>
+                </StyledFlexColumnLast>
               </StyledTR>
             )
           })}
@@ -295,11 +304,7 @@ const Trading = () => {
 
   return (
     <div>
-      {/* <Heading as="h2" size="lg" mb="24px" mt="24px" color="secondary">
-        Season Results
-      </Heading> */}
       <Table data={stub} />
-      <div>STUB {stub2}</div>
       {/* {data && <Table data={stub} />} */}
     </div>
   )

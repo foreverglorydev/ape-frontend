@@ -44,9 +44,9 @@ const HeroCard = () => {
     max-width: 200px;
 
     ${({ theme }) => theme.mediaQueries.xs} {
-        fontsize: 14px;
+      fontsize: 14px;
     }
-    
+
     ${({ theme }) => theme.mediaQueries.sm} {
       max-width: 100%;
     }
@@ -67,9 +67,9 @@ const HeroCard = () => {
     display: flex;
 
     ${({ theme }) => theme.mediaQueries.xs} {
-        width: 166px;
+      width: 166px;
     }
-   
+
     ${({ theme }) => theme.mediaQueries.sm} {
       width: 193px;
     }
@@ -87,11 +87,11 @@ const HeroCard = () => {
     margin-right: 20px;
     margin-left: -80px;
     ${({ theme }) => theme.mediaQueries.xs} {
-        height: 128px;
-        width: 113px;
-        margin-top: 30px;
-        margin-right: 20px;
-        margin-left: -120px;
+      height: 128px;
+      width: 113px;
+      margin-top: 30px;
+      margin-right: 20px;
+      margin-left: -120px;
     }
     ${({ theme }) => theme.mediaQueries.sm} {
       height: 190px;

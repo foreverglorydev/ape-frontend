@@ -30,7 +30,7 @@ const getProfile = async (address: string): Promise<ProfileTrading> => {
     return {
       ownedNfts,
       rarestNft,
-      address
+      address,
     } as ProfileTrading
   } catch (error) {
     return null

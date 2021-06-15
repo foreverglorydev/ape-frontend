@@ -53,7 +53,7 @@ const Trading = () => {
       <Heading as="h2" size="xl" mb="24px" mt="24px" color="secondary">
         Pair: BANANA/BNB
       </Heading> */}
-      <StyledHeading color="secondary" fontFamily="poppins" fontSize="24px">
+      <StyledHeading color="text" fontFamily="poppins" fontSize="24px">
         Season Results
       </StyledHeading>
       <StyledFlexContainer>

@@ -57,7 +57,7 @@ const StyledAvatar = styled.img`
   position: absolute;
   margin-top: -100px;
   margin-left: 30px;
-  
+
   border-radius: 50px;
   border: solid 2px #ffb300;
   background-color: white;
@@ -72,7 +72,7 @@ const StyledAvatar = styled.img`
     height: 70px;
     width: 70px;
     position: absolute;
-    margin-top: -100px;
+    margin-top: -82px;
     margin-left: 30px;
   }
   ${({ theme }) => theme.mediaQueries.xl} {
@@ -81,8 +81,6 @@ const StyledAvatar = styled.img`
     height: 100px;
     width: 100px;
   }
-
-
 `
 
 const StyledText = styled(Text)`
