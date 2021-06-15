@@ -22,6 +22,13 @@ const ParticipatingTokens = () => {
     text-align: center;
     text-transform: uppercase;
     margin-top: 12px;
+
+    font-size: 20px;
+
+    ${({ theme }) => theme.mediaQueries.xs} {
+      font-size: 25px;
+      max-width: 100%;
+    }
   `
 
   const StyledToken = styled.img`
@@ -53,7 +60,7 @@ const ParticipatingTokens = () => {
 
   return (
       <StyledCard>
-        <StyledTextSmaller fontSize="25px" color="white" fontFamily="poppins">Participating Tokens</StyledTextSmaller>
+        <StyledTextSmaller color="white" fontFamily="poppins">Participating Tokens</StyledTextSmaller>
         <Flex justifyContent="center" alignItems="center">
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <StyledToken src="/images/tokens/banana.svg" alt="banana-token" />

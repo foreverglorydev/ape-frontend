@@ -15,12 +15,37 @@ const Trading = () => {
   // }: { season?: string; pair?: string } = useParams()
 
   const StyledFlex = styled(Flex)`
-    width: 553px;
-    margin-left: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    ${({ theme }) => theme.mediaQueries.md} {
+      margin-left: 20px;
+      max-width: 553px;
+      margin-bottom: 0px;
+    }
+  `
+
+  const StyledFlexContainer = styled(Flex)`
+    flex-direction: column-reverse;
+
+    ${({ theme }) => theme.mediaQueries.md} {
+      flex-direction: row;
+    }
+  `
+
+  const StyledHeading = styled(Text)`
+    font-weight: bold;
+    display: none;
+
+    ${({ theme }) => theme.mediaQueries.md} {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
   `
 
   return (
-    <Page>
+    <Page width="1130px">
       <HeroCard />
       {/* <Heading as="h2" size="xl" mb="24px" mt="24px" color="secondary">
         Season: {season}
@@ -28,16 +53,16 @@ const Trading = () => {
       <Heading as="h2" size="xl" mb="24px" mt="24px" color="secondary">
         Pair: BANANA/BNB
       </Heading> */}
-      <Heading as="h4" size="lg" mb="24px" mt="24px" color="secondary">
+      <StyledHeading color="secondary" fontFamily="poppins" fontSize="24px">
         Season Results
-      </Heading>
-      <Flex>
+      </StyledHeading>
+      <StyledFlexContainer>
         <TradingTable />
         <StyledFlex flexDirection="column">
           <ParticipatingTokens />
           <PersonalTrading />
         </StyledFlex>
-      </Flex>
+      </StyledFlexContainer>
     </Page>
   )
 }

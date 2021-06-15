@@ -71,7 +71,7 @@ const StyledBananaReward = styled.img`
   height: 23px;
   border-radius: 50px;
   padding: 3px;
-  background-color: rgb(255,179,0, .1);
+  background-color: rgb(255, 179, 0, 0.1);
   margin-right: 9px;
 `
 
@@ -93,7 +93,16 @@ const Trading = () => {
   return (
     <div>
       {!account ? (
-        <UnlockButton fullWidth />
+        <Card>
+          <StyledCardHeader>
+            <Flex justifyContent="space-between" alignItems="center">
+              <StyledTextHeader>Your Stats</StyledTextHeader>
+            </Flex>
+          </StyledCardHeader>
+          <CardBody>
+            <UnlockButton fullWidth />
+          </CardBody>
+        </Card>
       ) : (
         <Card>
           <StyledCardHeader>

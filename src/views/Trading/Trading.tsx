@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { ColumnType, DataType, Heading, useTable, Flex } from '@apeswapfinance/uikit'
+import { ColumnType, DataType, Heading, useTable, Text, Flex } from '@apeswapfinance/uikit'
 import { useGetTradingStats } from 'hooks/api'
 
 import styled from 'styled-components'
@@ -20,22 +20,27 @@ const StyledHeader = styled.div`
 `
 
 const StyledText = styled.div`
-  font-family: Poppins;
-  font-weight: bold;
+
+font-family: Poppins;
+font-weight: bold;
+font-size: 12px;
+line-height: 22px;
+display: flex;
+align-items: center;
+text-transform: uppercase;
+color: #ffffff;
+
+${({ theme }) => theme.mediaQueries.sm} {
   font-size: 15px;
-  line-height: 22px;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  color: #ffffff;
+}
+
 `
 
 const StyledTR = styled(Flex)<{ ranking: number }>`
   padding: 16px;
   text-align: center;
   font-family: 'Poppins';
-  max-width: 537px;
-
+  width: 100%;
   background: ${({ ranking }) =>
     (ranking === 1 && 'linear-gradient(90.21deg, #FFB300 0.97%, #FCD988 76.73%, #FFB300 117.33%)') ||
     (ranking === 2 &&
@@ -47,6 +52,10 @@ const StyledTR = styled(Flex)<{ ranking: number }>`
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 10px;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    max-width: 537px;
+  }
 `
 
 const StyledRanking = styled.div<{ ranking: number }>`
@@ -85,9 +94,41 @@ const StyledAvatar = styled.img`
   background-color: red;
 `
 
+const StyledFlexColumn = styled(Flex)`
+  margin-right: 10px;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    margin-right: 30px;
+  }
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    margin-right: 50px;
+  }
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    margin-right: 70px;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    margin-right: 50px;
+  }
+`
+
+const StyledHeading = styled(Text)`
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  ${({ theme }) => theme.mediaQueries.md} {
+    display: none;
+    margin: 0px;
+  }
+`
+
 const Table = ({ data }) => {
   return (
     <div style={{ width: '100%' }}>
+      <StyledHeading color="secondary" fontFamily="poppins" fontSize="24px">
+        Season Results
+      </StyledHeading>
       <div>
         {data &&
           data.map((row) => {
@@ -99,13 +140,13 @@ const Table = ({ data }) => {
                   <StyledRanking ranking={row.ranking}>{row.ranking}</StyledRanking>
                   {/* <StyledAvatar src={image} alt="nfa" /> */}
                 </Flex>
-                <Flex flexDirection="column" ml="50px" mr="50px" justifyContent="center">
+                <StyledFlexColumn flexDirection="column" justifyContent="center" ml="50px">
                   <StyledHeader>Wallet</StyledHeader>
                   <StyledText>
                     {row.address.substr(1, 3)}....{row.address.substr(row.address.length - 5)}
                   </StyledText>
-                </Flex>
-                <Flex flexDirection="column" mr="50px" justifyContent="center">
+                </StyledFlexColumn>
+                <StyledFlexColumn flexDirection="column" justifyContent="center">
                   <StyledHeader>Volume</StyledHeader>
                   <StyledText>
                     {row.totalTradedUsd.toLocaleString(undefined, {
@@ -113,8 +154,8 @@ const Table = ({ data }) => {
                       maximumFractionDigits: 2,
                     })}
                   </StyledText>
-                </Flex>
-                <Flex flexDirection="column" mr="50px" justifyContent="center">
+                </StyledFlexColumn>
+                <StyledFlexColumn flexDirection="column" justifyContent="center">
                   <StyledHeader>Reward</StyledHeader>
                   <StyledText>
                     {row.pendingBananaRewards.toLocaleString(undefined, {
@@ -122,7 +163,7 @@ const Table = ({ data }) => {
                     })}{' '}
                     BANANA
                   </StyledText>
-                </Flex>
+                </StyledFlexColumn>
               </StyledTR>
             )
           })}
