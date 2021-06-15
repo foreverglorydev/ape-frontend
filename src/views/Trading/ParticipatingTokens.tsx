@@ -35,9 +35,18 @@ const ParticipatingTokens = () => {
     margin-top: 12px;
     margin-right: 33px;
     margin-left: 33px;
-    width: 83px;
-    height: 82px;
+    width: 63px;
+    height: 62px;
     border-radius: 67px;
+
+    ${({ theme }) => theme.mediaQueries.xs} {
+      width: 73px;
+      height: 72px;
+    }
+    ${({ theme }) => theme.mediaQueries.sm} {
+      width: 83px;
+      height: 82px;
+    }
   `
 
   const StyledTokenText = styled.div`

@@ -9,17 +9,16 @@ import format from 'format-number'
 import getProfile from './GetProfile'
 // import { fetchProfileTrading } from 'state/trading'
 
-const StyledHeader = styled.div`
+const StyledHeader = styled(Text)`
   font-family: Poppins;
   font-size: 12px;
   line-height: 18px;
   display: flex;
   align-items: center;
   text-transform: capitalize;
-  color: #ffffff;
 `
 
-const StyledText = styled.div`
+const StyledText = styled(Text)`
 
 font-family: Poppins;
 font-weight: bold;
@@ -28,7 +27,6 @@ line-height: 22px;
 display: flex;
 align-items: center;
 text-transform: uppercase;
-color: #ffffff;
 
 ${({ theme }) => theme.mediaQueries.sm} {
   font-size: 15px;
@@ -141,14 +139,14 @@ const Table = ({ data }) => {
                   {/* <StyledAvatar src={image} alt="nfa" /> */}
                 </Flex>
                 <StyledFlexColumn flexDirection="column" justifyContent="center" ml="50px">
-                  <StyledHeader>Wallet</StyledHeader>
-                  <StyledText>
+                  <StyledHeader color={row.ranking <= 3 ? "white" : "secondary"}>Wallet</StyledHeader>
+                  <StyledText color={row.ranking <= 3 ? "white" : "secondary"}>
                     {row.address.substr(1, 3)}....{row.address.substr(row.address.length - 5)}
                   </StyledText>
                 </StyledFlexColumn>
                 <StyledFlexColumn flexDirection="column" justifyContent="center">
-                  <StyledHeader>Volume</StyledHeader>
-                  <StyledText>
+                  <StyledHeader color={row.ranking <= 3 ? "white" : "secondary"}>Volume</StyledHeader>
+                  <StyledText color={row.ranking <= 3 ? "white" : "secondary"}>
                     {row.totalTradedUsd.toLocaleString(undefined, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
@@ -156,8 +154,8 @@ const Table = ({ data }) => {
                   </StyledText>
                 </StyledFlexColumn>
                 <StyledFlexColumn flexDirection="column" justifyContent="center">
-                  <StyledHeader>Reward</StyledHeader>
-                  <StyledText>
+                  <StyledHeader color={row.ranking <= 3 ? "white" : "secondary"}>Reward</StyledHeader>
+                  <StyledText color={row.ranking <= 3 ? "white" : "secondary"} >
                     {row.pendingBananaRewards.toLocaleString(undefined, {
                       maximumFractionDigits: 0,
                     })}{' '}
