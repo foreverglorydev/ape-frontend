@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@apeswapfinance/uikit@0.10.35":
-  version "0.10.35"
-  resolved "https://npm.pkg.github.com/download/@apeswapfinance/uikit/0.10.35/7f0fa22486d29de3250d91f34f6a45a719a70f8f87add502d7d12c77ba54236c#2601ec22cd09d6c5445e18530f4ae34f575d27ea"
-  integrity sha512-WmuYfhz9cLZCR4RZooPGlZVbPSr0k7HONg1jXUgyvmXPZ3LrGjdEo8/a+xktPHoqxn4hhjc+ZHOcT/+lHyoa3Q==
+"@apeswapfinance/uikit@^0.10.37":
+  version "0.10.37"
+  resolved "https://npm.pkg.github.com/download/@apeswapfinance/uikit/0.10.37/a4a396f8cef0bb02223860ac317963d91448cf965259c089a118bc33c4fd62d4#6e02ae2c319220bd899d6a8a50501ba929f7c353"
+  integrity sha512-Pa0NDrBP0nD5OQnWp3j5veewaIEQVNWCJ9/53505Ib+4CfMeaGx/HfIsc8j4+F/Bb/2hHmmUnQVK2AbxeS0N2g==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
@@ -4460,7 +4460,7 @@ big.js@^5.2.2:
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
   integrity sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==
 
-bignumber.js@^9.0.0:
+bignumber.js@^9.0.0, bignumber.js@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.0.1.tgz#8d7ba124c882bfd8e43260c67475518d0689e4e5"
   integrity sha512-IdZR9mh6ahOBv/hYGiXyVuyCetmGJhtYkqLBpTStdhEGjegpPlUawydyaF3pbIOFynJTpllEs+NP+CS9jKFLjA==

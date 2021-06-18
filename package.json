@@ -30,7 +30,7 @@
     ]
   },
   "dependencies": {
-    "@apeswapfinance/uikit": "0.10.35",
+    "@apeswapfinance/uikit": "^0.10.37",
     "@binance-chain/bsc-use-wallet": "^0.8.1",
     "@crowdin/crowdin-api-client": "^1.10.1",
     "@ethersproject/abi": "^5.0.7",
@@ -41,7 +41,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.7",
     "apexcharts": "^3.25.0",
-    "bignumber.js": "^9.0.0",
+    "bignumber.js": "^9.0.1",
     "chart.js": "^2.9.4",
     "date-fns": "^2.16.1",
     "format-number": "^3.0.0",
