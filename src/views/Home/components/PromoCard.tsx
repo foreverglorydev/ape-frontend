@@ -86,7 +86,7 @@ const StyledCarousel = styled(Carousel)`
 
   .carousel .slider-wrapper {
     ${({ theme }) => theme.mediaQueries.sm} {
-      max-height: 260px;
+      max-height: 270px;
     }
 
       ${({ theme }) => theme.mediaQueries.md} {
@@ -162,6 +162,7 @@ const ImageContainer = styled.img`
   width: 100%;
   margin-top: 15px;
   height: auto;
+  padding: 5px;
   ${({ theme }) => theme.mediaQueries.lg} {
     margin-top: 25px;
   }
@@ -234,13 +235,15 @@ const CarouselRightArrow = ({ onClick }) => {
 }
 
 const CarouselSlide = ({ slide }) => {
+  
   return (
     <a href={`${slide.pageLink}`}>
-      {slide.image ? (
-        <ImageContainer src={slide.image} className="container-image" />
+      {slide.image 
+      ? (
+      <ImageContainer src={slide.image} className="container-image" />
       ) : (
         <CardBody>
-          <Heading size="lg" mb="24px">
+          <Heading size="lg" mb="24px" mt="5px">
             {`${slide.header}`}
           </Heading>
           <StyledDiv>
