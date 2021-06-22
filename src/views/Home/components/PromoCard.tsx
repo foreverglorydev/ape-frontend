@@ -85,14 +85,18 @@ const StyledCarousel = styled(Carousel)`
   }
 
   .carousel .slider-wrapper {
-    ${({ theme }) => theme.mediaQueries.md} {
+    ${({ theme }) => theme.mediaQueries.sm} {
+      max-height: 260px;
+    }
+
+      ${({ theme }) => theme.mediaQueries.md} {
       max-width: 450px;
     }
     ${({ theme }) => theme.mediaQueries.lg} {
       max-width: 500px;
     }
     max-width: 380px;
-    max-height: 260px;
+    max-height: 280px;
   }
 `
 
@@ -120,8 +124,10 @@ const StyledClickRight = styled.img`
   cursor: pointer;
   padding: 80px 15px;
   z-index: 100;
+  display: none;
 
   ${({ theme }) => theme.mediaQueries.sm} {
+    display: flex;
     right: 22px;
     padding: 80px 10px;
   }
@@ -135,8 +141,9 @@ const StyledClickLeft = styled.img`
   cursor: pointer;
   padding: 80px 15px;
   z-index: 100;
-
+  display: none;
   ${({ theme }) => theme.mediaQueries.sm} {
+    display: flex;
     left: 22px;
     padding: 80px 10px;
   }
@@ -151,12 +158,13 @@ const LoadingContainer = styled.div`
     margin-bottom: 60px;
   }
 `
-const ImageContainer = styled.div<{ image: string }>`
-  background: url(${({ image }) => image});
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-top: 12px;
-  height: 244px;
+const ImageContainer = styled.img`
+  width: 100%;
+  margin-top: 15px;
+  height: auto;
+  ${({ theme }) => theme.mediaQueries.lg} {
+    margin-top: 25px;
+  }
 `
 
 const PromoCard = () => {
@@ -232,7 +240,7 @@ const CarouselSlide = ({ slide }) => {
   return (
     <a href={`${slide.pageLink}`}>
       {slide.image.length !== 0 ? (
-        <ImageContainer image={getImageUrl(slide.image[0])} className="container-image" />
+        <ImageContainer src={getImageUrl(slide.image[0])} className="container-image" />
       ) : (
         <CardBody>
           <Heading size="lg" mb="24px">
