@@ -244,7 +244,7 @@ export const getPromosHome = async () => {
       text2: promo.source2,
       link: promo.link_description,
       pageLink: promo.link,
-      image: promo.image,
+      image: promo.featured[0] ? promo.featured[0].url : null,
     }
   })
 

@@ -233,14 +233,11 @@ const CarouselRightArrow = ({ onClick }) => {
   )
 }
 
-const getImageUrl = (image) => {
-  return `${baseUrlStrapi}${image.url}`
-}
 const CarouselSlide = ({ slide }) => {
   return (
     <a href={`${slide.pageLink}`}>
-      {slide.image.length !== 0 ? (
-        <ImageContainer src={getImageUrl(slide.image[0])} className="container-image" />
+      {slide.image ? (
+        <ImageContainer src={slide.image} className="container-image" />
       ) : (
         <CardBody>
           <Heading size="lg" mb="24px">
