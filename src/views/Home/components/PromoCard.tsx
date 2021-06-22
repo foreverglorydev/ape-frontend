@@ -4,7 +4,6 @@ import { Card, CardBody, Heading, Spinner, Text } from '@apeswapfinance/uikit'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import useFetchPromoHome from 'state/strapi/useFetchPromoHome'
-import { baseUrlStrapi } from 'hooks/api'
 
 const StyledPromoCard = styled(Card)`
   text-align: center;
@@ -89,7 +88,7 @@ const StyledCarousel = styled(Carousel)`
       max-height: 270px;
     }
 
-      ${({ theme }) => theme.mediaQueries.md} {
+    ${({ theme }) => theme.mediaQueries.md} {
       max-width: 450px;
     }
     ${({ theme }) => theme.mediaQueries.lg} {
@@ -235,12 +234,10 @@ const CarouselRightArrow = ({ onClick }) => {
 }
 
 const CarouselSlide = ({ slide }) => {
-  
   return (
     <a href={`${slide.pageLink}`}>
-      {slide.image 
-      ? (
-      <ImageContainer src={slide.image} className="container-image" />
+      {slide.image ? (
+        <ImageContainer src={slide.image} className="container-image" />
       ) : (
         <CardBody>
           <Heading size="lg" mb="24px" mt="5px">
