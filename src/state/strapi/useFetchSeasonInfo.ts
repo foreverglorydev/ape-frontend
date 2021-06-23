@@ -23,7 +23,8 @@ const useFetchSeasonInfo = ({ season, pair, address }: { season: number; pair: s
         console.error('Unable to fetch data:', error)
       }
     }
-    fetchData()
+    if (pair)
+      fetchData()
   }, [season, pair, address])
 
   return state

@@ -170,7 +170,7 @@ const Trading = (individual) => {
                     </Flex>
                   </Flex>
                 </Flex>
-                <ButtonSquare>TRADE HERE</ButtonSquare>
+                <ButtonSquare onClick={() => window.open('https://app.apeswap.finance/swap')}>TRADE HERE</ButtonSquare>
               </Flex>
               <img
                 width="250px"

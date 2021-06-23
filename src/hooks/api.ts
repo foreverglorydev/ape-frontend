@@ -346,8 +346,9 @@ export const getSeasonInfo = async ({ season, pair, address }: { season: number;
     individual: {},
     trading: [],
   }
-  if (season == null || !pair || !address) return info
-  const url = `${apiBaseUrl}/trading/${season}/${pair}/${address}`
+  if (season == null || !pair) return info
+  let url = `${apiBaseUrl}/trading/${season}/${pair}`
+  if (address)  url = `${apiBaseUrl}/trading/${season}/${pair}/${address}`
   const resp = await fetch(url)
   const data = await resp.json()
 
