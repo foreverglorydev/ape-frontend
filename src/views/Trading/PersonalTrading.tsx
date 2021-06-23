@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Card, CardBody, CardHeader, Flex, Heading, Text, ButtonSquare } from '@apeswapfinance/uikit'
+import { Card, CardBody, CardHeader, Flex, Heading, Text, ButtonSquare, MonkeyLight } from '@apeswapfinance/uikit'
 import { useGetPersonalTradingStats } from 'hooks/api'
 
 import styled from 'styled-components'
@@ -51,7 +51,7 @@ const StyledTextPosition = styled.div`
   color: #ffffff;
 `
 
-const StyledAvatar = styled.img`
+const StyledAvatar = styled(MonkeyLight)`
   height: 70px;
   width: 70px;
   position: absolute;
@@ -132,7 +132,9 @@ const Trading = (individual) => {
               <StyledTextPosition>{position}th</StyledTextPosition>
             </Flex>
           </StyledCardHeader>
-          <StyledAvatar src={profileImage} alt="profile avatar" />
+
+          <StyledAvatar />
+          {/* <StyledAvatar src={profileImage} alt="profile avatar" /> */}
           {/* eslint-disable-next-line no-nested-ternary */}
           {individual ? (
             <CardBody>

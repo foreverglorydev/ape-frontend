@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react'
-import { ColumnType, DataType, Heading, useTable, Text, Flex } from '@apeswapfinance/uikit'
+import React, { useMemo, useState, useEffect } from 'react'
+import { ColumnType, DataType, Heading, useTable, Text, Flex, MonkeyLight } from '@apeswapfinance/uikit'
 import { useGetTradingStats } from 'hooks/api'
 
 import styled from 'styled-components'
@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 import format from 'format-number'
 
 import getProfile from './GetProfile'
+
 // import { fetchProfileTrading } from 'state/trading'
 
 const StyledHeader = styled(Text)`
@@ -129,183 +130,59 @@ const StyledHeading = styled(Text)`
     margin: 0px;
   }
 `
+const Trading = ({ tradingStats }) => {
+  const [tradingData, setTradingData] = useState([])
 
-const Table = ({ data }) => {
-  return (
-    <div style={{ width: '100%' }}>
-      <StyledHeading color="text" fontFamily="poppins" fontSize="24px">
-        Season Results
-      </StyledHeading>
-      <div>
-        {data &&
-          data.map((row) => {
-            // const image = await getProfile(row.address)
-            // debugger; // eslint-disable-line no-debugger
-            return (
-              <StyledTR ranking={row.ranking}>
-                <Flex>
-                  <StyledRanking ranking={row.ranking}>{row.ranking}</StyledRanking>
-                  {/* <StyledAvatar src={image} alt="nfa" /> */}
-                </Flex>
-                <StyledFlexColumn flexDirection="column" justifyContent="center" ml="50px">
-                  <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Wallet</StyledHeader>
-                  <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>
-                    {row.address.substr(1, 3)}....{row.address.substr(row.address.length - 5)}
-                  </StyledText>
-                </StyledFlexColumn>
-                <StyledFlexColumn flexDirection="column" justifyContent="center">
-                  <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Volume</StyledHeader>
-                  <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>
-                    {row.totalTradedUsd.toLocaleString(undefined, {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 2,
-                    })}
-                  </StyledText>
-                </StyledFlexColumn>
-                <StyledFlexColumnLast flexDirection="column" justifyContent="center">
-                  <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Reward</StyledHeader>
-                  <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>
-                    {row.pendingBananaRewards.toLocaleString(undefined, {
-                      maximumFractionDigits: 0,
-                    })}{' '}
-                    BANANA
-                  </StyledText>
-                </StyledFlexColumnLast>
-              </StyledTR>
-            )
-          })}
-      </div>
-    </div>
-  )
-}
-
-const Trading = ({ stub }: { stub: any }) => {
-  // const {
-  //   season = '0',
-  //   pair = '0xf65c1c0478efde3c19b49ecbe7acc57bb6b1d713',
-  // }: { season?: string; pair?: string } = useParams()
-
-  // const { data: tradingStats } = useGetTradingStats(pair, season)
-
-  // const data = useMemo(() => {
-  //   let currentRank = 0
-  //   debugger; // eslint-disable-line no-debugger
-  //   return tradingStats?.map(async (stat) => {
-  //     const formatedStat: any = { ...stat }
-  //     formatedStat.address = `${stat.address.substring(0, 4)}...${stat.address.substring(stat.address.length - 4)}`
-  //     formatedStat.image = await getProfile(formatedStat.address)
-  //     formatedStat.pair = `${stat.pair.substring(0, 4)}...${stat.pair.substring(stat.pair.length - 4)}`
-  //     currentRank++
-  //     formatedStat.ranking = currentRank
-  //     formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.totalTradedUsd)
-  //     formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.pendingBananaRewards)
-  //     return formatedStat
-  //   })
-  // }, [tradingStats])
-
-  // const memoColumns = useMemo(
-  //   () => [
-  //     {
-  //       label: 'Ranking',
-  //       name: 'ranking', // accessor is the "key" in the data
-  //     },
-  //     {
-  //       label: 'Address',
-  //       name: 'address',
-  //     },
-  //     {
-  //       label: 'Volume',
-  //       name: 'totalTradedUsd',
-  //     },
-  //     {
-  //       label: 'Banana Rewards',
-  //       name: 'pendingBananaRewards',
-  //     },
-  //   ],
-  //   [],
-  // )
-  // const memoData = useMemo(() => data, [data])
-
-  // const stub = [
-  //   {
-  //     _id: '60c4fb01f05177284951a0e3',
-  //     address: '0xd74ca4b1fc803f2a5f46fdd5831759b6f3cec334',
-  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-  //     season: 1,
-  //     pendingBananaRewards: 34.508900398555106,
-  //     totalTradedUsd: 34508.9003985551,
-  //     ranking: 1,
-  //   },
-  //   {
-  //     _id: '60c4fb01f05177284951a124',
-  //     address: '0x743fc05850fac2ce03251704cda96f5e09146cac',
-  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-  //     season: 1,
-  //     pendingBananaRewards: 14.778764736753105,
-  //     totalTradedUsd: 14778.764736753106,
-  //     ranking: 2,
-  //   },
-  //   {
-  //     _id: '60c4fb01f05177284951a0d6',
-  //     address: '0xae577c2ecaba8ed21fde92f4ff0e95f7ae8d5183',
-  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-  //     season: 1,
-  //     pendingBananaRewards: 13.36405908316909,
-  //     totalTradedUsd: 13364.05908316909,
-  //     ranking: 3,
-  //   },
-  //   {
-  //     _id: '60c4fb01f05177284951a0c7',
-  //     address: '0x861576f573b0a1baf1bf7f33267678d13d44d4ea',
-  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-  //     season: 1,
-  //     pendingBananaRewards: 11.52014133169429,
-  //     totalTradedUsd: 11520.141331694289,
-  //     ranking: 4,
-  //   },
-  //   {
-  //     _id: '60c4fb01f05177284951a136',
-  //     address: '0xb1a5d4460453747f0106c07838c92743243ac551',
-  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-  //     season: 1,
-  //     pendingBananaRewards: 11.291199062464795,
-  //     totalTradedUsd: 11291.199062464795,
-  //     ranking: 5,
-  //   },
-  //   {
-  //     _id: '60c4fb01f05177284951a104',
-  //     address: '0x232231e859cd568a0fc7fb91d1a8ede119d48608',
-  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-  //     season: 1,
-  //     pendingBananaRewards: 9.735348975342822,
-  //     totalTradedUsd: 9735.348975342822,
-  //     ranking: 6,
-  //   },
-  //   {
-  //     _id: '60c4fb01f05177284951a0ac',
-  //     address: '0x53ab22dd7b527108cb2a89f923704a0929ccb234',
-  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-  //     season: 1,
-  //     pendingBananaRewards: 9.674196601685546,
-  //     totalTradedUsd: 9674.196601685546,
-  //     ranking: 7,
-  //   },
-  // ]
-
-  const stub2 = () => {
-    debugger // eslint-disable-line no-debugger
-    stub.map(async (item) => {
-      debugger // eslint-disable-line no-debugger
-      const profile = await getProfile(item.address)
-      debugger // eslint-disable-line no-debugger
-      // stub.profile = profile
+  useEffect(() => {
+    let currentRank = 0
+    const data = tradingStats?.slice(0, 10).map((stat) => {
+      const formatedStat: any = { ...stat }
+      formatedStat.address = `${stat.address.substring(0, 4)}...${stat.address.substring(stat.address.length - 4)}`
+      formatedStat.pair = `${stat.pair.substring(0, 4)}...${stat.pair.substring(stat.pair.length - 4)}`
+      currentRank++
+      formatedStat.ranking = currentRank
+      formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.totalTradedUsd)
+      formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.pendingBananaRewards)
+      return formatedStat
     })
-  }
+    setTradingData(data)
+  }, [tradingStats])
 
   return (
     <div>
-      <Table data={stub} />
-      {/* {data && <Table data={stub} />} */}
+      <div style={{ width: '100%' }}>
+        <StyledHeading color="text" fontFamily="poppins" fontSize="24px">
+          Season Results
+        </StyledHeading>
+        <div>
+          {tradingData.length > 0 &&
+            tradingData.map((row) => {
+              return (
+                <StyledTR ranking={row.ranking}>
+                  <Flex>
+                    <MonkeyLight width="64px" height="64px" mr="10px" />
+
+                    <StyledRanking ranking={row.ranking}>{row.ranking}</StyledRanking>
+                  </Flex>
+                  <StyledFlexColumn flexDirection="column" justifyContent="center" ml="50px">
+                    <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Wallet</StyledHeader>
+                    <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>{row.address}</StyledText>
+                  </StyledFlexColumn>
+                  <StyledFlexColumn flexDirection="column" justifyContent="center">
+                    <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Volume</StyledHeader>
+                    <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>{row.totalTradedUsd}</StyledText>
+                  </StyledFlexColumn>
+                  <StyledFlexColumnLast flexDirection="column" justifyContent="center">
+                    <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Reward</StyledHeader>
+                    <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>
+                      {row.pendingBananaRewards} BANANA
+                    </StyledText>
+                  </StyledFlexColumnLast>
+                </StyledTR>
+              )
+            })}
+        </div>
+      </div>
     </div>
   )
 }
