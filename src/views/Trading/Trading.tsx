@@ -1,9 +1,7 @@
-import React, { useMemo, useState, useEffect } from 'react'
-import { ColumnType, DataType, Heading, useTable, Text, Flex, MonkeyLight } from '@apeswapfinance/uikit'
-import { useGetTradingStats } from 'hooks/api'
+import React, { useState, useEffect } from 'react'
+import { Text, Flex, MonkeyLight } from '@apeswapfinance/uikit'
 
 import styled from 'styled-components'
-import { useParams } from 'react-router-dom'
 import format from 'format-number'
 
 import getProfile from './GetProfile'
@@ -87,11 +85,11 @@ const StyledRanking = styled.div<{ ranking: number }>`
 `
 
 const StyledAvatar = styled.img`
-  position: absolute;
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   border-radius: 67px;
-  background-color: red;
+  background-color: white;
+  margin-right: 10px;
 `
 
 const StyledFlexColumn = styled(Flex)`
@@ -134,18 +132,22 @@ const Trading = ({ tradingStats }) => {
   const [tradingData, setTradingData] = useState([])
 
   useEffect(() => {
-    let currentRank = 0
-    const data = tradingStats?.slice(0, 10).map((stat) => {
-      const formatedStat: any = { ...stat }
-      formatedStat.address = `${stat.address.substring(0, 4)}...${stat.address.substring(stat.address.length - 4)}`
-      formatedStat.pair = `${stat.pair.substring(0, 4)}...${stat.pair.substring(stat.pair.length - 4)}`
-      currentRank++
-      formatedStat.ranking = currentRank
-      formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.totalTradedUsd)
-      formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.pendingBananaRewards)
-      return formatedStat
-    })
-    setTradingData(data)
+    const fetchData = async () => {
+      const data = await Promise.all(
+        tradingStats?.slice(0, 10).map(async (stat) => {
+          const formatedStat: any = { ...stat }
+          formatedStat.address = `${stat.address.substring(0, 4)}...${stat.address.substring(stat.address.length - 4)}`
+          formatedStat.pair = `${stat.pair.substring(0, 4)}...${stat.pair.substring(stat.pair.length - 4)}`
+          const nfaData = await getProfile(stat.address)
+          formatedStat.image = nfaData ? nfaData.rarestNft.image : null
+          formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.totalTradedUsd)
+          formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.pendingBananaRewards)
+          return formatedStat
+        }),
+      )
+      setTradingData(data)
+    }
+    fetchData()
   }, [tradingStats])
 
   return (
@@ -160,8 +162,11 @@ const Trading = ({ tradingStats }) => {
               return (
                 <StyledTR ranking={row.ranking} key={row.ranking}>
                   <Flex>
-                    <MonkeyLight width="64px" height="64px" mr="10px" />
-
+                    {row.image ? (
+                      <StyledAvatar src={row.image} />
+                    ) : (
+                      <MonkeyLight width="64px" height="64px" mr="10px" />
+                    )}
                     <StyledRanking ranking={row.ranking}>{row.ranking}</StyledRanking>
                   </Flex>
                   <StyledFlexColumn flexDirection="column" justifyContent="center" ml="50px">

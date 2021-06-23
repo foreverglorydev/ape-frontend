@@ -1,28 +1,15 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Card, CardBody, CardHeader, Flex, Heading, Text, ButtonSquare, MonkeyLight } from '@apeswapfinance/uikit'
-import { useGetPersonalTradingStats } from 'hooks/api'
 
 import styled from 'styled-components'
-import { useWeb3React } from '@web3-react/core'
 import CardValue from 'views/Home/components/CardValue'
-import useI18n from 'hooks/useI18n'
-import { usePriceBananaBusd, useProfile } from 'state/hooks'
+import { useProfile } from 'state/hooks'
 import UnlockButton from 'components/UnlockButton'
-import PageLoader from 'components/PageLoader'
-import { useParams } from 'react-router-dom'
-import { Button } from '@pancakeswap-libs/uikit'
 
 const StyledCardHeader = styled(CardHeader)`
   background: #ffb300;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-`
-const Row = styled.div`
-  align-items: center;
-  display: flex;
-  font-size: 14px;
-  justify-content: space-between;
-  margin-bottom: 8px;
 `
 const StyledTextHeader = styled.div`
   font-family: Poppins;
@@ -83,6 +70,38 @@ const StyledAvatar = styled(MonkeyLight)`
   }
 `
 
+const StyledAvatarImage = styled.img`
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 30px;
+
+  border-radius: 50px;
+  border: solid 2px #ffb300;
+  background-color: white;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    margin-top: -50px;
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    margin-top: -82px;
+    margin-left: 30px;
+  }
+  ${({ theme }) => theme.mediaQueries.xl} {
+    margin-top: -50px;
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+  }
+`
+
 const StyledText = styled(Text)`
   font-weight: 700;
 `
@@ -98,8 +117,6 @@ const StyledBananaReward = styled.img`
 
 const Trading = (individual) => {
   const { address, volume, prize, position } = individual
-  const bananaUsdPrice = usePriceBananaBusd()
-  const TranslateString = useI18n()
   const { profile } = useProfile()
 
   const profileImage = profile ? profile?.rarestNft.image : null
@@ -132,9 +149,7 @@ const Trading = (individual) => {
               <StyledTextPosition>{position}th</StyledTextPosition>
             </Flex>
           </StyledCardHeader>
-
-          <StyledAvatar />
-          {/* <StyledAvatar src={profileImage} alt="profile avatar" /> */}
+          {profileImage ? <StyledAvatarImage src={profileImage} alt="profile avatar" /> : <StyledAvatar />}{' '}
           {/* eslint-disable-next-line no-nested-ternary */}
           {individual ? (
             <CardBody>
@@ -159,14 +174,7 @@ const Trading = (individual) => {
                     </StyledText>
                     <Flex justifyContent="center" alignItems="center">
                       <StyledBananaReward src="/images/tokens/banana.svg" alt="banana-token-reward" />
-                      <CardValue
-                        fontSize="20px"
-                        fontWeight={700}
-                        decimals={2}
-                        value={bananaUsdPrice.times(prize).toNumber()}
-                        fontFamily="poppins"
-                        prefix="$"
-                      />
+                      <CardValue fontSize="20px" fontWeight={700} decimals={2} value={prize} fontFamily="poppins" />
                     </Flex>
                   </Flex>
                 </Flex>

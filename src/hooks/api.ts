@@ -359,7 +359,8 @@ export const getSeasonInfo = async ({ season, pair, address }: { season: number;
       season,
       pendingBananaRewards: trading.prize,
       totalTradedUsd: trading.volume,
-      raking: index + 1,
+      ranking: index + 1,
+      rank: trading.rank,
     }
   })
 

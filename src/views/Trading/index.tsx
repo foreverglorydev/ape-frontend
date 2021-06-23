@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Page from 'components/layout/Page'
-import { Heading, Card, Text, Button, Flex, CardRibbon, ArrowDropDownIcon, Spinner } from '@apeswapfinance/uikit'
+import { Text, Flex, Spinner } from '@apeswapfinance/uikit'
 import useFetchSeasonTrading from 'state/strapi/useFetchSeasonTrading'
 import useFetchSeasonInfo from 'state/strapi/useFetchSeasonInfo'
 import { useWeb3React } from '@web3-react/core'
