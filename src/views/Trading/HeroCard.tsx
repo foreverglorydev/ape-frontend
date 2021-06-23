@@ -131,7 +131,7 @@ const HeroCard = ({ season = 0, endTimestamp = '0' }: { season: any; endTimestam
             {endTimestamp && (
               <StyledFlexAirdrop ml="16px">
                 <StyledTextSubHead color="white" fontFamily="poppins">
-                  SEASON ENDS: {new Date(parseInt(endTimestamp) * 1000).toUTCString()}
+                  SEASON ENDS: {new Date(parseInt(endTimestamp) * 1000).toUTCString().replace('GMT', 'UTC')}
                 </StyledTextSubHead>
               </StyledFlexAirdrop>
             )}

@@ -158,7 +158,7 @@ const Trading = ({ tradingStats }) => {
           {tradingData.length > 0 &&
             tradingData.map((row) => {
               return (
-                <StyledTR ranking={row.ranking} key={row.ranking} >
+                <StyledTR ranking={row.ranking} key={row.ranking}>
                   <Flex>
                     <MonkeyLight width="64px" height="64px" mr="10px" />
 
