@@ -14,8 +14,8 @@ const StyledPage = styled(Container)<SizeProps>`
   min-height: calc(100vh - 64px);
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
 
   ${({ theme }) => theme.mediaQueries.sm} {

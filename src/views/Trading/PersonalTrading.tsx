@@ -84,8 +84,8 @@ const StyledAvatarImage = styled.img`
   ${({ theme }) => theme.mediaQueries.xs} {
     margin-top: -50px;
     margin-left: 20px;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
   }
   ${({ theme }) => theme.mediaQueries.md} {
     height: 70px;

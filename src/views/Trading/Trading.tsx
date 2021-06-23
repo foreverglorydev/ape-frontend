@@ -102,7 +102,7 @@ const StyledFlexColumn = styled(Flex)`
   }
 
   ${({ theme }) => theme.mediaQueries.xs} {
-    margin-right: 50px;
+    margin-right: 10px;
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
@@ -169,7 +169,7 @@ const Trading = ({ tradingStats }) => {
                     )}
                     <StyledRanking ranking={row.ranking}>{row.ranking}</StyledRanking>
                   </Flex>
-                  <StyledFlexColumn flexDirection="column" justifyContent="center" ml="50px">
+                  <StyledFlexColumn flexDirection="column" justifyContent="center" ml="10px">
                     <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Wallet</StyledHeader>
                     <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>{row.address}</StyledText>
                   </StyledFlexColumn>
