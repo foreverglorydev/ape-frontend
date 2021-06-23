@@ -5,7 +5,7 @@ import { Heading, Card, Text, Button, Flex, CardRibbon, ArrowDropDownIcon, Spinn
 import useFetchSeasonTrading from 'state/strapi/useFetchSeasonTrading'
 import useFetchSeasonInfo from 'state/strapi/useFetchSeasonInfo'
 import { useParams } from 'react-router-dom'
-import { useWallet } from '@binance-chain/bsc-use-wallet'
+import { useWeb3React } from '@web3-react/core'
 import TradingTable from './Trading'
 import PersonalTrading from './PersonalTrading'
 import ParticipatingTokens from './ParticipatingTokens'
@@ -56,7 +56,7 @@ const Trading = () => {
       margin-bottom: 60px;
     }
   `
-  const { account } = useWallet()
+  const { account } = useWeb3React()
   const { seasons, loading } = useFetchSeasonTrading()
   const infoSeason = seasons[0] ?? { season: 0, endTimestamp: 0, pair: '' }
   const { allInfo } = useFetchSeasonInfo({ season: infoSeason?.season, pair: infoSeason?.pair, address: account })

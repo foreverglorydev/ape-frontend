@@ -43,7 +43,7 @@ const CardValue: React.FC<CardValueProps> = ({
       font-size: ${differentFontSize || fontSize};
     }
 
-    font-family: ${fontFamily || 'titan-one'};
+    font-family: ${fontFamily};
   `
 
   const updateValue = useRef(update)

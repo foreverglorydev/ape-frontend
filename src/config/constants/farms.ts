@@ -1000,6 +1000,81 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
+    pid: 72,
+    lpSymbol: 'TWIN-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0x39ca344E2e9AAf125b0002aA37258C8b1Ed30A78',
+    },
+    tokenSymbol: 'TWIN',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x62907ad5c2d79e2a4f048a90ae2b49d062a773f3',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 73,
+    lpSymbol: 'MBOX-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xe5459c34e13797372f6c95c0aac81a5faf60223e',
+    },
+    tokenSymbol: 'MBOX',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 74,
+    lpSymbol: 'FOXY-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xbe3e38918ca1180f0285fa18c3fa154d0dde6853',
+    },
+    tokenSymbol: 'FOXY',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x4354a4f710182966e55ea30cfa807fa1b821a67b',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 76,
+    lpSymbol: 'WYVERN-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0xeef751bba57e90b832c96b0e65ef5430868c69a7',
+    },
+    tokenSymbol: 'WYVERN',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0x470862af0cf8d27ebfe0ff77b0649779c29186db',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 77,
+    lpSymbol: 'BOG-BNB LP',
+    lpAddresses: {
+      97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
+      56: '0x9d8370c3e6833942b8c38478c84ef74374f28b9f',
+    },
+    tokenSymbol: 'BOG',
+    tokenAddresses: {
+      97: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      56: '0xb09fe1613fe03e7361319d2a43edc17422f36b09',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
     pid: 7, // NOTE: Inactive Farm
     lpSymbol: 'BANANA-BAKE LP',
     lpAddresses: {

@@ -3,7 +3,7 @@ import { Card, CardBody, CardHeader, Flex, Heading, Text, ButtonSquare } from '@
 import { useGetPersonalTradingStats } from 'hooks/api'
 
 import styled from 'styled-components'
-import { useWallet } from '@binance-chain/bsc-use-wallet'
+import { useWeb3React } from '@web3-react/core'
 import CardValue from 'views/Home/components/CardValue'
 import useI18n from 'hooks/useI18n'
 import { usePriceBananaBusd, useProfile } from 'state/hooks'
