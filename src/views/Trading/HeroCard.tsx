@@ -108,33 +108,33 @@ const HeroCard = ({ season = 0, endTimestamp = '0' }: { season: any; endTimestam
       flex-direction: row;
     }
   `
-  const seasonText = `Season #${season}`
+
+  const seasonText = `Season ${season}`
   return (
     <StyledCard ribbon={<CardRibbon text={seasonText} variantColor="success" />}>
       <Flex justifyContent="space-between" mb="10px">
         <StyledContainer>
           <StyledText color="white" fontFamily="poppins">
-            TRADING COMPETITION
+            Crazy Ape Trading Competitions
           </StyledText>
-          <StyledTextSubHead color="white" fontFamily="poppins">
-            Here is info about the trading comp
+          <StyledTextSubHead mt="8px" color="white" fontFamily="poppins">
+            Welcome to the Wild-Wild Jungle, where only the craziest of Apes survive.
           </StyledTextSubHead>
           <Flex mt="20px" alignItems="center">
             <StyledButton
               as="a"
-              // href="https://obiedobo.gitbook.io/apeswap-finance/tokens-and-economics/golden-banana"
+              href="https://apeswap.gitbook.io/apeswap-finance/tokens-and-economics/golden-banana"
               target="_blank"
             >
               READ MORE
             </StyledButton>
-            <StyledFlexAirdrop ml="16px">
-              <StyledTextSubHead color="white" fontFamily="poppins">
-                NEXT AIR DROP: {endTimestamp}
-              </StyledTextSubHead>
-              <StyledText color="white" fontFamily="poppins">
-                TIME
-              </StyledText>
-            </StyledFlexAirdrop>
+            {endTimestamp && (
+              <StyledFlexAirdrop ml="16px">
+                <StyledTextSubHead color="white" fontFamily="poppins">
+                  SEASON ENDS: {new Date(parseInt(endTimestamp) * 1000).toUTCString()}
+                </StyledTextSubHead>
+              </StyledFlexAirdrop>
+            )}
           </Flex>
         </StyledContainer>
         <StyledImg src="/images/trophy-circle.svg" alt="trophy" />

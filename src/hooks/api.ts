@@ -340,7 +340,7 @@ export const getSeasonsTrading = async () => {
   return seasons
 }
 
-export const getSeasonInfo = async ({ season, pair, address }: { season: any; pair: any; address: any }) => {
+export const getSeasonInfo = async ({ season, pair, address }: { season: number; pair: string; address: string }) => {
   const info = {
     season: {},
     individual: {},

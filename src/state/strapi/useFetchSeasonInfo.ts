@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getSeasonInfo } from '../../hooks/api'
 
-const useFetchSeasonInfo = ({ season, pair, address }: { season: any; pair: any; address: any }) => {
+const useFetchSeasonInfo = ({ season, pair, address }: { season: number; pair: string; address: string }) => {
   const [state, setState] = useState({
     allInfo: {
       season: {},
@@ -10,6 +10,7 @@ const useFetchSeasonInfo = ({ season, pair, address }: { season: any; pair: any;
     },
     loadingAllInfo: true,
   })
+
   useEffect(() => {
     const fetchData = async () => {
       try {
