@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import Page from 'components/layout/Page'
-import { Heading, Card, Text, Button, Flex, CardRibbon, ArrowDropDownIcon } from '@apeswapfinance/uikit'
+import { Heading, Card, Text, Button, Flex, CardRibbon, ArrowDropDownIcon, Spinner } from '@apeswapfinance/uikit'
+import useFetchSeasonTrading from 'state/strapi/useFetchSeasonTrading'
+import useFetchSeasonInfo from 'state/strapi/useFetchSeasonInfo'
 import { useParams } from 'react-router-dom'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 import TradingTable from './Trading'
 import PersonalTrading from './PersonalTrading'
 import ParticipatingTokens from './ParticipatingTokens'
@@ -43,26 +46,42 @@ const Trading = () => {
       margin-left: 20px;
     }
   `
+  const LoadingContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    ${({ theme }) => theme.mediaQueries.lg} {
+      margin-bottom: 60px;
+    }
+  `
+  const { account } = useWallet()
+  const { seasons, loading } = useFetchSeasonTrading()
+  const infoSeason = seasons[0] ?? { season: 0, endTimestamp: 0, pair: '' }
+  const { allInfo } = useFetchSeasonInfo({ season: infoSeason?.season, pair: infoSeason?.pair, address: account })
 
   return (
     <Page width="1130px">
-      <HeroCard />
-      {/* <Heading as="h2" size="xl" mb="24px" mt="24px" color="secondary">
-        Season: {season}
-      </Heading>
-      <Heading as="h2" size="xl" mb="24px" mt="24px" color="secondary">
-        Pair: BANANA/BNB
-      </Heading> */}
-      <StyledHeading color="text" fontFamily="poppins" fontSize="24px">
-        Season Results
-      </StyledHeading>
-      <StyledFlexContainer>
-        <TradingTable />
-        <StyledFlex flexDirection="column">
-          <ParticipatingTokens />
-          <PersonalTrading />
-        </StyledFlex>
-      </StyledFlexContainer>
+      {loading ? (
+        <LoadingContainer className="something">
+          <Spinner />
+        </LoadingContainer>
+      ) : (
+        <>
+          <HeroCard season={infoSeason?.season ?? 0} endTimestamp={infoSeason?.endTimestamp ?? 0} />
+          <StyledHeading color="text" fontFamily="poppins" fontSize="24px">
+            Season Results
+          </StyledHeading>
+          <StyledFlexContainer>
+            <TradingTable stub={allInfo?.trading ?? []} />
+            <StyledFlex flexDirection="column">
+              <ParticipatingTokens {...allInfo.season} />
+              <PersonalTrading {...allInfo.individual} />
+            </StyledFlex>
+          </StyledFlexContainer>
+        </>
+      )}
     </Page>
   )
 }

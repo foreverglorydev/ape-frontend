@@ -96,15 +96,8 @@ const StyledBananaReward = styled.img`
   margin-right: 9px;
 `
 
-const Trading = () => {
-  const { account } = useWallet()
-  debugger // eslint-disable-line no-debugger
-  const {
-    season = '0',
-    pair = '0xf65c1c0478efde3c19b49ecbe7acc57bb6b1d713',
-  }: { season?: string; pair?: string } = useParams()
-
-  const { data: tradingStats, loading } = useGetPersonalTradingStats(pair, account, season)
+const Trading = (individual) => {
+  const { address, volume, prize, position } = individual
   const bananaUsdPrice = usePriceBananaBusd()
   const TranslateString = useI18n()
   const { profile } = useProfile()
@@ -113,7 +106,7 @@ const Trading = () => {
 
   return (
     <div>
-      {!account ? (
+      {!address ? (
         <Card>
           <StyledCardHeader>
             <Flex justifyContent="space-between" alignItems="center">
@@ -130,18 +123,18 @@ const Trading = () => {
             <Flex justifyContent="space-between" alignItems="center">
               <Flex flexDirection="column" ml="100px">
                 <StyledTextHeader>Your Stats</StyledTextHeader>
-                {account !== null && (
+                {address !== null && (
                   <StyledTextSubHead>
-                    {account.substr(1, 10)}....{account.substr(account.length - 5)}
+                    {address.substr(1, 10)}....{address.substr(address.length - 5)}
                   </StyledTextSubHead>
                 )}
               </Flex>
-              <StyledTextPosition>Position</StyledTextPosition>
+              <StyledTextPosition>{position}th</StyledTextPosition>
             </Flex>
           </StyledCardHeader>
           <StyledAvatar src={profileImage} alt="profile avatar" />
           {/* eslint-disable-next-line no-nested-ternary */}
-          {tradingStats ? (
+          {individual ? (
             <CardBody>
               <Flex flexDirection="column" alignItems="center">
                 <Flex justifyContent="center" mb="17px">
@@ -153,7 +146,7 @@ const Trading = () => {
                       fontSize="20px"
                       fontWeight={700}
                       decimals={2}
-                      value={tradingStats.pendingBananaRewards}
+                      value={volume}
                       fontFamily="poppins"
                       prefix="~"
                     />
@@ -168,7 +161,7 @@ const Trading = () => {
                         fontSize="20px"
                         fontWeight={700}
                         decimals={2}
-                        value={bananaUsdPrice.times(tradingStats.pendingBananaRewards).toNumber()}
+                        value={bananaUsdPrice.times(prize).toNumber()}
                         fontFamily="poppins"
                         prefix="$"
                       />
@@ -184,8 +177,6 @@ const Trading = () => {
                 alt="monkey"
               />
             </CardBody>
-          ) : loading ? (
-            <PageLoader />
           ) : (
             <Heading fontSize="16px" mb="24px" m="16px" style={{ textAlign: 'center' }}>
               No Volume for this pair

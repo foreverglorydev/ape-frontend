@@ -179,7 +179,7 @@ const Table = ({ data }) => {
   )
 }
 
-const Trading = () => {
+const Trading = ({ stub }: { stub: any }) => {
   // const {
   //   season = '0',
   //   pair = '0xf65c1c0478efde3c19b49ecbe7acc57bb6b1d713',
@@ -226,71 +226,71 @@ const Trading = () => {
   // )
   // const memoData = useMemo(() => data, [data])
 
-  const stub = [
-    {
-      _id: '60c4fb01f05177284951a0e3',
-      address: '0xd74ca4b1fc803f2a5f46fdd5831759b6f3cec334',
-      pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-      season: 1,
-      pendingBananaRewards: 34.508900398555106,
-      totalTradedUsd: 34508.9003985551,
-      ranking: 1,
-    },
-    {
-      _id: '60c4fb01f05177284951a124',
-      address: '0x743fc05850fac2ce03251704cda96f5e09146cac',
-      pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-      season: 1,
-      pendingBananaRewards: 14.778764736753105,
-      totalTradedUsd: 14778.764736753106,
-      ranking: 2,
-    },
-    {
-      _id: '60c4fb01f05177284951a0d6',
-      address: '0xae577c2ecaba8ed21fde92f4ff0e95f7ae8d5183',
-      pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-      season: 1,
-      pendingBananaRewards: 13.36405908316909,
-      totalTradedUsd: 13364.05908316909,
-      ranking: 3,
-    },
-    {
-      _id: '60c4fb01f05177284951a0c7',
-      address: '0x861576f573b0a1baf1bf7f33267678d13d44d4ea',
-      pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-      season: 1,
-      pendingBananaRewards: 11.52014133169429,
-      totalTradedUsd: 11520.141331694289,
-      ranking: 4,
-    },
-    {
-      _id: '60c4fb01f05177284951a136',
-      address: '0xb1a5d4460453747f0106c07838c92743243ac551',
-      pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-      season: 1,
-      pendingBananaRewards: 11.291199062464795,
-      totalTradedUsd: 11291.199062464795,
-      ranking: 5,
-    },
-    {
-      _id: '60c4fb01f05177284951a104',
-      address: '0x232231e859cd568a0fc7fb91d1a8ede119d48608',
-      pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-      season: 1,
-      pendingBananaRewards: 9.735348975342822,
-      totalTradedUsd: 9735.348975342822,
-      ranking: 6,
-    },
-    {
-      _id: '60c4fb01f05177284951a0ac',
-      address: '0x53ab22dd7b527108cb2a89f923704a0929ccb234',
-      pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
-      season: 1,
-      pendingBananaRewards: 9.674196601685546,
-      totalTradedUsd: 9674.196601685546,
-      ranking: 7,
-    },
-  ]
+  // const stub = [
+  //   {
+  //     _id: '60c4fb01f05177284951a0e3',
+  //     address: '0xd74ca4b1fc803f2a5f46fdd5831759b6f3cec334',
+  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
+  //     season: 1,
+  //     pendingBananaRewards: 34.508900398555106,
+  //     totalTradedUsd: 34508.9003985551,
+  //     ranking: 1,
+  //   },
+  //   {
+  //     _id: '60c4fb01f05177284951a124',
+  //     address: '0x743fc05850fac2ce03251704cda96f5e09146cac',
+  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
+  //     season: 1,
+  //     pendingBananaRewards: 14.778764736753105,
+  //     totalTradedUsd: 14778.764736753106,
+  //     ranking: 2,
+  //   },
+  //   {
+  //     _id: '60c4fb01f05177284951a0d6',
+  //     address: '0xae577c2ecaba8ed21fde92f4ff0e95f7ae8d5183',
+  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
+  //     season: 1,
+  //     pendingBananaRewards: 13.36405908316909,
+  //     totalTradedUsd: 13364.05908316909,
+  //     ranking: 3,
+  //   },
+  //   {
+  //     _id: '60c4fb01f05177284951a0c7',
+  //     address: '0x861576f573b0a1baf1bf7f33267678d13d44d4ea',
+  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
+  //     season: 1,
+  //     pendingBananaRewards: 11.52014133169429,
+  //     totalTradedUsd: 11520.141331694289,
+  //     ranking: 4,
+  //   },
+  //   {
+  //     _id: '60c4fb01f05177284951a136',
+  //     address: '0xb1a5d4460453747f0106c07838c92743243ac551',
+  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
+  //     season: 1,
+  //     pendingBananaRewards: 11.291199062464795,
+  //     totalTradedUsd: 11291.199062464795,
+  //     ranking: 5,
+  //   },
+  //   {
+  //     _id: '60c4fb01f05177284951a104',
+  //     address: '0x232231e859cd568a0fc7fb91d1a8ede119d48608',
+  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
+  //     season: 1,
+  //     pendingBananaRewards: 9.735348975342822,
+  //     totalTradedUsd: 9735.348975342822,
+  //     ranking: 6,
+  //   },
+  //   {
+  //     _id: '60c4fb01f05177284951a0ac',
+  //     address: '0x53ab22dd7b527108cb2a89f923704a0929ccb234',
+  //     pair: '0x73cddf4ea34dbd872f89e98c2866c81929aafe50',
+  //     season: 1,
+  //     pendingBananaRewards: 9.674196601685546,
+  //     totalTradedUsd: 9674.196601685546,
+  //     ranking: 7,
+  //   },
+  // ]
 
   const stub2 = () => {
     debugger // eslint-disable-line no-debugger

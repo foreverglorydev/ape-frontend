@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card, Text, Flex, ArrowDropDownIcon } from '@apeswapfinance/uikit'
 
-const ParticipatingTokens = () => {
+const ParticipatingTokens = (seasonInfo) => {
   const StyledCard = styled(Card)`
     background-image: url('/images/trading-card.svg');
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@ const ParticipatingTokens = () => {
     fill: #faf9fa;
     width: 15px;
   `
-
+  const { tokenName1, tokenImage1, tokenName2, tokenImage2 } = seasonInfo
   return (
     <StyledCard>
       <StyledTextSmaller color="white" fontFamily="poppins">
@@ -75,13 +75,13 @@ const ParticipatingTokens = () => {
       </StyledTextSmaller>
       <Flex justifyContent="center" alignItems="center">
         <Flex flexDirection="column" justifyContent="center" alignItems="center">
-          <StyledToken src="/images/tokens/banana.svg" alt="banana-token" />
-          <StyledTokenText>BANANA</StyledTokenText>
+          <StyledToken src={tokenImage1} alt="banana-token" />
+          <StyledTokenText>{tokenName1}</StyledTokenText>
         </Flex>
         <StyledArrow />
         <Flex flexDirection="column" justifyContent="center" alignItems="center">
-          <StyledToken src="/images/tokens/banana.svg" alt="banana-token" />
-          <StyledTokenText>BANANA</StyledTokenText>
+          <StyledToken src={tokenImage2} alt="banana-token" />
+          <StyledTokenText>{tokenName2}</StyledTokenText>
         </Flex>
       </Flex>
     </StyledCard>

@@ -41,6 +41,16 @@ export interface SaleHistory {
   transactionHash: string
   blockNumber: number
 }
+export interface SeasonTradingDto {
+  season: number
+  pair: string
+  name: string
+  startTimestamp: string
+  endTimestamp: string
+  finished: boolean
+  token1: string
+  token2: string
+}
 
 export const useGetNfaSales = (id: number) => {
   const [sale, setSale] = useState<SaleHistory[] | null>(null)
@@ -295,4 +305,61 @@ export const getPromosHome = async () => {
   })
 
   return promos
+}
+
+export const getSeasonsTrading = async () => {
+  const url = `${baseUrlStrapi}/tradings`
+  const resp = await fetch(url)
+  const data = await resp.json()
+
+  const seasons = data.map((trading) => {
+    return {
+      season: trading.season,
+      pair: trading.pair,
+      name: trading.name,
+      startTimestamp: trading.startTimestamp,
+      endTimestamp: trading.endTimestamp,
+      finished: trading.finished,
+      token1: trading.token1,
+      token2: trading.token2,
+    }
+  })
+
+  return seasons
+}
+
+export const getSeasonInfo = async ({ season, pair, address }: { season: any; pair: any; address: any }) => {
+  const info = {
+    season: {},
+    individual: {},
+    trading: [],
+  }
+  if (season == null || !pair || !address) return info
+  const url = `${apiBaseUrl}/trading/${season}/${pair}/${address}`
+  const resp = await fetch(url)
+  const data = await resp.json()
+
+  data.trading = data.trading.map((trading, index) => {
+    return {
+      address: trading.user,
+      pair,
+      season,
+      pendingBananaRewards: trading.prize,
+      totalTradedUsd: trading.volume,
+      raking: index + 1,
+    }
+  })
+
+  data.season = {
+    ...data.season,
+    tokenImage1: mappingImage(data.season.token1),
+    tokenImage2: mappingImage(data.season.token2),
+  }
+  return data
+}
+
+const mappingImage = (image) => {
+  if (!image) return '/images/tokens/banana.svg'
+
+  return image.url
 }

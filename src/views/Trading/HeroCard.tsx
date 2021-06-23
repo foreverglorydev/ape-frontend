@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card, Text, Button, Flex, CardRibbon } from '@apeswapfinance/uikit'
 
-const HeroCard = () => {
+const HeroCard = ({ season = 0, endTimestamp = '0' }: { season: any; endTimestamp: string }) => {
   const StyledCard = styled(Card)`
     background-image: url('/images/leaf-banner.svg');
     background-repeat: no-repeat;
@@ -108,9 +108,9 @@ const HeroCard = () => {
       flex-direction: row;
     }
   `
-
+  const seasonText = `Season #${season}`
   return (
-    <StyledCard ribbon={<CardRibbon text="Ribbon" variantColor="success" />}>
+    <StyledCard ribbon={<CardRibbon text={seasonText} variantColor="success" />}>
       <Flex justifyContent="space-between" mb="10px">
         <StyledContainer>
           <StyledText color="white" fontFamily="poppins">
@@ -129,7 +129,7 @@ const HeroCard = () => {
             </StyledButton>
             <StyledFlexAirdrop ml="16px">
               <StyledTextSubHead color="white" fontFamily="poppins">
-                NEXT AIR DROP:{' '}
+                NEXT AIR DROP: {endTimestamp}
               </StyledTextSubHead>
               <StyledText color="white" fontFamily="poppins">
                 TIME
