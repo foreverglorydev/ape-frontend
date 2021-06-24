@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@apeswapfinance/uikit@0.10.37.3":
-  version "0.10.3-7.3"
-  resolved "https://npm.pkg.github.com/download/@apeswapfinance/uikit/0.10.3-7.3/e0326301dbdd02328893342817a5a4001a40a1390c28da35f6af38e5c1c33482#a33c1d47fb24cfd4e655fe7874341f80bda59095"
-  integrity sha512-Dw31LLlRuOsNtYdZpAQensyAAhh7mGVGE5cl8uAQDCkzS/EWD8hlih45mu/2kKvmZv5oUZ9QLmNs1MROjkF5+w==
+"@apeswapfinance/uikit@0.10.37.4":
+  version "0.10.3-7.4"
+  resolved "https://npm.pkg.github.com/download/@apeswapfinance/uikit/0.10.3-7.4/8f35a29a4657dfb555180ddb60a80a5b62f00cefa28a9991e35f4d6001d8791f#953bb58a43ed1b7a9708e15cbe572aa953131b3b"
+  integrity sha512-XKWb/Ky8x1SqB7ZnBS3xfxb9Ldl20S+T4mWpDdDnEQYylWmvyk2CM7FmFtzdrp10YT5jfOYknrbXA30jqdB/Jw==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
