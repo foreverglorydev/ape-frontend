@@ -74,7 +74,7 @@ const StyledAvatarImage = styled.img`
   height: 70px;
   width: 70px;
   position: absolute;
-  margin-top: -100px;
+  margin-top: -82px;
   margin-left: 30px;
 
   border-radius: 50px;
@@ -82,7 +82,7 @@ const StyledAvatarImage = styled.img`
   background-color: white;
 
   ${({ theme }) => theme.mediaQueries.xs} {
-    margin-top: -50px;
+    margin-top: -82px;
     margin-left: 20px;
     height: 80px;
     width: 80px;
@@ -95,8 +95,8 @@ const StyledAvatarImage = styled.img`
     margin-left: 30px;
   }
   ${({ theme }) => theme.mediaQueries.xl} {
-    margin-top: -50px;
-    margin-left: 20px;
+    margin-top: -82px;
+    margin-left: 8px;
     height: 100px;
     width: 100px;
   }

@@ -92,6 +92,16 @@ const StyledAvatar = styled.img`
   margin-right: 10px;
 `
 
+const StyledMonkeyLight = styled(MonkeyLight)`
+  display: inline-block;
+  ${({ theme }) => theme.mediaQueries.md} {
+    display: none;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    display: inline-block;
+  }
+`
+
 const StyledFlexColumn = styled(Flex)`
   margin-right: 10px;
   justify-content: center;
@@ -165,7 +175,7 @@ const Trading = ({ tradingStats }) => {
                     {row.image ? (
                       <StyledAvatar src={row.image} />
                     ) : (
-                      <MonkeyLight width="64px" height="64px" mr="10px" />
+                      <StyledMonkeyLight width="64px" height="64px" mr="10px" />
                     )}
                     <StyledRanking ranking={row.ranking}>{row.ranking}</StyledRanking>
                   </Flex>
