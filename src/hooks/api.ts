@@ -42,6 +42,13 @@ export interface SaleHistory {
   transactionHash: string
   blockNumber: number
 }
+
+export interface AddressStatsDto {
+  address: string;
+  position?: number;
+  volume: number;
+  prize: number;
+}
 export interface SeasonTradingDto {
   season: number
   pair: string
@@ -49,8 +56,14 @@ export interface SeasonTradingDto {
   startTimestamp: string
   endTimestamp: string
   finished: boolean
-  token1: string
-  token2: string
+  tokenImage1: string
+  tokenImage2: string
+}
+
+export interface TradingAllInfoDto {
+  season?: SeasonTradingDto;
+  individual?: AddressStatsDto;
+  trading?: AddressStatsDto[];
 }
 
 export const useGetNfaSales = (id: number) => {
@@ -337,39 +350,33 @@ export const getSeasonsTrading = async () => {
     }
   })
 
-  return seasons
+  return seasons as SeasonTradingDto[]
 }
 
 export const getSeasonInfo = async ({ season, pair, address }: { season: number; pair: string; address: string }) => {
-  const info = {
-    season: {},
-    individual: {},
-    trading: [],
-  }
+  const info: TradingAllInfoDto = {};
   if (season == null || !pair) return info
   let url = `${apiBaseUrl}/trading/${season}/${pair}`
   if (address) url = `${apiBaseUrl}/trading/${season}/${pair}/${address}`
   const resp = await fetch(url)
   const data = await resp.json()
 
-  data.trading = data.trading.map((trading, index) => {
+  info.trading = data.trading.map((trading, index) => {
     return {
-      address: trading.user,
+      ...trading,
       pair,
-      season,
-      pendingBananaRewards: trading.prize,
-      totalTradedUsd: trading.volume,
       ranking: index + 1,
-      rank: trading.rank,
     }
   })
 
-  data.season = {
+  info.season = {
     ...data.season,
     tokenImage1: mappingImage(data.season.token1),
     tokenImage2: mappingImage(data.season.token2),
   }
-  return data
+
+  info.individual = data.individual;
+  return info
 }
 
 const mappingImage = (image) => {

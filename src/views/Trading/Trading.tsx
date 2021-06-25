@@ -146,12 +146,12 @@ const Trading = ({ tradingStats }) => {
       const data = await Promise.all(
         tradingStats?.slice(0, 10).map(async (stat) => {
           const formatedStat: any = { ...stat }
-          formatedStat.address = `${stat.address.substring(0, 4)}...${stat.address.substring(stat.address.length - 4)}`
+          formatedStat.user = `${stat.user.substring(0, 4)}...${stat.user.substring(stat.user.length - 4)}`
           formatedStat.pair = `${stat.pair.substring(0, 4)}...${stat.pair.substring(stat.pair.length - 4)}`
-          const nfaData = await getProfile(stat.address)
+          const nfaData = await getProfile(stat.user)
           formatedStat.image = nfaData ? nfaData.rarestNft.image : null
-          formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.totalTradedUsd)
-          formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.pendingBananaRewards)
+          formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.prize)
+          formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.volume)
           return formatedStat
         }),
       )
@@ -181,7 +181,7 @@ const Trading = ({ tradingStats }) => {
                   </Flex>
                   <StyledFlexColumn flexDirection="column" justifyContent="center" ml="10px">
                     <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Wallet</StyledHeader>
-                    <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>{row.address}</StyledText>
+                    <StyledText color={row.ranking <= 3 ? 'white' : 'primary'}>{row.user}</StyledText>
                   </StyledFlexColumn>
                   <StyledFlexColumn flexDirection="column" justifyContent="center">
                     <StyledHeader color={row.ranking <= 3 ? 'white' : 'primary'}>Volume</StyledHeader>

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { getSeasonsTrading } from '../../hooks/api'
+import { getSeasonsTrading, SeasonTradingDto } from '../../hooks/api'
 
 const useFetchSeasonTrading = () => {
+  const listSeasonTrading: SeasonTradingDto[] = [];
   const [state, setState] = useState({
-    seasons: [],
+    seasons: listSeasonTrading,
     loading: true,
   })
 

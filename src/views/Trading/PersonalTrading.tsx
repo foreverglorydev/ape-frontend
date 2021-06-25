@@ -146,7 +146,7 @@ const Trading = (individual) => {
                   </StyledTextSubHead>
                 )}
               </Flex>
-              <StyledTextPosition>{position}th</StyledTextPosition>
+              <StyledTextPosition>{position === 0 ? '---' : position}th</StyledTextPosition>
             </Flex>
           </StyledCardHeader>
           {profileImage ? <StyledAvatarImage src={profileImage} alt="profile avatar" /> : <StyledAvatar />}{' '}
