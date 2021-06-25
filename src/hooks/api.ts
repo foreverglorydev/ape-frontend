@@ -44,10 +44,10 @@ export interface SaleHistory {
 }
 
 export interface AddressStatsDto {
-  address: string;
-  position?: number;
-  volume: number;
-  prize: number;
+  address: string
+  position?: number
+  volume: number
+  prize: number
 }
 export interface SeasonTradingDto {
   season: number
@@ -61,9 +61,9 @@ export interface SeasonTradingDto {
 }
 
 export interface TradingAllInfoDto {
-  season?: SeasonTradingDto;
-  individual?: AddressStatsDto;
-  trading?: AddressStatsDto[];
+  season?: SeasonTradingDto
+  individual?: AddressStatsDto
+  trading?: AddressStatsDto[]
 }
 
 export const useGetNfaSales = (id: number) => {
@@ -354,7 +354,7 @@ export const getSeasonsTrading = async () => {
 }
 
 export const getSeasonInfo = async ({ season, pair, address }: { season: number; pair: string; address: string }) => {
-  const info: TradingAllInfoDto = {};
+  const info: TradingAllInfoDto = {}
   if (season == null || !pair) return info
   let url = `${apiBaseUrl}/trading/${season}/${pair}`
   if (address) url = `${apiBaseUrl}/trading/${season}/${pair}/${address}`
@@ -375,7 +375,7 @@ export const getSeasonInfo = async ({ season, pair, address }: { season: number;
     tokenImage2: mappingImage(data.season.token2),
   }
 
-  info.individual = data.individual;
+  info.individual = data.individual
   return info
 }
 
