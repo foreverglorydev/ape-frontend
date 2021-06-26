@@ -165,7 +165,7 @@ const Trading = (individual) => {
                       decimals={2}
                       value={volume}
                       fontFamily="poppins"
-                      prefix="~"
+                      prefix="$"
                     />
                   </Flex>
                   <Flex flexDirection="column" ml="25px">
@@ -174,7 +174,13 @@ const Trading = (individual) => {
                     </StyledText>
                     <Flex justifyContent="center" alignItems="center">
                       <StyledBananaReward src="/images/tokens/banana.svg" alt="banana-token-reward" />
-                      <CardValue fontSize="20px" fontWeight={700} decimals={2} value={prize} fontFamily="poppins" />
+                      {prize > 1 ? (
+                        <CardValue fontSize="20px" fontWeight={700} decimals={2} value={prize} fontFamily="poppins" />
+                      ) : (
+                        <StyledText fontFamily="poppins" fontSize="20px" fontWeight={700} color="primary">
+                          -
+                        </StyledText>
+                      )}
                     </Flex>
                   </Flex>
                 </Flex>

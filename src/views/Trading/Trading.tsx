@@ -3,8 +3,8 @@ import { Text, Flex, MonkeyLight } from '@apeswapfinance/uikit'
 
 import styled from 'styled-components'
 import format from 'format-number'
-
-import getProfile from './GetProfile'
+import getProfile from 'state/profile/getProfile'
+import { AddressStatsDto } from 'hooks/api'
 
 // import { fetchProfileTrading } from 'state/trading'
 
@@ -138,7 +138,7 @@ const StyledHeading = styled(Text)`
     margin: 0px;
   }
 `
-const Trading = ({ tradingStats }) => {
+const Trading = ({ tradingStats }: { tradingStats: AddressStatsDto[] }) => {
   const [tradingData, setTradingData] = useState([])
 
   useEffect(() => {
@@ -150,8 +150,8 @@ const Trading = ({ tradingStats }) => {
           formatedStat.pair = `${stat.pair.substring(0, 4)}...${stat.pair.substring(stat.pair.length - 4)}`
           const nfaData = await getProfile(stat.user)
           formatedStat.image = nfaData ? nfaData.rarestNft.image : null
-          formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.prize)
-          formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.volume)
+          formatedStat.totalTradedUsd = format({ prefix: '$', truncate: 2 })(stat.volume)
+          formatedStat.pendingBananaRewards = format({ truncate: 2 })(stat.prize)
           return formatedStat
         }),
       )

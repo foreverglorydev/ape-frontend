@@ -45,9 +45,11 @@ export interface SaleHistory {
 
 export interface AddressStatsDto {
   address: string
-  position?: number
+  rank: number
   volume: number
   prize: number
+  user: string
+  pair: string
 }
 export interface SeasonTradingDto {
   season: number
