@@ -52,7 +52,7 @@ const config: MenuEntry[] = [
     href: '/apezone',
   },
   {
-    label: 'Ape Trading',
+    label: 'Trading Comps',
     icon: 'Trading',
     href: '/trading',
   },

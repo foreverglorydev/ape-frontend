@@ -56,7 +56,7 @@ const StyledButton = styled(Button)`
   border-radius: 10px;
   font-family: Poppins;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 10px;
   line-height: 24px;
   color: #ffb300;
   width: 150px;
@@ -71,6 +71,7 @@ const StyledButton = styled(Button)`
 
   ${({ theme }) => theme.mediaQueries.sm} {
     width: 193px;
+    font-size: 16px;
   }
 `
 
@@ -109,13 +110,15 @@ const StyledFlexAirdrop = styled(Flex)`
 `
 
 const HeroCard = ({
-  season = 0,
-  endTimestamp = '0',
-  startTimestamp = '0',
+  season,
+  endTimestamp,
+  startTimestamp,
+  name
 }: {
   season: any
   endTimestamp: string
   startTimestamp: string
+  name: string
 }) => {
   const seasonText = `Season ${season}`
   return (
@@ -127,6 +130,9 @@ const HeroCard = ({
           </StyledText>
           <StyledTextSubHead mt="8px" color="white" fontFamily="poppins">
             Welcome to the Wild-Wild Jungle, where only the craziest of Apes survive.
+          </StyledTextSubHead>
+          <StyledTextSubHead mt="8px" color="white" fontWeight={100} >
+            {seasonText}: {name}
           </StyledTextSubHead>
           <Flex mt="20px" alignItems="center">
             <StyledButton

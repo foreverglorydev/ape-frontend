@@ -69,6 +69,7 @@ const Trading = () => {
         <>
           <HeroCard
             season={infoSeason.season}
+            name={infoSeason.name}
             endTimestamp={infoSeason.endTimestamp}
             startTimestamp={infoSeason.startTimestamp}
           />
