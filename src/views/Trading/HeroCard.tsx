@@ -113,7 +113,7 @@ const HeroCard = ({
   season,
   endTimestamp,
   startTimestamp,
-  name
+  name,
 }: {
   season: any
   endTimestamp: string
@@ -131,7 +131,7 @@ const HeroCard = ({
           <StyledTextSubHead mt="8px" color="white" fontFamily="poppins">
             Welcome to the Wild-Wild Jungle, where only the craziest of Apes survive.
           </StyledTextSubHead>
-          <StyledTextSubHead mt="8px" color="white" fontWeight={100} >
+          <StyledTextSubHead mt="8px" color="white" fontWeight={100}>
             {seasonText}: {name}
           </StyledTextSubHead>
           <Flex mt="20px" alignItems="center">
