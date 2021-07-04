@@ -67,7 +67,11 @@ const Trading = () => {
         </LoadingContainer>
       ) : (
         <>
-          <HeroCard season={infoSeason.season} endTimestamp={infoSeason.endTimestamp} />
+          <HeroCard
+            season={infoSeason.season}
+            endTimestamp={infoSeason.endTimestamp}
+            startTimestamp={infoSeason.startTimestamp}
+          />
           <StyledHeading color="text" fontFamily="poppins" fontSize="24px">
             Season Results
           </StyledHeading>
