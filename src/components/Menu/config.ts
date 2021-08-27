@@ -34,7 +34,16 @@ const config: MenuEntry[] = [
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: '/pools',
+    items: [
+      {
+        label: 'Pools',
+        href: '/pools',
+      },
+      {
+        label: 'Burning Pools',
+        href: '/burning-pools',
+      },
+    ],
   },
   {
     label: 'IAO',

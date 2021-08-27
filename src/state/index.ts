@@ -7,6 +7,7 @@ import statsReducer from './stats'
 import statsOverallReducer from './statsOverall'
 import teamsReducer from './teams'
 import auctionReducer from './auction'
+import burningPoolsReducer from './burningPools'
 
 export default configureStore({
   devTools: process.env.NODE_ENV !== 'production',
@@ -14,6 +15,7 @@ export default configureStore({
     farms: farmsReducer,
     toasts: toastsReducer,
     pools: poolsReducer,
+    burningPools: burningPoolsReducer,
     profile: profileReducer,
     stats: statsReducer,
     statsOverall: statsOverallReducer,

@@ -1,9 +1,15 @@
 import { useCallback } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import { useDispatch } from 'react-redux'
-import { fetchFarmUserDataAsync, updateUserStakedBalance, updateUserBalance } from 'state/actions'
-import { stake, sousStake, sousStakeBnb } from 'utils/callHelpers'
-import { useMasterchef, useSousChef } from './useContract'
+import {
+  fetchFarmUserDataAsync,
+  updateUserStakedBalance,
+  updateUserBalance,
+  updateBurningUserStakedBalance,
+  updateBurningUserBalance,
+} from 'state/actions'
+import { stake, sousStake, sousStakeBnb, sousBurningStake } from 'utils/callHelpers'
+import { useBurningSousChef, useMasterchef, useSousChef } from './useContract'
 
 const useStake = (pid: number) => {
   const dispatch = useDispatch()
@@ -41,6 +47,24 @@ export const useSousStake = (sousId, isUsingBnb = false) => {
       dispatch(updateUserBalance(sousId, account))
     },
     [account, dispatch, isUsingBnb, masterChefContract, sousChefContract, sousId],
+  )
+
+  return { onStake: handleStake }
+}
+
+export const useBurningSousStake = (sousId) => {
+  const dispatch = useDispatch()
+  const { account } = useWeb3React()
+  const sousBurningChefContract = useBurningSousChef(sousId)
+
+  const handleStake = useCallback(
+    async (amount: string) => {
+      console.log(amount)
+      await sousBurningStake(sousBurningChefContract, amount, account)
+      dispatch(updateBurningUserStakedBalance(sousId, account))
+      dispatch(updateBurningUserBalance(sousId, account))
+    },
+    [account, dispatch, sousBurningChefContract, sousId],
   )
 
   return { onStake: handleStake }

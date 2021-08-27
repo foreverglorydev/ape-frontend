@@ -30,6 +30,10 @@ export interface Pool extends PoolConfig {
   lpData?: any
 }
 
+export interface BurningPool extends Pool {
+  lockBlock?: number
+}
+
 export interface Profile {
   ownedNfts: Nft[]
   rarestNft: Nft
@@ -125,6 +129,8 @@ export interface PoolOverall {
   rewardTokenSymbol: string
 }
 
+export interface BurningPoolOverall extends PoolOverall{}
+
 export interface FarmOverall {
   address: string
   lpSymbol: string
@@ -162,6 +168,10 @@ export interface FarmsState {
 
 export interface PoolsState {
   data: Pool[]
+}
+
+export interface BurningPoolsState {
+  data: BurningPool[]
 }
 
 export interface ProfileState {
@@ -212,6 +222,7 @@ export interface State {
   farms: FarmsState
   toasts: ToastsState
   pools: PoolsState
+  burningPools: BurningPoolsState
   profile: ProfileState
   stats: StatsState
   statsOverall: StatsOverallState

@@ -6,6 +6,9 @@ import {
   updateUserStakedBalance,
   updateUserBalance,
   updateUserPendingReward,
+  updateBurningUserStakedBalance,
+  updateBurningUserBalance,
+  updateBurningUserPendingReward,
 } from 'state/actions'
 import { unstake, sousUnstake, sousEmegencyUnstake } from 'utils/callHelpers'
 import { useMasterchef, useSousChef } from './useContract'
@@ -54,6 +57,25 @@ export const useSousUnstake = (sousId) => {
       dispatch(updateUserPendingReward(sousId, account))
     },
     [account, dispatch, isOldSyrup, masterChefContract, sousChefContract, sousId],
+  )
+
+  return { onUnstake: handleUnstake }
+}
+
+export const useBurningSousUnstake = (sousId) => {
+  const dispatch = useDispatch()
+  const { account } = useWeb3React()
+  const sousChefContract = useSousChef(sousId)
+
+  const handleUnstake = useCallback(
+    async (amount: string) => {
+      const txHash = await sousUnstake(sousChefContract, amount, account)
+      console.info(txHash)
+      dispatch(updateBurningUserStakedBalance(sousId, account))
+      dispatch(updateBurningUserBalance(sousId, account))
+      dispatch(updateBurningUserPendingReward(sousId, account))
+    },
+    [account, dispatch, sousChefContract, sousId],
   )
 
   return { onUnstake: handleUnstake }

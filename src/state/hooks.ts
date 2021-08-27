@@ -21,6 +21,7 @@ import {
   State,
   Farm,
   Pool,
+  BurningPool,
   ProfileState,
   StatsState,
   StatsOverallState,
@@ -33,6 +34,7 @@ import { fetchStats } from './stats'
 import { fetchStatsOverall } from './statsOverall'
 import { fetchTeam, fetchTeams } from './teams'
 import { fetchAuctions } from './auction'
+import { fetchBurningPoolsPublicDataAsync, fetchBurningPoolsUserDataAsync } from './burningPools'
 
 const ZERO = new BigNumber(0)
 
@@ -42,6 +44,7 @@ export const useFetchPublicData = () => {
   useEffect(() => {
     dispatch(fetchFarmsPublicDataAsync())
     dispatch(fetchPoolsPublicDataAsync())
+    dispatch(fetchBurningPoolsPublicDataAsync())
   }, [dispatch, slowRefresh])
 }
 
@@ -100,6 +103,36 @@ export const useGnanaPools = (account): Pool[] => {
 
 export const useAllPools = (): Pool[] => {
   const pools = useSelector((state: State) => state.pools.data)
+  return pools
+}
+
+// Burning Pools
+
+export const useBurningPools = (account): BurningPool[] => {
+  const { fastRefresh } = useRefresh()
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (account) {
+      dispatch(fetchBurningPoolsUserDataAsync(account))
+    }
+  }, [account, dispatch, fastRefresh])
+
+  const pools = useSelector((state: State) => state.burningPools.data)
+  return pools
+}
+
+export const useBurningPoolFromPid = (sousId): BurningPool => {
+  const pool = useSelector((state: State) => state.burningPools.data.find((p) => p.sousId === sousId))
+  return pool
+}
+
+export const useBurningGnanaPools = (account): BurningPool[] => {
+  const pools = usePools(account).filter((burningPool) => burningPool.stakingTokenName === 'GNANA')
+  return pools
+}
+
+export const useAllBurningPools = (): BurningPool[] => {
+  const pools = useSelector((state: State) => state.burningPools.data)
   return pools
 }
 

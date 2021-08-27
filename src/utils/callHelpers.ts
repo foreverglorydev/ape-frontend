@@ -34,6 +34,15 @@ export const sousStake = async (sousChefContract, amount, account) => {
     })
 }
 
+export const sousBurningStake = async (sousBurningChefContract, amount, account) => {
+  return sousBurningChefContract.methods
+    .stake(new BigNumber(amount).times(new BigNumber(10).pow(18)).toString())
+    .send({ from: account })
+    .on('transactionHash', (tx) => {
+      return tx.transactionHash
+    })
+}
+
 export const sousStakeBnb = async (sousChefContract, amount, account) => {
   return sousChefContract.methods
     .deposit()
@@ -115,6 +124,15 @@ export const harvest = async (masterChefContract, pid, account) => {
 export const soushHarvest = async (sousChefContract, account) => {
   return sousChefContract.methods
     .deposit('0')
+    .send({ from: account })
+    .on('transactionHash', (tx) => {
+      return tx.transactionHash
+    })
+}
+
+export const sousBurningHarvest = async (sousBurningChefContract, account) => {
+  return sousBurningChefContract.methods
+    .stake('0')
     .send({ from: account })
     .on('transactionHash', (tx) => {
       return tx.transactionHash

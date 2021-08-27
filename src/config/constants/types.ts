@@ -93,6 +93,10 @@ export interface PoolConfig {
   lpStaking?: boolean
 }
 
+export interface BurningPoolConfig extends PoolConfig {
+  lockBlock?: number
+}
+
 export type Images = {
   lg: string
   md: string

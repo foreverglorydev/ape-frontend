@@ -15,6 +15,7 @@ import {
   getAuctionAddress,
 } from 'utils/addressHelpers'
 import { poolsConfig } from 'config/constants'
+import burningPoolsConfig from 'config/constants/burningPools'
 import { PoolCategory } from 'config/constants/types'
 import ifo from 'config/abi/ifo.json'
 import erc20 from 'config/abi/erc20.json'
@@ -25,6 +26,7 @@ import treasuryAbi from 'config/abi/treasury.json'
 import lotteryTicket from 'config/abi/lotteryNft.json'
 import masterChef from 'config/abi/masterchef.json'
 import sousChef from 'config/abi/sousChef.json'
+import sousBurningChef from 'config/abi/sousBurningChef.json'
 import sousChefBnb from 'config/abi/sousChefBnb.json'
 import profile from 'config/abi/bananaProfile.json'
 import auction from 'config/abi/auction.json'
@@ -122,6 +124,13 @@ export const useMasterchef = () => {
 export const useSousChef = (id) => {
   const config = poolsConfig.find((pool) => pool.sousId === id)
   const rawAbi = config.poolCategory === PoolCategory.BINANCE ? sousChefBnb : sousChef
+  const abi = (rawAbi as unknown) as AbiItem
+  return useContract(abi, config.contractAddress[process.env.REACT_APP_CHAIN_ID])
+}
+
+export const useBurningSousChef = (id) => {
+  const config = burningPoolsConfig.find((pool) => pool.sousId === id)
+  const rawAbi = config.poolCategory === PoolCategory.BINANCE ? sousChefBnb : sousBurningChef
   const abi = (rawAbi as unknown) as AbiItem
   return useContract(abi, config.contractAddress[process.env.REACT_APP_CHAIN_ID])
 }

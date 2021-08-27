@@ -5,7 +5,7 @@ import { ethers } from 'ethers'
 import { useDispatch } from 'react-redux'
 import { updateUserAllowance, fetchFarmUserDataAsync } from 'state/actions'
 import { approve } from 'utils/callHelpers'
-import { useMasterchef, useBanana, useSousChef, useLottery } from './useContract'
+import { useMasterchef, useBanana, useSousChef, useLottery, useBurningSousChef } from './useContract'
 
 // Approve a Farm
 export const useApprove = (lpContract: Contract) => {
@@ -31,6 +31,25 @@ export const useSousApprove = (lpContract: Contract, sousId) => {
   const dispatch = useDispatch()
   const { account } = useWeb3React()
   const sousChefContract = useSousChef(sousId)
+
+  const handleApprove = useCallback(async () => {
+    try {
+      const tx = await approve(lpContract, sousChefContract, account)
+      dispatch(updateUserAllowance(sousId, account))
+      return tx
+    } catch (e) {
+      return false
+    }
+  }, [account, dispatch, lpContract, sousChefContract, sousId])
+
+  return { onApprove: handleApprove }
+}
+
+// Approve a Burning Pool
+export const useBurningSousApprove = (lpContract: Contract, sousId) => {
+  const dispatch = useDispatch()
+  const { account } = useWeb3React()
+  const sousChefContract = useBurningSousChef(sousId)
 
   const handleApprove = useCallback(async () => {
     try {

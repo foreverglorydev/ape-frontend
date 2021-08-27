@@ -23,6 +23,7 @@ import PageLoader from './components/PageLoader'
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
 const Pools = lazy(() => import('./views/Pools'))
+const BurningPools = lazy(() => import('./views/BurningPools'))
 const Lottery = lazy(() => import('./views/Lottery'))
 const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
@@ -100,6 +101,9 @@ const App: React.FC = () => {
             <Route path="/farms">{statsOverall && <Farms />}</Route>
             <Route path="/pools">
               <Pools />
+            </Route>
+            <Route path="/burning-pools">
+              <BurningPools />
             </Route>
             <Route path="/lottery">
               <Lottery />
