@@ -41,7 +41,11 @@ export const BurningPoolsSlice = createSlice({
 })
 
 // Actions
-export const { setBurningPoolsPublicData, setBurningPoolsUserData, updateBurningPoolsUserData } = BurningPoolsSlice.actions
+export const {
+  setBurningPoolsPublicData,
+  setBurningPoolsUserData,
+  updateBurningPoolsUserData,
+} = BurningPoolsSlice.actions
 
 // Thunks
 export const fetchBurningPoolsPublicDataAsync = () => async (dispatch) => {

@@ -93,7 +93,7 @@ const ActionPanel: React.FC<ExpandableSectionProps> = ({
   pendingReward,
   projectLink,
   tokenDecimals,
-  lockBlock
+  lockBlock,
 }) => {
   const TranslateString = useI18n()
 
@@ -108,7 +108,6 @@ const ActionPanel: React.FC<ExpandableSectionProps> = ({
   const timeUntilStart = getTimePeriods(blocksUntilStart * BSC_BLOCK_TIME)
   const timeUntilEnd = getTimePeriods(blocksRemaining * BSC_BLOCK_TIME)
   const timeUntilLock = getTimePeriods(lockBlock * BSC_BLOCK_TIME)
-
 
   return (
     <Wrapper>

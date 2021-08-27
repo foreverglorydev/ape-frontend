@@ -40,7 +40,7 @@ const burningPools: BurningPoolConfig[] = [
     poolCategory: PoolCategory.CORE,
     projectLink: 'https://apeswap.finance/',
     harvest: true,
-    tokenPerBlock: '0.00416666666666666',
+    tokenPerBlock: '0.000138888888888888',
     sortOrder: 1,
     isFinished: false,
     tokenDecimals: 18,

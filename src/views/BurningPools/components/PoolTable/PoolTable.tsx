@@ -119,7 +119,7 @@ const PoolTable: React.FC<HarvestProps> = ({ pool, removed }) => {
     projectLink,
     contractAddress,
     tokenDecimals,
-    lockBlock
+    lockBlock,
   } = pool
 
   const { account } = useWeb3React()

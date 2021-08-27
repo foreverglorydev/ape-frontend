@@ -79,7 +79,7 @@ const StakeAction: React.FC<StakeActionsProps> = ({
   stakedBalance,
   isApproved,
   firstStake,
-  lockBlock
+  lockBlock,
 }) => {
   const TranslateString = useI18n()
 
@@ -101,7 +101,6 @@ const StakeAction: React.FC<StakeActionsProps> = ({
   const block = useBlock()
 
   const disableStake = block > lockBlock
-
 
   const [onPresentDeposit] = useModal(
     <DepositModal
@@ -156,7 +155,11 @@ const StakeAction: React.FC<StakeActionsProps> = ({
   }
 
   if (firstStake) {
-    return <ButtonSquare onClick={onPresentDeposit} disabled={disableStake}>{TranslateString(999, `Stake ${stakingTokenName}`)}</ButtonSquare>
+    return (
+      <ButtonSquare onClick={onPresentDeposit} disabled={disableStake}>
+        {TranslateString(999, `Stake ${stakingTokenName}`)}
+      </ButtonSquare>
+    )
   }
 
   return (

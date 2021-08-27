@@ -83,7 +83,6 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const TranslateString = useI18n()
 
   const totalDollarAmountStaked = totalStaked * stakedTokenPrice
-  console.log(stakedTokenPrice)
 
   const totalDollarAmountStakedFormated = totalDollarAmountStaked
     ? `${Number(totalDollarAmountStaked).toLocaleString(undefined, { maximumFractionDigits: 2 })}`

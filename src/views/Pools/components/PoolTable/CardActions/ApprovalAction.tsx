@@ -13,8 +13,6 @@ const ApprovalAction: React.FC<ApprovalActionProps> = ({ stakingContractAddress,
   const stakingTokenContract = useERC20(stakingContractAddress)
   const [requestedApproval, setRequestedApproval] = useState(false)
   const rewardRefReward = useRef(null)
-  console.log(stakingTokenContract)
-  console.log(sousId)
   const { onApprove } = useSousApprove(stakingTokenContract, sousId)
 
   const handleApprove = useCallback(async () => {

@@ -59,7 +59,6 @@ export const useBurningSousStake = (sousId) => {
 
   const handleStake = useCallback(
     async (amount: string) => {
-      console.log(amount)
       await sousBurningStake(sousBurningChefContract, amount, account)
       dispatch(updateBurningUserStakedBalance(sousId, account))
       dispatch(updateBurningUserBalance(sousId, account))
