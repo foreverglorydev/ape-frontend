@@ -1981,6 +1981,28 @@ const pools: PoolConfig[] = [
     isFinished: false,
     tokenDecimals: 8,
   },
+  {
+    sousId: 90,
+    tokenName: 'POLAR',
+    image: 'POLAR.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a',
+      56: '0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299',
+    },
+    contractAddress: {
+      97: '0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d',
+      56: '0xced71d65f3fc86767d26152ab0987b29c089ae85',
+    },
+    poolCategory: PoolCategory.APEZONE,
+    projectLink: 'https://www.polarsync.app/',
+    harvest: true,
+    tokenPerBlock: `0.964506172839506172`,
+    sortOrder: 1,
+    reflect: false,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
 ]
 
 export default pools
