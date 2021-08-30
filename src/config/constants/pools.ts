@@ -1984,7 +1984,7 @@ const pools: PoolConfig[] = [
   {
     sousId: 90,
     tokenName: 'POLAR',
-    image: 'POLAR.svg',
+    image: 'POLAR.png',
     stakingTokenName: 'GNANA',
     stakingTokenAddress: {
       97: '0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a',
