@@ -572,7 +572,7 @@ const Pools: React.FC = () => {
     return tokenPriceBN
   }
 
-  const poolsWithApy = allBurningPools.map((pool) => {
+  const poolsWithRoi = allBurningPools.map((pool) => {
     const isBnbPool = pool.poolCategory === PoolCategory.BINANCE
     const rewardTokenFarm = farms.find((f) => f.tokenSymbol === pool.tokenName)
     const stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
@@ -607,6 +607,7 @@ const Pools: React.FC = () => {
 
     const totalRewardPricePerYear = rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
     const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
+    const roi = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
     const apr = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
 
     return {
@@ -618,7 +619,7 @@ const Pools: React.FC = () => {
     }
   })
 
-  const [finishedPools, openPools] = partition(poolsWithApy, (pool) => pool.isFinished)
+  const [finishedPools, openPools] = partition(poolsWithRoi, (pool) => pool.isFinished)
 
   const stakedOnlyPools = openPools.filter(
     (pool) => pool.userData && new BigNumber(pool.userData.stakedBalance).isGreaterThan(0),

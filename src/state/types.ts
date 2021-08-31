@@ -129,7 +129,8 @@ export interface PoolOverall {
   rewardTokenSymbol: string
 }
 
-export interface BurningPoolOverall extends PoolOverall {}
+// export interface BurningPoolOverall extends PoolOverall {}
+export type BurningPoolOverall = PoolOverall
 
 export interface FarmOverall {
   address: string

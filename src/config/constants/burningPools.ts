@@ -46,6 +46,28 @@ const burningPools: BurningPoolConfig[] = [
     tokenDecimals: 18,
     lockBlock: 10407185,
   },
+  {
+    sousId: 5,
+    tokenName: 'BANANA',
+    image: 'BANANA.svg',
+    stakingTokenName: 'GNANA',
+    stakingTokenAddress: {
+      97: '0xddb3bd8645775f59496c821e4f55a7ea6a6dc299',
+      56: '0xddb3bd8645775f59496c821e4f55a7ea6a6dc299',
+    },
+    contractAddress: {
+      97: '0x28734b675A2402aF73cE345389970BB51Bc5780c',
+      56: '0x504dA3B8B3E4f2C00CF41102f9B07338Cdae9277',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'https://apeswap.finance/',
+    harvest: true,
+    tokenPerBlock: '0.000017361111111111',
+    sortOrder: 1,
+    isFinished: false,
+    tokenDecimals: 18,
+    lockBlock: 10519009,
+  },
 ]
 
 export default burningPools
