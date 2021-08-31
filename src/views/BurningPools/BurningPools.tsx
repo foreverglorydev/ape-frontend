@@ -393,11 +393,11 @@ const ButtonCheckWrapper = styled.div`
 
 const StyledHeading = styled(Heading)`
   font-size: 32px;
-  max-width: 176px !important;
+  max-width: 276px !important;
 
   ${({ theme }) => theme.mediaQueries.xs} {
     font-size: 36px;
-    max-width: 240px !important;
+    max-width: 340px !important;
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
@@ -728,16 +728,13 @@ const Pools: React.FC = () => {
           <StyledHeading as="h1" mb="8px" mt={0} color="white">
             {TranslateString(999, 'Burning Pools')}
           </StyledHeading>
-          {size.width > 968 && (
+          {/* {size.width > 968 && (
             <Text fontSize="22px" fontFamily="poppins" fontWeight={400} color="white">
               Stake BANANA to earn new tokens. <br /> You can unstake at any time. <br /> Rewards are calculated per
               block.
             </Text>
-          )}
+          )} */}
         </HeadingContainer>
-        <MonkeyWrapper>
-          <PoolMonkey />
-        </MonkeyWrapper>
       </Header>
       <StyledPage width="1130px">
         <ControlContainer>
@@ -777,7 +774,7 @@ const Pools: React.FC = () => {
           </StyledLabelContainerLP>
           <StyledLabelContainerAPR>
             <StyledLabel active={sortOption === 'apr'} onClick={() => handleSortOptionChange('apr')}>
-              APR
+              ROI
               {sortOption === 'apr' ? (
                 <StyledArrowDropDownIcon width="7px" height="8px" color="white" down={sortDirection === 'desc'} />
               ) : null}

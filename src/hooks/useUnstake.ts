@@ -10,7 +10,7 @@ import {
   updateBurningUserBalance,
   updateBurningUserPendingReward,
 } from 'state/actions'
-import { unstake, sousUnstake, sousEmegencyUnstake } from 'utils/callHelpers'
+import { unstake, sousUnstake, sousEmegencyWithdraw } from 'utils/callHelpers'
 import { useMasterchef, useSousChef } from './useContract'
 
 const useUnstake = (pid: number) => {
@@ -46,7 +46,7 @@ export const useSousUnstake = (sousId) => {
         const txHash = await unstake(masterChefContract, 0, amount, account)
         console.info(txHash)
       } else if (isOldSyrup) {
-        const txHash = await sousEmegencyUnstake(sousChefContract, amount, account)
+        const txHash = await sousEmegencyWithdraw(sousChefContract, account)
         console.info(txHash)
       } else {
         const txHash = await sousUnstake(sousChefContract, amount, account)
@@ -79,6 +79,20 @@ export const useBurningSousUnstake = (sousId) => {
   )
 
   return { onUnstake: handleUnstake }
+}
+
+export const useSousEmergencyWithdraw = (sousId) => {
+  const dispatch = useDispatch()
+  const { account } = useWeb3React()
+  const sousChefContract = useSousChef(sousId)
+  const handleEmergencyWithdraw = useCallback(async () => {
+    const txHash = await sousEmegencyWithdraw(sousChefContract, account)
+    console.info(txHash)
+    dispatch(updateUserStakedBalance(sousId, account))
+    dispatch(updateUserBalance(sousId, account))
+    dispatch(updateUserPendingReward(sousId, account))
+  }, [account, dispatch, sousChefContract, sousId])
+  return { onEmergencyWithdraw: handleEmergencyWithdraw }
 }
 
 export default useUnstake
