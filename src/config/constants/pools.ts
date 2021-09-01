@@ -18,22 +18,22 @@ const getPoolCategory = (category) => {
   }
 }
 
-const pools: PoolConfig[] = poolList.map((pool) => (
-  {
-    sousId: Number(pool.sousId),
-    tokenName: pool.tokenName,
-    image: pool.image,
-    stakingTokenName: pool.stakingTokenName,
-    stakingTokenAddress: pool.stakingTokenAddress, // BANANA token address
-    contractAddress: pool.contractAddress,
-    poolCategory: getPoolCategory(pool.poolCategory),
-    projectLink: pool.projectLink,
-    harvest: pool.harvest,
-    tokenPerBlock: (new BigNumber(pool.rewardPerBlock).dividedBy(new BigNumber(10).pow(new BigNumber(pool.tokenDecimals)))).toString(),
-    sortOrder: pool.sortOrder,
-    isFinished: pool.isFinished,
-    tokenDecimals: pool.tokenDecimals,
-  }
-));
+const pools: PoolConfig[] = poolList.map((pool) => ({
+  sousId: Number(pool.sousId),
+  tokenName: pool.tokenName,
+  image: pool.image,
+  stakingTokenName: pool.stakingTokenName,
+  stakingTokenAddress: pool.stakingTokenAddress, // BANANA token address
+  contractAddress: pool.contractAddress,
+  poolCategory: getPoolCategory(pool.poolCategory),
+  projectLink: pool.projectLink,
+  harvest: pool.harvest,
+  tokenPerBlock: new BigNumber(pool.rewardPerBlock)
+    .dividedBy(new BigNumber(10).pow(new BigNumber(pool.tokenDecimals)))
+    .toString(),
+  sortOrder: pool.sortOrder,
+  isFinished: pool.isFinished,
+  tokenDecimals: pool.tokenDecimals,
+}))
 
 export default pools
