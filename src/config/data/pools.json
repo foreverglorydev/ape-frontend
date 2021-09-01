@@ -1,0 +1,2479 @@
+[
+  {
+    "sousId": 0,
+    "tokenName": "BANANA",
+    "image": "BANANA.svg",
+    "stakingTokenName": "BANANA",
+    "stakingTokenAddress": {
+        "97": "0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+    },
+    "contractAddress": {
+        "97": "0xbbC5e1cD3BA8ED639b00927115e5f0e0040aA613",
+        "56": "0x5c8D727b265DBAfaba67E050f2f739cAeEB4A6F9"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://apeswap.finance/",
+    "harvest": true,
+    "rewardPerBlock": 2500000000000000000,
+    "sortOrder": 1,
+    "isFinished": false,
+    "tokenDecimals": 18
+    },
+  {
+    "sousId": 1,
+    "name": "BANANA -> BNB Reward Pool",
+    "tokenName": "BNB",
+    "image": "BNB.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "rewardPerBlock": 694444400000000,
+    "startBlock": 5034880,
+    "bonusEndBlock": 5178877,
+    "stakingTokenAddress": {
+        "97": "0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+    },
+    "contractAddress": {
+        "97": "0x88777a814946cd8eb80e7029eedf05cc6cf34168",
+        "56": "0x0245c697a96045183048cdf18e9abae5b2237ff6"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://research.binance.com/en/projects/bnb",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "displayDecimals": 5,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 2,
+    "name": "SOUL/BANANA LP -> SOUL Reward Pool",
+    "tokenName": "SOUL",
+    "image": "SOUL.png",
+    "stakingTokenName": "BANANA-SOUL",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x67d012F731c23F0313CEA1186d0121779c77fcFE",
+    "rewardPerBlock": 135800000000,
+    "startBlock": 5511250,
+    "bonusEndBlock": 5604850,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xa48271ff51900007d3b21cecf30fdc8ccb63fee6"
+    },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0xf5Cb9F954D3Ea26Bb503A6996a4b2B0aAdC8c969"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://apoyield.com",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 3,
+    "name": "SOUL/BANANA LP -> SOUL Reward Pool",
+    "tokenName": "SOUL",
+    "image": "SOUL.png",
+    "stakingTokenName": "BANANA-SOUL",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x67d012F731c23F0313CEA1186d0121779c77fcFE",
+    "rewardPerBlock": 39600000000,
+    "startBlock": 5602450,
+    "bonusEndBlock": 5857050,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xa48271ff51900007d3b21cecf30fdc8ccb63fee6"
+    },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x82576dB7685418CBDD5A9f4721D605C125E4569c"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://apoyield.com",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 8,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 4,
+    "name": "NUTS/BANANA LP -> NUTS Reward Pool",
+    "tokenName": "NUTS",
+    "stakingTokenName": "BANANA-NUTS",
+    "image": "NUTS.svg",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x8893D5fA71389673C5c4b9b3cb4EE1ba71207556",
+    "rewardPerBlock": 86805555560000000,
+    "startBlock": 5629403,
+    "bonusEndBlock": 5658203,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x44baf117d79d5313bea1fbba416e4067436e4bbe" 
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x3523cE00C9f82FfafC850C0Acccb78341239028b"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://squirrel.finance/",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI",
+    "lpStaking": true
+  },
+  {
+    "sousId": 5,
+    "name": "NUTS/BANANA LP -> BANANA Reward Pool",
+    "tokenName": "BANANA",
+    "stakingTokenName": "BANANA-NUTS",
+    "image": "BANANA.svg",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95",
+    "rewardPerBlock": 144652777800000000,
+    "startBlock": 5658203,
+    "bonusEndBlock": 5687003,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x44baf117d79d5313bea1fbba416e4067436e4bbe" 
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0xdb28A11Fe950C9979A8050E6cBA76D187D5C3b70"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://squirrel.finance/",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI",
+    "lpStaking": true
+  },
+  {
+    "sousId": 6,
+    "name": "CRX/BANANA LP -> CRX Reward Pool",
+    "tokenName": "CRX",
+    "stakingTokenName": "BANANA-CRX",
+    "image": "CRX.svg",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x97a30C692eCe9C317235d48287d23d358170FC40",
+    "rewardPerBlock": 2604166666667000,
+    "startBlock": 5682212,
+    "bonusEndBlock": 5826212,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xbd896f59baf9a624a7587de5d28b7ad3459342ba" 
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x084beaa501dB448869001BA49913c9aD009b1694"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://cryptexlock.me/",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI",
+    "lpStaking": true
+  },
+  {
+    "sousId": 7,
+    "name": "NAUT/BNB LP -> NAUT Reward Pool",
+    "tokenName": "NAUT",
+    "stakingTokenName": "BNB-NAUT",
+    "image": "NAUT.png",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x05B339B0A346bF01f851ddE47a5d485c34FE220c",
+    "rewardPerBlock": "28935185",
+    "startBlock": 5720710,
+    "bonusEndBlock": 6584710,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x288ea5437c7aad045a393cee2f41e548df24d1c8" 
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x114d54e18eb4A7Dc9bB8280e283E5799D4188E3f"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://astronaut.to",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 8,
+    "lpStaking": true,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 8,
+    "name": "NUTS/BANANA LP -> NUTZ Reward Pool",
+    "tokenName": "NUTS",
+    "stakingTokenName": "BANANA-NUTS",
+    "image": "NUTS.svg",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x8893D5fA71389673C5c4b9b3cb4EE1ba71207556",
+    "rewardPerBlock": "24965277777778000",
+    "startBlock": 5744527,
+    "bonusEndBlock": 5946127,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x44baf117d79d5313bea1fbba416e4067436e4bbe"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x6Fd37f3F83F11100f9f501e2690E96F6fAC37E94"
+      },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://squirrel.finance/",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "lpStaking": true,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 10,
+    "name": "HPS/BANANA LP -> HPS Reward Pool",
+    "tokenName": "HPS",
+    "stakingTokenName": "BANANA-HPS",
+    "image": "HPS.png",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0xeDa21B525Ac789EaB1a08ef2404dd8505FfB973D",
+    "rewardPerBlock": "14880952380952000",
+    "startBlock": 5850334,
+    "bonusEndBlock": 6253534,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x268f002A3B8d2faC2aA2bA6D4B90d519ca0d1d46"
+    },
+      "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x9c64Cec2Ad86E918929665cF9AADf91cd755fEf1"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://billionhappiness.finance",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "lpStaking": true,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 11,
+    "name": "BRICK/BANANA LP -> BRICK Reward Pool",
+    "tokenName": "BRICK",
+    "stakingTokenName": "BANANA-BRICK",
+    "image": "BRICK.png",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0xc4DaA5a9f2B832eD0f9Bc579662883cD53EA9d61",
+    "rewardPerBlock": "2976190476190476000",
+    "startBlock": 5878788,
+    "bonusEndBlock": 6080388,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x51a9771708d0471a0e592e8febb2c6b868e3d99b"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x6B7254AdfCa2178B7065b4B57fDc452c405DFC8A"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://brickchain.finance",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "lpStaking": true,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 12,
+    "name": "JDI/BNB LP -> JDI Reward Pool",
+    "tokenName": "JDI",
+    "stakingTokenName": "BNB-JDI",
+    "image": "JDI.svg",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x0491648c910ad2c1afaab733faf71d30313df7fc",
+    "rewardPerBlock": "77160493827160000",
+    "startBlock": 6206295,
+    "bonusEndBlock": 11390295,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xfb6063f29af6dcd1fc03a8e221c6d91deabbe764"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x7336B60aC64a5Bf04Eec760bD135ea105994387C"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://jdiyield.com",
+    "harvest": true,
+    "sortOrder": 6,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "lpStaking": true,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 13,
+    "name": "BANANA -> FOXY Reward Pool",
+    "tokenName": "FOXY",
+    "stakingTokenName": "BANANA",
+    "image": "FOXY.png",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4354a4f710182966e55ea30cfa807fa1b821a67b",
+    "rewardPerBlock": "57870370",
+    "startBlock": 6346011,
+    "bonusEndBlock": 7210011,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95" 
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x726d5A4D170425C98BAff117BF3d9aF9f77f80bd"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://foxynft.org",
+    "harvest": true,
+    "sortOrder": 4,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "lpStaking": false,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 13,
+    "name": "BANANA -> FOXY Reward Pool",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4354a4f710182966e55ea30cfa807fa1b821a67b",
+    "rewardPerBlock": "57870370",
+    "startBlock": 6348011,
+    "bonusEndBlock": 7212011,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x726d5A4D170425C98BAff117BF3d9aF9f77f80bd"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://foxynft.org",
+    "harvest": true,
+    "sortOrder": 4,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "lpStaking": false,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 14,
+    "name": "BANANA -> JDI Reward Pool",
+    "tokenName": "JDI",
+    "stakingTokenName": "BANANA",
+    "image": "JDI.svg",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x0491648C910ad2c1aFaab733faF71D30313Df7FC",
+    "rewardPerBlock": "115640358485111000",
+    "startBlock": 6401695,
+    "bonusEndBlock": 9860695,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x72C8750af0744282E065F0dF3F73460A3764c624"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://jdiyield.com",
+    "harvest": true,
+    "sortOrder": 3,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "lpStaking": false,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 16,
+    "name": "BANANA -> LYPTUS Reward Pool",
+    "tokenName": "LYPTUS",
+    "stakingTokenName": "BANANA",
+    "image": "LYPTUS.png",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xBA26397cdFF25F0D26E815d218Ef3C77609ae7f1",
+    "rewardPerBlock": "34722222222222000",
+    "startBlock": 6427200,
+    "bonusEndBlock": 8164258,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x1900f5370830F0aa46DF76a6a4F0656Ef321b9f8"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://koaladefi.finance/",
+    "harvest": true,
+    "sortOrder": 3,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "lpStaking": false,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 17,
+    "name": "BANANA -> SWAMP Reward Pool",
+    "tokenName": "SWAMP",
+    "stakingTokenName": "BANANA",
+    "image": "SWAMP.svg",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xc5A49b4CBe004b6FD55B30Ba1dE6AC360FF9765d",
+    "rewardPerBlock": "479442180800000",
+    "startBlock": 6680032,
+    "bonusEndBlock": 8408032,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0xA007a5a8165D70DdFBC230927Cd639163228Fc72"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://swamp.finance",
+    "harvest": true,
+    "sortOrder": 7,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "lpStaking": false,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 18,
+    "name": "NAUT/BNB -> NAUT Reward Pool",
+    "tokenName": "NAUT",
+    "stakingTokenName": "BNB-NAUT",
+    "image": "NAUT.png",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x05b339b0a346bf01f851dde47a5d485c34fe220c",
+    "rewardPerBlock": "4960317",
+    "startBlock": 6658428,
+    "bonusEndBlock": 7061628,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x288ea5437c7aad045a393cee2f41e548df24d1c8"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x330de89a559a75738acB5b87aE93579120d53AfB"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://astronaut.to",
+    "harvest": true,
+    "sortOrder": 6,
+    "isFinished": false,
+    "tokenDecimals": 8,
+    "lpStaking": true,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 19,
+    "name": "BANANA -> ALLOY Reward Pool",
+    "tokenName": "ALLOY",
+    "stakingTokenName": "BANANA",
+    "image": "ALLOY.png",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x5ef5994fa33ff4eb6c82d51ee1dc145c546065bd",
+    "rewardPerBlock": "1467673032",
+    "startBlock": 6707400,
+    "bonusEndBlock": 8435400,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0x834534853bff9C97F8A9b0fb9FFF864E3584Df99"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://hyperjump.fi",
+    "harvest": true,
+    "sortOrder": 5,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "lpStaking": false,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 20,
+    "name": "BANANA -> NAUT Reward Pool",
+    "tokenName": "NAUT",
+    "stakingTokenName": "BANANA",
+    "image": "NAUT.png",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x05B339B0A346bF01f851ddE47a5d485c34FE220c",
+    "rewardPerBlock": "3858024",
+    "startBlock": 6744393,
+    "bonusEndBlock": 9336393,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0xb1108939748A635C5ed982a17FF5C6E7D79ECF62",
+        "56": "0xDC0913b2bf505E03794f0A68a0DbBa333D8e0E01"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://astronaut.to",
+    "harvest": true,
+    "sortOrder": 5,
+    "isFinished": false,
+    "tokenDecimals": 8,
+    "lpStaking": false,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 21,
+    "name": "GNANA -> BANANA Reward Pool",
+    "tokenName": "BANANA",
+    "image": "BANANA.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95",
+    "rewardPerBlock": "86805555555556000",
+    "startBlock": 6770043,
+    "bonusEndBlock": 10571867,
+    "stakingTokenAddress": {
+        "97": "0x9407026d236DEAE22CC1F3c419A9e47CBfCFE9E5",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x8F97B2E6559084CFaBA140e2AB4Da9aAF23FE7F8"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://apeswap.finance/apezone",
+    "harvest": true,
+    "sortOrder": 3,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 22,
+    "name": "BANANA -> ONT Reward Pool",
+    "tokenName": "ONT",
+    "image": "ONT.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xFd7B3A77848f1C2D67E05E54d78d174a0C850335",
+    "rewardPerBlock": "9645061728000000",
+    "startBlock": 6772125,
+    "bonusEndBlock": 9364125,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7", 
+        "56": "0x8e6f61f855a7483E29c8E87BF221C73e10b49738"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://ont.io",
+    "harvest": true,
+    "sortOrder": 2,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 23,
+    "name": "BANANA -> NFTL Reward Pool",
+    "tokenName": "NFTL",
+    "image": "NFTL.jpg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xE5904E9816b309d3eD4d061c922f5aa8f3B24C92",
+    "rewardPerBlock": "2142857142000000000",
+    "startBlock": 6794775,
+    "bonusEndBlock": 6996375,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7", 
+        "56": "0x7618c42Fb5DC96F3C238FEC799B440AEd7c56E03"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://cybertime.finance",
+    "harvest": true,
+    "sortOrder": 999,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 24,
+    "name": "BFT -> BFT",
+    "tokenName": "BFT",
+    "image": "BFT.svg",
+    "stakingTokenName": "BFT",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xa4f93159ce0a4b533b443c74b89967c60a5969f8",
+    "rewardPerBlock": "3858024691358025000",
+    "startBlock": 6834460,
+    "bonusEndBlock": 9426460,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xa4f93159ce0a4b533b443c74b89967c60a5969f8"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7", 
+        "56": "0x49bbB345c432b9B66b407f1525A81A84F4509b8b"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.bitfresh.win",
+    "harvest": true,
+    "sortOrder": 1.01,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 25,
+    "name": "GNANA -> BFT",
+    "stakeTokenIsLp": false,
+    "tokenName": "BFT",
+    "image": "BFT.svg",
+    "stakingTokenName": "GNANA",
+    "rewardToken": "0xa4f93159ce0a4b533b443c74b89967c60a5969f8",
+    "rewardPerBlock": "5787037037000000000",
+    "startBlock": 6834460,
+    "bonusEndBlock": 7698460,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7", 
+        "56": "0x5798271B134e27c4dE28CB33aa8D18e5753e83fC"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.bitfresh.win",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 26,
+    "name": "GNANA -> SAFEP",
+    "tokenName": "SAFEP",
+    "image": "SAFEP.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xA8c514D991F59baB02d32b68f04204cB89261c88",
+    "rewardPerBlock": "1157407407",
+    "startBlock": 6907900,
+    "bonusEndBlock": 8635900,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0xEdea59e33A6D0A2d491Aa818f6E08ea18DE13c32"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://safeprotocol.io",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": true,
+    "isFinished": true,
+    "tokenDecimals": 8,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 27,
+    "name": "GNANA -> GEN",
+    "tokenName": "GEN",
+    "image": "GEN.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xb0f2939a1c0e43683e5954c9fe142f7df9f8d967",
+    "rewardPerBlock": "24801587301587000",
+    "startBlock": 6942111,
+    "bonusEndBlock": 7345311,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x6FbB19A87f1E86f027A084C8bfc3528120Cf8249"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://evodefi.com",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 28,
+    "name": "JDI -> JDI",
+    "tokenName": "JDI",
+    "image": "JDI.svg",
+    "stakingTokenName": "JDI",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x0491648c910ad2c1afaab733faf71d30313df7fc",
+    "rewardPerBlock": "115740740740000000",
+    "startBlock": 6962657,
+    "bonusEndBlock": 8690657,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x0491648c910ad2c1afaab733faf71d30313df7fc"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0xa3283C497710cbBE31d35A5cf56C315C621D6e10"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://jdiyield.com",
+    "harvest": true,
+    "sortOrder": 3,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "reflect": true,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 29,
+    "name": "GNANA -> BINGUS",
+    "tokenName": "BINGUS",
+    "image": "Bingus.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xda20c8a5c3b1ab48e31ba6e43f0f2830e50218d8",
+    "rewardPerBlock": "3592308202022",
+    "startBlock": 7110269,
+    "bonusEndBlock": 9702269,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x1697b103a72299d5db4e39ef28a32991c347be23"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "http://bingus.finance/",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 30,
+    "name": "BANANA -> bxBTC",
+    "tokenName": "bxBTC",
+    "image": "XBTC.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xab111d5948470ba73d98d66bbdf2798fbe093546",
+    "rewardPerBlock": "300625000",
+    "startBlock": 7189195,
+    "bonusEndBlock": 8840555,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0xd65f1319f6408C03EBA7f27e156391784492A9EF"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://xbtc.fi/",
+    "harvest": true,
+    "sortOrder": 999,
+    "reflect": false,
+    "isFinished": true,
+    "tokenDecimals": 9,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 31,
+    "name": "GNANA -> vBSWAP",
+    "tokenName": "vBSWAP",
+    "image": "VBSWAP.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4f0ed527e8a95ecaa132af214dfd41f30b361600",
+    "rewardPerBlock": "17361111000000",
+    "startBlock": 7218116,
+    "bonusEndBlock": 9810116,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x7124d635a4bb82319acfd57ce9da18137a7a6f22"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://valuedefi.io/",
+    "harvest": true,
+    "sortOrder": 6,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 32,
+    "name": "BANANA -> WATCH",
+    "tokenName": "WATCH",
+    "image": "WATCH.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x7a9f28eb62c791422aa23ceae1da9c847cbec9b0",
+    "rewardPerBlock": "15432098765432098",
+    "startBlock": 7246473,
+    "bonusEndBlock": 9838473,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x465a3782d9014e6eefccc21470c5e41b2cad9d6d"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.yieldwatch.net/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 33,
+    "name": "GNANA -> KEYFI",
+    "stakeTokenIsLp": false,
+    "tokenName": "KEYFI",
+    "image": "KEYFI.png",
+    "stakingTokenName": "GNANA",
+    "rewardToken": "0x4b6000f9163de2e3f0a01ec37e06e1469dbbce9d",
+    "rewardPerBlock": "25483796296296296",
+    "startBlock": 7305030,
+    "bonusEndBlock": 8601030,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0xEedd7475Eb5D05D591bE0927B178AcBBdC5ee1c1"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://keyfi.com/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 34,
+    "name": "BANANA -> BFT",
+    "stakeTokenIsLp": false,
+    "tokenName": "BFT",
+    "image": "BFT.svg",
+    "stakingTokenName": "BANANA",
+    "rewardToken": "0xa4f93159ce0a4b533b443c74b89967c60a5969f8",
+    "rewardPerBlock": "1929012345679012400",
+    "startBlock": 7323325,
+    "bonusEndBlock": 12507325,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x73775564d2cbad604c41d0b3ddf061e80e1d0279"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.bitfresh.win",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 35,
+    "name": "GNANA -> NRV",
+    "tokenName": "NRV",
+    "image": "NRV.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096",
+    "rewardPerBlock": "64484126984126990",
+    "startBlock": 7433841,
+    "bonusEndBlock": 9449841,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x48ee3f7748fac3e8e4858bd0b09483c4339d3d7e"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.nerve.fi",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 36,
+    "name": "GNANA -> MOONLIGHT",
+    "tokenName": "MOONLIGHT",
+    "image": "MOONLIGHT.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xb1ced2e320e3f4c8e3511b1dc59203303493f382",
+    "rewardPerBlock": "15098621485023728",
+    "startBlock": 7635704,
+    "bonusEndBlock": 9363704,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0xe44d4786e9d367a475a0789dc618c76a2b2d05ec"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://moonlighttoken.com/",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 37,
+    "name": "SPACE/BNB -> SPACE",
+    "tokenName": "SPACE",
+    "image": "SPACE.svg",
+    "stakingTokenName": "SPACE-BNB",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0xe486a69E432Fdc29622bF00315f6b34C99b45e80",
+    "rewardPerBlock": "27557043650000000",
+    "startBlock": 7706570,
+    "bonusEndBlock": 8109770,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xd0F82498051067E154d1dcd3d88fA95063949D7e"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0xfE615dA45dBC8C763851A34Cf14d65B0056a2D8A"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://aperocket.finance/",
+    "harvest": true,
+    "sortOrder": 999,
+    "reflect": false,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 38,
+    "name": "GNANA -> TAPE",
+    "tokenName": "TAPE",
+    "image": "TAPE.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xf63400ee0420ce5b1ebdee0c942d7de1c734a41f",
+    "rewardPerBlock": "2314814814814814700",
+    "startBlock": 7870997,
+    "bonusEndBlock": 8734997,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x4b5ee00fcce905cc2861c8255b368cf9f114c667"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://apetools.co/",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 39,
+    "name": "GNANA -> SPACE",
+    "tokenName": "SPACE",
+    "image": "SPACE.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xe486a69e432fdc29622bf00315f6b34c99b45e80",
+    "rewardPerBlock": "9902199074074074",
+    "startBlock": 7897297,
+    "bonusEndBlock": 9625297,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x52634C2763a6DADA2028440d0892431b04809d88"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://aperocket.finance",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 40,
+    "name": "GNANA -> pCWS",
+    "tokenName": "pCWS",
+    "image": "pCWS.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xbcf39f0edda668c58371e519af37ca705f2bfcbd",
+    "rewardPerBlock": "11574074074074074",
+    "startBlock": 8006108,
+    "bonusEndBlock": 8870108,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x1C62ac4D59FFACb35BFfcDb9fcd8b368a528B544"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://game.seascape.network/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 41,
+    "name": "GNANA -> TYPH",
+    "tokenName": "TYPH",
+    "image": "TYPH.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4090e535f2e251f5f88518998b18b54d26b3b07c",
+    "rewardPerBlock": "413359788359788350",
+    "startBlock": 8016879,
+    "bonusEndBlock": 8621679,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x222c821620480f7482238dd3B71A7051d02c9624"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://typhoon.network/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 42,
+    "name": "GNANA -> bMXX",
+    "tokenName": "bMXX",
+    "image": "bMXX.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4131b87f74415190425ccd873048c708f8005823",
+    "rewardPerBlock": "14467592592592592",
+    "startBlock": 8148642,
+    "bonusEndBlock": 9012642,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x73dAF9AfEBB271007167f3f0D140a35f5b1a7058"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://multiplier.finance/",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 43,
+    "name": "HIFI/BNB -> HIFI",
+    "tokenName": "HIFI",
+    "image": "HIFI.svg",
+    "stakingTokenName": "HIFI-BNB",
+    "stakeTokenIsLp": true,
+    "rewardToken": "0x0a38bc18022b0ccb043f7b730b354d554c6230f1",
+    "rewardPerBlock": "49603174603174600000",
+    "startBlock": 8199995,
+    "bonusEndBlock": 8401595,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xf093ce6778c4d7d99c23f714297fff15a661d354"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x454155ac563a382458eda66fdaf59237d7230dc9"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://hifigamingsociety.com",
+    "harvest": true,
+    "sortOrder": 999,
+    "reflect": false,
+    "isFinished": true,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 44,
+    "name": "GNANA -> CRUSH",
+    "tokenName": "CRUSH",
+    "stakingTokenName": "GNANA",
+    "image": "crush.svg",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x0Ef0626736c2d484A792508e99949736D0AF807e",
+    "rewardPerBlock": "231481660093873500",
+    "startBlock": 8208403,
+    "bonusEndBlock": 10800401,
+    "stakingTokenAddress": {
+        "97": "0x9407026d236deae22cc1f3c419a9e47cbfcfe9e5",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0xa439dec59e6ef0ef2c03564fcd72b181054e3e60",
+        "56": "0xAC4409CC7709783c7CCEb6c6e69Fe42fAD192623"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "http://bitcrusharcade.io",
+    "harvest": true,
+    "sortOrder": 4,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 45,
+    "name": "GNANA -> GRAND",
+    "tokenName": "GRAND",
+    "image": "GRAND.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xee814f5b2bf700d2e843dc56835d28d095161dd9",
+    "rewardPerBlock": "231481481481481",
+    "startBlock": 8264573,
+    "bonusEndBlock": 9128573,
+    "stakingTokenAddress": {
+        "97": "0xed89477d619c7e73f752d5fc7be60308ceb63663",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x3996F919980778cb0fc1982087cAc01089e33fe7",
+        "56": "0x52F5f16F90B897AB9C2c7d3028FEF9e11B2BB485"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.thegrandbanks.finance/",
+    "harvest": true,
+    "sortOrder": 5,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 46,
+    "name": "GNANA -> GMR",
+    "tokenName": "GMR",
+    "image": "gmr.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x0523215dcafbf4e4aa92117d13c6985a3bef27d7",
+    "rewardPerBlock": "1257518026451967",
+    "startBlock": 8270381,
+    "bonusEndBlock": 9998381,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x0e34e04310e44329f1dafd28c9922ee4517ac397",
+        "56": "0xfd9c606d3Ff6AC1b044C4F5C0A9Fa934634bD2e8"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.gmr.finance/",
+    "harvest": true,
+    "sortOrder": 6,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 47,
+    "name": "BANANA -> WINGS",
+    "tokenName": "WINGS",
+    "image": "WINGS.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x0487b824c8261462f88940f97053e65bdb498446",
+    "rewardPerBlock": "9156250000000000",
+    "startBlock": 8291632,
+    "bonusEndBlock": 9155632,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x15C4200e694e4A0223191Ec717906CBA82F54745"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://jetswap.finance/",
+    "harvest": true,
+    "sortOrder": 6,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 48,
+    "name": "GNANA --> HERO",
+    "tokenName": "HERO",
+    "image": "HERO.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x9b26e16377ad29a6ccc01770bcfb56de3a36d8b2",
+    "rewardPerBlock": "578703703703703700",
+    "startBlock": 8329545,
+    "bonusEndBlock": 9193545,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xc417D9D9b01b5985c1720cA89B963c2417821bdC"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://farmhero.io/",
+    "harvest": true,
+    "sortOrder": 6,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 49,
+    "name": "BANANA --> FOXY",
+    "tokenName": "FOXY",
+    "image": "FOXY.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4354a4f710182966e55ea30cfa807fa1b821a67b",
+    "rewardPerBlock": "289351851",
+    "startBlock": 8350940,
+    "bonusEndBlock": 9214940,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x6D5A4371B0B658765D5282Ae64eFaf9e6f9A4600"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://foxynft.org/",
+    "harvest": true,
+    "sortOrder": 6,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 50,
+    "name": "BANANA --> MBOX",
+    "tokenName": "MBOX",
+    "image": "MOBOX.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+    "rewardPerBlock": "183043981481481500",
+    "startBlock": 8361077,
+    "bonusEndBlock": 10089077,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x19383690321291cb00de31ddec94f4596d504f5a"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.mobox.io/",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 51,
+    "name": "BANANA --> WYVERN",
+    "tokenName": "WYVERN",
+    "image": "WYVERN.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x470862af0cf8d27ebfe0ff77b0649779c29186db",
+    "rewardPerBlock": "1352941671296",
+    "startBlock": 8381901,
+    "bonusEndBlock": 9245901,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x33a8CE49cFBdeF61e5E494f769b5626d395a56f3"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://wyverntoken.com/",
+    "harvest": true,
+    "sortOrder": 5,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 52,
+    "name": "BANANA --> BOG",
+    "tokenName": "BOG",
+    "image": "BOG.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xb09fe1613fe03e7361319d2a43edc17422f36b09",
+    "rewardPerBlock": "57870370370370370",
+    "startBlock": 8466478,
+    "bonusEndBlock": 9330478,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x1851a14b9b6bcd55b57da6bfd11f7fb5ae8c3d01"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://bogged.finance/",
+    "harvest": true,
+    "sortOrder": 4,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 54,
+    "name": "GNANA --> HIFI",
+    "tokenName": "HIFI",
+    "image": "HIFI.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x0a38bc18022b0ccb043f7b730b354d554c6230f1",
+    "rewardPerBlock": "52083333333333333333",
+    "startBlock": 8612324,
+    "bonusEndBlock": 9476324,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x4fa77345de3d991625cbf3317cb449f729378d34"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://hifigamingsociety.com",
+    "harvest": true,
+    "sortOrder": 4,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 55,
+    "name": "BANANA --> LORY",
+    "tokenName": "LORY",
+    "image": "LORY.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xcd5d75dbe75449a9021b6c570a41959eb571c751",
+    "rewardPerBlock": "31348765432098765",
+    "startBlock": 8706755,
+    "bonusEndBlock": 11298755,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x14e87345dd641a222a353d1fb0de5f0e66d0668e"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://yieldparrot.finance",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 56,
+    "name": "BANANA --> SCAM",
+    "tokenName": "SCAM",
+    "image": "SCAM.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x00aa85e010204068b7cc2235800b2d8036bdbf2e",
+    "rewardPerBlock": "16666666666666",
+    "startBlock": 8727620,
+    "bonusEndBlock": 9591620,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x49605d4d0bdf049a9c3f20f59e066662a086a9a8"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://scamily.io/",
+    "harvest": true,
+    "sortOrder": 4,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 10,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 57,
+    "name": "BANANA --> FRUIT",
+    "tokenName": "FRUIT",
+    "image": "FRUIT.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4ecfb95896660aa7f54003e967e7b283441a2b0a",
+    "rewardPerBlock": "11574189814814814814",
+    "startBlock": 8839898,
+    "bonusEndBlock": 9703898,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+    },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x98cb2265f54d8aed72ea78d207f068961f0630a4"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.fruitsadventures.com/",
+    "harvest": true,
+    "sortOrder": 3,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 58,
+    "name": "GNANA --> SKILL",
+    "tokenName": "SKILL",
+    "image": "SKILL.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x154a9f9cbd3449ad22fdae23044319d6ef2a1fab",
+    "rewardPerBlock": "115740740740740740",
+    "startBlock": 8867286,
+    "bonusEndBlock": 9731286,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x92f5927fb750593b00ac933d296d9230d6f8b421"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.cryptoblades.io/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 59,
+    "name": "BANANA --> GNT",
+    "tokenName": "GNT",
+    "image": "GNT.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xf750a26eb0acf95556e8529e72ed530f3b60f348",
+    "rewardPerBlock": "5260942760416666666666",
+    "startBlock": 8896083,
+    "bonusEndBlock": 9760083,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xfa1e8344e8316b4c7ca4d9f9359154bd3b42b427"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.greentrusttoken.com/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 60,
+    "name": "BANANA --> PACOCA",
+    "tokenName": "PACOCA",
+    "image": "PACOCA.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x55671114d774ee99d653d6c12460c780a67f1d18",
+    "rewardPerBlock": "980902777777777777",
+    "startBlock": 8926934,
+    "bonusEndBlock": 9790934,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x32d5dae00cf9ec718e6054cbe5f307b9e8ed80e9"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://pacoca.io",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 61,
+    "name": "BANANA --> NEWB",
+    "tokenName": "NEWB",
+    "image": "NEWB.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x545f90dc35ca1e6129f1fed354b3e2df12034261",
+    "rewardPerBlock": "218750000000000",
+    "startBlock": 8950767,
+    "bonusEndBlock": 9814767,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x2f70e1ab58231e1981915c1b3434144dcf26868f"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.newb.farm/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 62,
+    "name": "GNANA --> BISON",
+    "tokenName": "BISON",
+    "image": "BISON.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x19a6da6e382b85f827088092a3dbe864d9ccba73",
+    "rewardPerBlock": "13778549382716049",
+    "startBlock": 8995748,
+    "bonusEndBlock": 11587748,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x5a10311f7d03a6e7ab464da54bdd535f3d4ce512"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://bishares.finance",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 63,
+    "name": "GNANA --> TWIN",
+    "tokenName": "TWIN",
+    "image": "TWIN.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x62907ad5c2d79e2a4f048a90ae2b49d062a773f3",
+    "rewardPerBlock": "4629629629629629629",
+    "startBlock": 9039526,
+    "bonusEndBlock": 9903526,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x6e8cd8e267e4a8538b7119c3ca30ce04667070e5"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://twin.finance/",
+    "harvest": true,
+    "sortOrder": 63,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 64,
+    "name": "GNANA --> NALIS",
+    "tokenName": "NALIS",
+    "image": "NALIS.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xb2ebaa0ad65e9c888008bf10646016f7fcdd73c3",
+    "rewardPerBlock": "28935185185185185",
+    "startBlock": 9081523,
+    "bonusEndBlock": 9945523,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x063e98d9f0484c07028eb78661df554a064aeb05"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://koaladefi.finance/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 65,
+    "name": "GNANA --> STARS",
+    "tokenName": "STARS",
+    "image": "STARS.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xbd83010eb60f12112908774998f65761cf9f6f9a",
+    "rewardPerBlock": "2893518518518518518",
+    "startBlock": 9189490,
+    "bonusEndBlock": 10053490,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x2555190c9f515877ac88defc2242a4e91aa49021"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.mogulproductions.com/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 66,
+    "name": "BANANA --> SISTA",
+    "tokenName": "SISTA",
+    "image": "SISTA.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xca6d25c10dad43ae8be0bc2af4d3cd1114583c08",
+    "rewardPerBlock": "2893518518518518518",
+    "startBlock": 9309413,
+    "bonusEndBlock": 11037413,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x0a509adf33e7094f3bd15c0062debd3aef2bce28"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://srnartgallery.com",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 67,
+    "name": "BANANA --> CAPS",
+    "tokenName": "CAPS",
+    "image": "CAPS.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xffba7529ac181c2ee1844548e6d7061c9a597df4",
+    "rewardPerBlock": "1736111111111111111",
+    "startBlock": 9329793,
+    "bonusEndBlock": 10193793,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x99dc608804adf5c5e9701b829fefbd618da14c5b"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.ternoa.com/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 68,
+    "name": "GNANA --> BIRB",
+    "tokenName": "BIRB",
+    "image": "BIRB.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x82a479264b36104be4fdb91618a59a4fc0f50650",
+    "rewardPerBlock": "5787037037037037037",
+    "startBlock": 9368186,
+    "bonusEndBlock": 10232186,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xaffd843b548f70cc586cdecb2dd0e85be5349e96"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://birb.co/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 69,
+    "name": "GNANA --> DINOP",
+    "tokenName": "DINOP",
+    "image": "DINOP.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xea90DC6F64d18771Ca1dac8098526a9082265B42",
+    "rewardPerBlock": "1736111111",
+    "startBlock": 9539564,
+    "bonusEndBlock": 11267564,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x82ee644a04573aebbfbf3d7fa98f20922a5c606a"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.dinopark.fun/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 9,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 70,
+    "name": "GNANA --> MARU",
+    "tokenName": "MARU",
+    "image": "MARU.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x215f51990a0ca5aa360a177181f014e2da376e5e",
+    "rewardPerBlock": "57870370370370370370",
+    "startBlock": 9586814,
+    "bonusEndBlock": 10450814,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x51c58fb9a61c00e3e4cd09b499726ba1cd3dd261"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://riyoku.tv/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 71,
+    "name": "GNANA --> PERA",
+    "tokenName": "PERA",
+    "image": "PERA.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xb9d8592e16a9c1a3ae6021cddb324eac1cbc70d6",
+    "rewardPerBlock": "462962962962962962",
+    "startBlock": 9590021,
+    "bonusEndBlock": 10454021,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xE6C5DAfc5BAeb927Bc56B3a4154eDeCFDbB937d6"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://pera.finance",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 72,
+    "name": "BANANA --> GUARD",
+    "tokenName": "GUARD",
+    "image": "GUARD.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xf606bd19b1e61574ed625d9ea96c841d4e247a32",
+    "rewardPerBlock": "4050925925925925925",
+    "startBlock": 9673258,
+    "bonusEndBlock": 14857258,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x73d3d28cc018a89fe6518d7b5efbcfcf0695a0d9"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.wolfdencrypto.com/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 73,
+    "name": "GNANA --> LAND",
+    "tokenName": "LAND",
+    "image": "LAND.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x9d986a3f147212327dd658f712d5264a73a1fdb0",
+    "rewardPerBlock": "57870370370370370",
+    "startBlock": 9715055,
+    "bonusEndBlock": 12307055,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x44b7e5593dfc65208a2b68c3f6c1cffd881ef6fb"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://landshare.io/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 74,
+    "name": "BANANA --> POTS",
+    "tokenName": "POTS",
+    "image": "POTS.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x3fcca8648651e5b974dd6d3e50f61567779772a8",
+    "rewardPerBlock": "115740740740740740",
+    "startBlock": 9724558,
+    "bonusEndBlock": 10588558,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x4632d4ff6312c9a00c6440c9271f0061aaa49a4b"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://moonpot.com/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 75,
+    "name": "GNANA --> SACT",
+    "tokenName": "SACT",
+    "image": "SACT.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x1ba8c21c623c843cd4c60438d70e7ad50f363fbb",
+    "rewardPerBlock": "462962962962962962",
+    "startBlock": 9780373,
+    "bonusEndBlock": 10644373,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xade70b187429e3cf4a8dd476ecba8ce9002621ec"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://srnartgallery.com/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 76,
+    "name": "GNANA --> BHC",
+    "tokenName": "BHC",
+    "image": "BHC.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x6fd7c98458a943f469E1Cf4eA85B173f5Cd342F4",
+    "rewardPerBlock": "2474537037000000",
+    "startBlock": 9807952,
+    "bonusEndBlock": 10671952,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x189aE88B8Df159BDB28260E86e87D770F2FC384D"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://billionhappiness.finance/",
+    "harvest": true,
+    "sortOrder": 2,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 77,
+    "name": "GNANA --> CYT",
+    "tokenName": "CYT",
+    "image": "CYT.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xd9025e25bb6cf39f8c926a704039d2dd51088063",
+    "rewardPerBlock": "13503086419753086419",
+    "startBlock": 9844178,
+    "bonusEndBlock": 12436178,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x64fc4bf63c4315156f56b953a42bf2459b227a68"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://dragonary.com/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 78,
+    "name": "GNANA --> HOTCROSS",
+    "tokenName": "HOTCROSS",
+    "image": "HOTCROSS.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x4fa7163e153419e0e1064e418dd7a99314ed27b6",
+    "rewardPerBlock": "925925925925925925",
+    "startBlock": 10033233,
+    "bonusEndBlock": 10897233,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x03f344ceb868841ffa262503fe1cf21b9cd5d7a8"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://hotcross.com/ ",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 79,
+    "name": "GNANA --> LMT", 
+    "tokenName": "LMT",
+    "image": "LMT.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x9617857e191354dbea0b714d78bc59e57c411087",
+    "rewardPerBlock": "367766203703703703",
+    "startBlock": 10061826,
+    "bonusEndBlock": 11789826,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x7ef515eac1cf68cde1bdbee2cda8707815e1a3c3"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://lympo.io/lmt/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 80,
+    "name": "GNANA --> FOOT",
+    "tokenName": "FOOT",
+    "image": "FOOT.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x1c64fd4f55e1a3c1f737dfa47ee5f97eaf413cf0",
+    "rewardPerBlock": "1087547951388888888888",
+    "startBlock": 10090519,
+    "bonusEndBlock": 10522519,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x372c7b2c017aa055b6bd18b2d250b7dfc7593f5a"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://bigfoottoken.finance/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 81,
+    "name": "GNANA --> NABOX",
+    "tokenName": "NABOX",
+    "image": "NABOX.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x755f34709e369d37c6fa52808ae84a32007d1155",
+    "rewardPerBlock": "3565642041666666666666",
+    "startBlock": 10118057,
+    "bonusEndBlock": 10550057,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xae6b44c1857d48512f1cebc0f2a55e02a751969c"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://nabox.io/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 82,
+    "name": "GNANA --> BABI",
+    "tokenName": "BABI",
+    "image": "BABI.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xec15a508a187e8ddfe572a5423faa82bbdd65120",
+    "rewardPerBlock": "1860119047619047619",
+    "startBlock": 10153400,
+    "bonusEndBlock": 10556600,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xbc2329abb85e0a3dc7e5bfd01901374bd4162831"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://babylons.io/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 83,
+    "name": "GNANA --> REVV",
+    "tokenName": "REVV",
+    "image": "REVV.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x833F307aC507D47309fD8CDD1F835BeF8D702a93",
+    "rewardPerBlock": "597993827160493827",
+    "startBlock": 10186369,
+    "bonusEndBlock": 12778369,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xddb3bd8645775f59496c821e4f55a7ea6a6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xa38e86fa40bff9a82bb0fdcca8002f34d08f64b9"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://revvmotorsport.com/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 84,
+    "name": "GNANA --> WIZARD",
+    "tokenName": "WIZARD",
+    "image": "WIZARD.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x5066C68cAe3B9BdaCD6A1A37c90F2d1723559D18",
+    "rewardPerBlock": "39265046296296296",
+    "startBlock": 10262550,
+    "bonusEndBlock": 11126550,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x8440870a806e73977c5f094376a5ac8e41d9db0b"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://wizard.financial",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 85,
+    "name": "GNANA --> GNT",
+    "tokenName": "GNT",
+    "image": "GNT.svg",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xf750a26eb0acf95556e8529e72ed530f3b60f348",
+    "rewardPerBlock": "10946469907407407407407",
+    "startBlock": 10292265,
+    "bonusEndBlock": 11156265,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x68741f87120e158dd8b4e972c54a6b062d3958b9"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.greentrusttoken.com/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 86,
+    "name": "BANANA --> CLA",
+    "tokenName": "CLA",
+    "image": "CLA.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xf6663f46ecd7ae8ee8b6cc54681a42eba0ef52b4",
+    "rewardPerBlock": "2480158730158730158",
+    "startBlock": 10348366,
+    "bonusEndBlock": 10751566,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xc8fdda71305ff3001e84ef31f3f28460da4535ff"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://www.candelacoin.com/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": true,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 87,
+    "name": "BANANA --> PLAY",
+    "tokenName": "PLAY",
+    "image": "PLAY.png",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x9a3077f34cc30f9bf8e93a0369119bae0113d9cc",
+    "rewardPerBlock": "11574074074074074",
+    "startBlock": 10377161,
+    "bonusEndBlock": 11241161,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xb1f213615bb45d818b4579b17f25293fdccc7fda"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://polyplay.net/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 88,
+    "name": "GNANA --> ZIG",
+    "tokenName": "ZIG",
+    "image": "ZIG.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0x8C907e0a72C3d55627E853f4ec6a96b0C8771145",
+    "rewardPerBlock": "2462569444444444444",
+    "startBlock": 10405604,
+    "bonusEndBlock": 11269604,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0x02f93496a75c430433a61f99c9d3f21278ee13d3"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://zignaly.com/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 89,
+    "name": "BANANA --> NVT",
+    "tokenName": "NVT",
+    "image": "NVT.svg",
+    "stakingTokenName": "BANANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xf0e406c49c63abf358030a299c0e00118c4c6ba5",
+    "rewardPerBlock": "144675925",
+    "startBlock": 10461955,
+    "bonusEndBlock": 10893955,
+    "stakingTokenAddress": {
+        "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+        "56": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+      },
+    "contractAddress": {
+        "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+        "56": "0xf45d14aa2844c14ee8a06a1bff1daa99656cf65c"
+    },
+    "poolCategory": "CORE",
+    "projectLink": "https://nerve.network/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 8,
+    "abi": "BEP20_REWARD_APE_ABI"
+  },
+  {
+    "sousId": 90,
+    "name": "GNANA --> POLAR",
+    "tokenName": "POLAR",
+    "image": "POLAR.png",
+    "stakingTokenName": "GNANA",
+    "stakeTokenIsLp": false,
+    "rewardToken": "0xc64c9b30c981fc2ee4e13d0ca3f08258e725fd24",
+    "rewardPerBlock": "964506172839506172",
+    "startBlock": 10518601,
+    "bonusEndBlock": 11814601,
+    "stakingTokenAddress": {
+      "97": "0x4fb99590ca95fc3255d9fa66a1ca46c43c34b09a",
+      "56": "0xdDb3Bd8645775F59496c821E4F55A7eA6A6dc299"
+    },
+    "contractAddress": {
+      "97": "0x6c6248ea3ff05200b9df0bc91cec2dea4f57a95d",
+      "56": "0xcfaa62b60575c0808b24b2253e107fc8aa992ef4"
+    },
+    "poolCategory": "APEZONE",
+    "projectLink": "https://www.polarsync.app/",
+    "harvest": true,
+    "sortOrder": 1,
+    "reflect": false,
+    "isFinished": false,
+    "tokenDecimals": 18,
+    "abi": "BEP20_REWARD_APE_ABI"
+  }
+]
