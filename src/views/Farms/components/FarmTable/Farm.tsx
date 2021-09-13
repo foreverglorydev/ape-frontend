@@ -41,9 +41,15 @@ const Farm: React.FunctionComponent<FarmProps> = ({ image, label, tokenSymbol, q
   return (
     <Container>
       <StyledBackground>
-        <IconImage src={`/images/tokens/${quoteTokenSymbol}.svg`} alt={quoteTokenSymbol} width={50} height={50} marginLeft="5px"/>
         <IconImage
-          src={`/images/tokens/${tokenSymbol}.svg`}
+          src={`https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/${quoteTokenSymbol}.svg`}
+          alt={quoteTokenSymbol}
+          width={50}
+          height={50}
+          marginLeft="5px"
+        />
+        <IconImage
+          src={`https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/${tokenSymbol}.svg`}
           alt={tokenSymbol}
           width={50}
           height={50}
