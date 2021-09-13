@@ -226,7 +226,7 @@ const StyledLabelContainerLP = styled.div`
   ${({ theme }) => theme.mediaQueries.lg} {
     position: absolute;
     top: 6px;
-    left: 169px;
+    left: 225px;
     margin: 0px;
   }
 `
@@ -575,6 +575,8 @@ const Farms: React.FC = () => {
       farm: {
         image: farm.lpSymbol.split(' ')[0].toLocaleLowerCase(),
         label: lpLabel,
+        tokenSymbol: farm.tokenSymbol,
+        quoteTokenSymbol: farm.quoteTokenSymbol,
         pid: farm.pid,
       },
       earned: {

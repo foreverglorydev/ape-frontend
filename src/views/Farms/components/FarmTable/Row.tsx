@@ -215,7 +215,7 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
         <StyledTd1>
           <FarmMobileCell>
             <CellLayout>
-              <Farm {...props.farm} />
+              <Farm {...props.farm} quoteTokenSymbol={quoteTokenSymbol}/>
             </CellLayout>
           </FarmMobileCell>
           <EarnedMobileCell>

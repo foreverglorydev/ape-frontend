@@ -24,6 +24,7 @@ export interface ExpandableSectionProps {
   pid?: number
   lpSymbol: string
   showExpandableSection?: boolean
+  quoteTokenSymbol?: string
 }
 
 const StyledBackground = styled(Flex)`
@@ -33,7 +34,7 @@ const StyledBackground = styled(Flex)`
     justify-content: center;
     background: rgb(255, 179, 0, 0.4);
     border-radius: 20px;
-    width: 121px;
+    width: 200px;
     align-items: flex-end;
     height: 80px;
     margin-left: 0px;
@@ -51,7 +52,7 @@ const StyledHeading = styled(Heading)`
   }
 
   ${({ theme }) => theme.mediaQueries.sm} {
-    font-size: 22px;
+    font-size: 17px;
   }
 `
 
@@ -59,7 +60,7 @@ const StyledText1 = styled(Text)`
   font-weight: 700;
   font-size: 12px;
   ${({ theme }) => theme.mediaQueries.sm} {
-    font-size: 15px;
+    font-size: 14px;
   }
 `
 
@@ -182,7 +183,7 @@ const StyledAPRText = styled.div`
   margin-left: 5px;
   margin-bottom: 2px;
   ${({ theme }) => theme.mediaQueries.sm} {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 23px;
   }
 `
@@ -193,16 +194,53 @@ const ButtonContainer = styled.div`
 
 const StyledImage = styled.img`
   display: none;
+  align-self: center;
 
-  @media (min-width: 400px) {
+  @media (min-width: 500px) {
     display: flex;
-    width: 75px;
-    height: 75px;
+    width: 45px;
+    height: 45px;
   }
 
   ${({ theme }) => theme.mediaQueries.sm} {
-    width: 109px;
-    height: 109px;
+    width: 60px;
+    height: 60px;
+  }
+`
+
+const StyledImageRight = styled.img`
+  display: none;
+  align-self: center;
+  z-index: 1;
+  margin-left: -16px;
+
+  @media (min-width: 500px) {
+    display: flex;
+    width: 45px;
+    height: 45px;
+  }
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    width: 60px;
+    height: 60px;
+  }
+`
+
+const StyledArrow = styled.img`
+  display: none;
+  align-self: center;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  @media (min-width: 500px) {
+    display: flex;
+    width: 12px;
+    height: 12px;
+  }
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    width: 22px;
+    height: 22px;
   }
 `
 
@@ -218,19 +256,22 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   pid,
   lpSymbol,
   showExpandableSection,
+  quoteTokenSymbol,
 }) => {
   const TranslateString = useI18n()
 
   const { earnings } = useFarmUser(pid)
   const rawEarningsBalance = getBalanceNumber(earnings)
   const displayBalance = rawEarningsBalance ? rawEarningsBalance.toLocaleString() : '?'
-
   const { account } = useWeb3React()
 
   return (
     <Flex>
       <StyledBackground>
-        <StyledImage src={`/images/farms/${farmImage}.svg`} alt={tokenSymbol} />
+        <StyledImage src={`/images/tokens/${quoteTokenSymbol}.svg`} alt={quoteTokenSymbol} />
+        <StyledImageRight src={`/images/tokens/${tokenSymbol}.svg`} alt={tokenSymbol} />
+        <StyledArrow src="/images/arrow.svg" alt="arrow" />
+        <StyledImage src="/images/tokens/BANANA.svg" alt="BANANA" />
       </StyledBackground>
       <StyledFlexContainer>
         <LabelContainer>
