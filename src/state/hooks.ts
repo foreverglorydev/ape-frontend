@@ -169,6 +169,13 @@ export const useTvl = (): BigNumber => {
 
 // Prices
 
+export function usePriceByPid (pid : number) : BigNumber  {
+  const farm = useFarmFromPid(pid)
+  return farm.tokenPriceVsQuote ? new BigNumber(1).div(farm.tokenPriceVsQuote) : ZERO
+}
+
+export default usePriceByPid
+
 export const usePriceBnbBusd = (): BigNumber => {
   const pid = 3 // BUSD-BNB LP
   const farm = useFarmFromPid(pid)

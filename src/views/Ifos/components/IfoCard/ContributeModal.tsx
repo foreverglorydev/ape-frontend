@@ -7,6 +7,7 @@ import useTokenBalance from 'hooks/useTokenBalance'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import { ZERO_ADDRESS } from 'config'
 import track from 'utils/track'
+import { usePriceBnbBusd } from 'state/hooks'
 import { CHAIN_ID } from 'config/constants'
 
 interface Props {
@@ -30,6 +31,14 @@ const ContributeModal: React.FC<Props> = ({ currency, contract, currencyAddress,
     }
     return contract.methods.deposit(depositValue).send({ from: account })
   }
+  const bnbPrice = usePriceBnbBusd()
+  const bigNumber = (num) => {
+    return num / 1e18
+  }
+
+  const getUsd = (num) => {
+    return (bnbPrice.c[0] * bigNumber(num)).toFixed(2)
+  }
 
   return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
@@ -51,11 +60,12 @@ const ContributeModal: React.FC<Props> = ({ currency, contract, currencyAddress,
             setPendingTx(true)
             await deposit()
             const amount = new BigNumber(value).times(new BigNumber(10).pow(18)).toString()
+            const amountUsd = getUsd(amount)
             track({
               event: 'iao',
               chain: CHAIN_ID,
               data: {
-                amount,
+                amountUsd,
                 cat: 'buy',
                 contract: contract.address,
               },

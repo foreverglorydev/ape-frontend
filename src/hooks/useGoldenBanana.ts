@@ -2,6 +2,7 @@ import { useCallback } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import { useTreasury } from 'hooks/useContract'
 import BigNumber from 'bignumber.js'
+import { usePriceBananaBusd } from 'state/hooks'
 import { CHAIN_ID } from 'config/constants'
 import track from 'utils/track'
 
@@ -34,16 +35,18 @@ export const sell = async (contract, amount, account) => {
 export const useSellGoldenBanana = () => {
   const { account } = useWeb3React()
   const treasuryContract = useTreasury()
+  const price = usePriceBananaBusd();
 
   const handleSell = useCallback(
     async (amount: string) => {
       try {
         const txHash = await sell(treasuryContract, amount, account)
+        const amountUsd = parseFloat(amount) * price.toNumber();
         track({
           event: 'gnana',
           chain: CHAIN_ID,
           data: {
-            amount,
+            amountUsd,
             cat: 'sell',
           },
         })
@@ -52,7 +55,7 @@ export const useSellGoldenBanana = () => {
         return false
       }
     },
-    [account, treasuryContract],
+    [account, treasuryContract, price],
   )
 
   return { handleSell }
@@ -61,16 +64,18 @@ export const useSellGoldenBanana = () => {
 export const useBuyGoldenBanana = () => {
   const { account } = useWeb3React()
   const treasuryContract = useTreasury()
+  const price = usePriceBananaBusd();
 
   const handleBuy = useCallback(
     async (amount: string) => {
       try {
         const txHash = await buy(treasuryContract, amount, account)
+        const amountUsd = parseFloat(amount) * price.toNumber();
         track({
           event: 'gnana',
           chain: CHAIN_ID,
           data: {
-            amount,
+            amountUsd,
             cat: 'buy',
           },
         })
@@ -79,7 +84,7 @@ export const useBuyGoldenBanana = () => {
         return false
       }
     },
-    [account, treasuryContract],
+    [account, treasuryContract, price],
   )
 
   return { handleBuy }

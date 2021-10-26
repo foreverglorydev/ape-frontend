@@ -10,6 +10,7 @@ import {
   updateNfaStakingUserBalance,
   updateUserNfaStakingPendingReward,
 } from 'state/actions'
+import { usePriceByPid, usePriceBananaBusd } from 'state/hooks'
 import { unstake, sousUnstake, sousEmegencyWithdraw, nfaUnstake } from 'utils/callHelpers'
 import track from 'utils/track'
 import { CHAIN_ID } from 'config/constants'
@@ -19,23 +20,25 @@ const useUnstake = (pid: number) => {
   const dispatch = useDispatch()
   const { account } = useWeb3React()
   const masterChefContract = useMasterchef()
+  const price = usePriceByPid(pid)
 
   const handleUnstake = useCallback(
     async (amount: string) => {
       const txHash = await unstake(masterChefContract, pid, amount, account)
+      const amountUsd = parseFloat(amount) * price.toNumber();
       dispatch(fetchFarmUserDataAsync(account))
       track({
         event: 'farm',
         chain: CHAIN_ID,
         data: {
           cat: 'unstake',
-          amount,
+          amountUsd,
           pid,
         },
       })
       console.info(txHash)
     },
-    [account, dispatch, masterChefContract, pid],
+    [account, dispatch, masterChefContract, pid, price],
   )
 
   return { onUnstake: handleUnstake }
@@ -50,6 +53,7 @@ export const useSousUnstake = (sousId) => {
   const masterChefContract = useMasterchef()
   const sousChefContract = useSousChef(sousId)
   const isOldSyrup = SYRUPIDS.includes(sousId)
+  const price = usePriceBananaBusd();
 
   const handleUnstake = useCallback(
     async (amount: string) => {
@@ -66,17 +70,18 @@ export const useSousUnstake = (sousId) => {
       dispatch(updateUserStakedBalance(sousId, account))
       dispatch(updateUserBalance(sousId, account))
       dispatch(updateUserPendingReward(sousId, account))
+      const amountUsd = parseFloat(amount) * price.toNumber();
       track({
         event: 'pool',
         chain: CHAIN_ID,
         data: {
           cat: 'unstake',
-          amount,
+          amountUsd,
           pid: sousId,
         },
       })
     },
-    [account, dispatch, isOldSyrup, masterChefContract, sousChefContract, sousId],
+    [account, dispatch, isOldSyrup, masterChefContract, sousChefContract, sousId, price],
   )
 
   return { onUnstake: handleUnstake }

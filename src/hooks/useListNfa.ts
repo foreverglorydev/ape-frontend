@@ -3,12 +3,13 @@ import { useWeb3React } from '@web3-react/core'
 import track from 'utils/track'
 import { CHAIN_ID } from 'config/constants'
 import { listNfa } from 'utils/callHelpers'
+import { usePriceBnbBusd } from 'state/hooks'
 import { useAuction } from './useContract'
 
 const useListNfa = () => {
   const { account } = useWeb3React()
   const auctionContract = useAuction()
-
+  const bnbPrice = usePriceBnbBusd()
   const handleListNfa = useCallback(
     async (id, auctionLength, timeToExtend, minimumExtendTime, minimumBid) => {
       try {
@@ -21,6 +22,15 @@ const useListNfa = () => {
           minimumBid,
           account,
         )
+        const bigNumber = (num) => {
+          return num / 1e18
+        }
+
+        const getUsd = (num) => {
+          return (bnbPrice.c[0] * bigNumber(num)).toFixed(2)
+        }
+        
+        const amountUsd = getUsd(minimumBid)
         track({
           event: 'nfa',
           chain: CHAIN_ID,
@@ -29,7 +39,7 @@ const useListNfa = () => {
             id,
             auctionLength,
             extendTime: timeToExtend,
-            minimumBid,
+            amountUsd,
           },
         })
         console.info(txHash)
@@ -37,7 +47,7 @@ const useListNfa = () => {
         console.log(e)
       }
     },
-    [account, auctionContract],
+    [account, auctionContract, bnbPrice],
   )
 
   return { onListNfa: handleListNfa }
