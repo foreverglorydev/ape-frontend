@@ -1466,7 +1466,7 @@ const farms: FarmConfig[] = [
   },
   {
     pid: 99,
-    image: '',
+    image: 'GUARD.png',
     lpSymbol: 'GUARD-BNB',
     lpAddresses: {
       97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
@@ -1978,7 +1978,7 @@ const farms: FarmConfig[] = [
   },
   {
     pid: 132,
-    image: '',
+    image: 'NFTY.png',
     lpSymbol: 'NFTY-BNB',
     lpAddresses: {
       97: '0xed89477d619c7e73f752d5fc7be60308ceb63663',
