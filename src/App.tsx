@@ -29,7 +29,7 @@ const DualFarms = lazy(() => import('./views/DualFarms'))
 const Nft = lazy(() => import('./views/Nft'))
 const Nfa = lazy(() => import('./views/Nft/Nfa'))
 const ApeZone = lazy(() => import('./views/ApeZone'))
-const Stats = lazy(() => import('./views/Stats'))
+// const Stats = lazy(() => import('./views/Stats'))
 const Auction = lazy(() => import('./views/Auction'))
 const BurningGames = lazy(() => import('./views/BurningGames'))
 const Iazos = lazy(() => import('./views/Iazos'))
@@ -202,7 +202,8 @@ const App: React.FC = () => {
               <ApeZone />
             </Route>
             <Route path="/stats">
-              <Stats />
+              {/* <Stats /> */}
+              <Redirect to="/" />
             </Route>
             <Route path="/burn">
               <BurningGames />
