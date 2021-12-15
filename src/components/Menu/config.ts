@@ -7,11 +7,11 @@ const config: MenuEntry[] = [
     icon: 'HomeIcon',
     href: '/',
   },
-  {
-    label: 'Ape Stats',
-    icon: 'StatsIcon',
-    href: '/stats',
-  },
+  // {
+  //   label: 'Ape Stats',
+  //   icon: 'StatsIcon',
+  //   href: '/stats',
+  // },
   {
     label: 'Trade',
     icon: 'TradeIcon',
