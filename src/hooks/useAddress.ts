@@ -82,3 +82,11 @@ export const useIazoSettingsAddress = () => {
 export const useIazoFactoryAddress = () => {
   return useAddress(addresses.iazoFactoryProxy)
 }
+
+export const useBondFactoryStorageAddress = () => {
+  return useAddress(addresses.bondFactoryStorage)
+}
+
+export const useCustomBondAddress = () => {
+  return useAddress(addresses.customBond)
+}

@@ -104,4 +104,12 @@ export default {
     56: '0x624433b9C78dE84c8Dd3C9e906046017Bb03E3A6',
     97: '0x22FaB17bF074f07Ee2708868282897E619103369',
   },
+  bondFactoryStorage: {
+    56: '',
+    97: '0x89e8Dfdc1494C89733c98664d79a346d922BE6aC',
+  },
+  customBond: {
+    56: '',
+    97: '0xF82E5c55aa6a86175E749c3aCb21f71f0E5C3bFA',
+  },
 }

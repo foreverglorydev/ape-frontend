@@ -27,6 +27,8 @@ import iazoExposerAbi from 'config/abi/iazoExposer.json'
 import iazoSettingsAbi from 'config/abi/iazoSettings.json'
 import iazoFactoryAbi from 'config/abi/iazoFactory.json'
 import iazoAbi from 'config/abi/iazo.json'
+import customBondAbi from 'config/abi/customBond.json'
+import bondFactoryStorageAbi from 'config/abi/bondFactoryStorage.json'
 import { useSelector } from 'react-redux'
 import { State } from 'state/types'
 import {
@@ -52,12 +54,16 @@ import {
   NonFungibleApes,
   IfoLinear,
   Ifo,
+  CustomBond,
+  BondFactoryStorage,
 } from 'config/abi/types'
 import {
   useApePriceGetterAddress,
   useAuctionAddress,
   useBananaAddress,
   useBananaProfileAddress,
+  useBondFactoryStorageAddress,
+  useCustomBondAddress,
   useGoldenBananaAddress,
   useIazoExposerAddress,
   useIazoFactoryAddress,
@@ -202,6 +208,13 @@ export function useWETHContract(withSignerIfPossible?: boolean): Contract | null
 
 export function usePairContract(pairAddress?: string, withSignerIfPossible?: boolean): Contract | null {
   return useContract(IUniswapV2PairABI, pairAddress, withSignerIfPossible)
+}
+
+export const useBondFactoryStorage = () => {
+  return useContract(bondFactoryStorageAbi, useBondFactoryStorageAddress()) as BondFactoryStorage
+}
+export const useCustomBond = () => {
+  return useContract(customBondAbi, useCustomBondAddress()) as CustomBond
 }
 
 export default useContract
